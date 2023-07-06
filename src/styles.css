@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bs-success-rgb: 26, 173, 163 !important;
+}
+.container-nav {
+  width: 95% !important;
+}
+.bg-success {
+  background-color: rgba(var(--bs-success-rgb));
+}
+.navbar-brand,
+.link-underline {
+  font-size: 0.75rem !important;
+}
+@media (max-width: 992px) {
+  .border-end {
+    --bs-border-width: 0px !important;
+  }
+}
+.site-logo img {
+  max-width: 196px;
+  max-height: 95px;
+}
+@media (max-width: 991px) {
+  .site-logo img {
+    max-height: 60px;
+    /* max-width: 100%; */
+  }
+}
+@media (max-width: 576px) {
+  .site-logo img {
+    /* max-height: 60px; */
+    max-width: 90px;
+  }
+}
+.navbar__phone {
+  width: fit-content;
+  text-align: center;
+}
+.offcanvas-body {
+  width: calc(100% / 3) !important;
+}
+.fa-angle-down {
+  font-size: 12px;
+}
+@media (max-width: 992px) {
+  .nav-link {
+    font-size: 0.8rem !important;
+  }
+}
+@media (max-width: 1200px) {
+  .offcanvas-body .nav-link {
+    color: white !important;
+  }
+}
+.nav-link__offcanvas:hover,
+.active {
+  color: rgba(var(--bs-success-rgb)) !important;
+  font-weight: bold !important;
+  padding-left: 10px;
+}
+.dropdown-toggle-split {
+  border-left: 1px solid #454545 !important;
+}
