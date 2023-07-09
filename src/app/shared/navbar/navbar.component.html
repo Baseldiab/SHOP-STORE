@@ -50,7 +50,9 @@
 </nav>
 <!-- ======================================================== -->
 <!-- ======================================================== -->
-<nav class="navbar navbar-expand-xl m-0 py-4">
+<nav
+  class="navbar navbar-expand-xl m-0 py-2 py-lg-3 shadow-sm sticky-top bg-white"
+>
   <div class="container-fluid flex-wrap mx-auto">
     <!-- ===================== -->
     <button
@@ -95,32 +97,205 @@
       </div>
       <div class="offcanvas d-xl-inline d-none">
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li class="nav-item navlink__home">
             <a
-              class="nav-link text-uppercase text-success d-flex justify-content-xl-center align-items-center"
+              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
               aria-current="page"
-              href="#"
+              routerLink=""
               >Home <i class="fa-solid fa-angle-down d-inline ps-1"></i
             ></a>
+            <div
+              class="nav__home container d-none position-absolute top mx-auto justify-content-center row shadow bg-light px-0 py-2 z-3"
+            >
+              <figure class="nav__page1 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink=""
+                    routerLinkActive=""
+                    ><span class="text-success">1.</span> home default</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/default.jpg"
+                  alt="home default image"
+                />
+              </figure>
+              <figure class="nav__page2 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="furniture"
+                    ><span class="text-success">2.</span> furniture</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/furniture.jpg"
+                  alt="furniture image"
+                />
+              </figure>
+              <figure class="nav__page3 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="groceries"
+                    ><span class="text-success">3.</span> groceries</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/jewellery-menu.jpg"
+                  alt="jewellery image"
+                />
+              </figure>
+              <figure class="nav__page4 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="electronics"
+                    ><span class="text-success">4.</span> electronics</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/electronics.jpg"
+                  alt="electronics image"
+                />
+              </figure>
+              <figure class="nav__page5 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="lighting"
+                    ><span class="text-success">5.</span> lighting</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/lighting.jpg"
+                  alt="lighting image"
+                />
+              </figure>
+              <figure class="nav__page6 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="watches"
+                    ><span class="text-success">6.</span> watches</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/watches.jpg"
+                  alt="watches image"
+                />
+              </figure>
+              <figure class="nav__page7 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="shoes"
+                    ><span class="text-success">7.</span> shoes</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/shoes.jpg"
+                  alt="shoes image"
+                />
+              </figure>
+              <figure class="nav__page8 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="men-bags"
+                    ><span class="text-success">7.</span> men's bags</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/default.jpg"
+                  alt="bags image"
+                />
+              </figure>
+              <figure class="nav__page9 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="women-bags"
+                    ><span class="text-success">7.</span> women's bags</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/woman bags.jpg"
+                  alt="woman bags image"
+                />
+              </figure>
+              <figure class="nav__page10 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="women-dresses"
+                    ><span class="text-success">8.</span> woman's dresses</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/woman dresses.jpg"
+                  alt="woman dresses"
+                />
+              </figure>
+              <figure class="nav__page11 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="men-shirts"
+                    ><span class="text-success">9.</span> men's shirts</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/men's shirt.jpg"
+                  alt="woman dresses"
+                />
+              </figure>
+              <figure class="nav__page12 text-center col-3">
+                <figcaption class="text-uppercase fw-bold pb-1">
+                  <a
+                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    routerLink="sunglasses"
+                    ><span class="text-success">10.</span> sunglasses</a
+                  >
+                </figcaption>
+                <img
+                  class="d-none d-xl-inline w-100"
+                  src="./assets/images/sunglasses.jpg"
+                  alt="sunglasses image"
+                />
+              </figure>
+            </div>
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              href="#"
+              routerLink=""
               >shop <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              href="#"
+              routerLink=""
               >blog <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              href="#"
+              routerLink=""
               >pages <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
           </li>
@@ -585,7 +760,7 @@
           <li class="nav-item dropdown row m-0 w-100">
             <a
               class="nav-link nav-link__offcanvas text-start py-sm-3 col-10 ps-4 d-inline text-uppercase"
-              href="#"
+              routerLink="login"
               role="button"
             >
               login / register
@@ -607,11 +782,14 @@
     <!-- ===================== -->
     <div class="navbar col-xl-4 justify-content-end">
       <ul class="navbar-nav d-flex flex-wrap flex-row">
-        <li class="nav-item px-2 d-none d-xl-inline">
+        <li
+          class="nav-item px-2 d-none d-xl-inline border-end border-dark-subtle pe-lg-4"
+        >
           <a
-            class="nav-link border-end border-dark-subtle pe-lg-4"
+            class="nav-link"
             aria-current="page"
-            href="#"
+            routerLink="login"
+            routerLinkActive="text-success border-bottom border-dark-subtle link-offset-1 border-2 "
             >Login / Register</a
           >
         </li>
@@ -634,126 +812,3 @@
     </div>
   </div>
 </nav>
-
-<div class="nav__home d-flex flex-xl-row justify-content-lg-between flex-wrap">
-  <figure class="nav__page1 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">1.</span> home default
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/default.jpg"
-      alt="home default image"
-    />
-  </figure>
-  <figure class="nav__page2 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">2.</span> furniture
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/furniture.jpg"
-      alt="furniture image"
-    />
-  </figure>
-  <figure class="nav__page3 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">3.</span> groceries
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/jewellery-menu.jpg"
-      alt="jewellery image"
-    />
-  </figure>
-  <figure class="nav__page4 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">4.</span> electronics
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/electronics.jpg"
-      alt="electronics image"
-    />
-  </figure>
-  <figure class="nav__page5 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">5.</span> lighting
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/lighting.jpg"
-      alt="lighting image"
-    />
-  </figure>
-  <figure class="nav__page6 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">6.</span> watches
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/watches.jpg"
-      alt="watches image"
-    />
-  </figure>
-  <figure class="nav__page7 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">7.</span> shoes
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/shoes.jpg"
-      alt="shoes image"
-    />
-  </figure>
-  <figure class="nav__page8 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">7.</span> men's bags
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/default.jpg"
-      alt="bags image"
-    />
-  </figure>
-  <figure class="nav__page9 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">7.</span> women's bags
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/woman bags.jpg"
-      alt="woman bags image"
-    />
-  </figure>
-  <figure class="nav__page10 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">8.</span> woman's dresses
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/woman dresses.jpg"
-      alt="woman dresses"
-    />
-  </figure>
-  <figure class="nav__page2 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">9.</span> men's shirts
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/men's shirt.jpg"
-      alt="woman dresses"
-    />
-  </figure>
-  <figure class="nav__page2 text-center">
-    <figcaption class="text-uppercase fw-bold pb-1">
-      <span class="text-success">10.</span> sunglasses
-    </figcaption>
-    <img
-      class="d-none d-xl-inline"
-      src="./assets/images/sunglasses.jpg"
-      alt="sunglasses image"
-    />
-  </figure>
-</div>

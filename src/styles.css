@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 :root {
   --bs-success-rgb: 26, 173, 163 !important;
 }
@@ -62,3 +64,29 @@
 .dropdown-toggle-split {
   border-left: 1px solid #454545 !important;
 }
+.navlink__home:hover .nav__home {
+  display: flex !important;
+}
+
+/* ==================HOME=============== */
+.home__carousel img {
+  height: 80vh;
+}
+.curousel-home__text h6 {
+  font-family: Pacifico, serif;
+}
+@media (min-width: 576px) {
+  .curousel-home__text {
+    left: 40% !important;
+    /* translateY: ; */
+  }
+  .curousel-home__text h2 {
+    font-size: 100px;
+    font-weight: 700;
+  }
+  .curousel-home__text h6 {
+    font-size: 70px;
+    font-weight: 500;
+  }
+}
+/* ==================HOME=============== */
