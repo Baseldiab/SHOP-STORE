@@ -1,6 +1,6 @@
 <section
-  id="carouselExampleAutoplaying"
   class="carousel slide home__carousel"
+  id="carouselExampleAutoplaying"
   data-bs-ride="carousel"
 >
   <div class="carousel-inner">
@@ -15,17 +15,17 @@
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          man bags
+          new arrival
         </h2>
         <h6
           class="text-capitalize text-light"
           data-aos="fade-up"
           data-aos-duration="1700"
         >
-          new men's collection
+          hot trending
         </h6>
 
-        <a routerLink="men-bags">
+        <a routerLink="women-dresses">
           <button
             type="button  "
             data-aos="fade-up"
@@ -37,7 +37,7 @@
         >
       </div>
       <img
-        src="./assets/images/home-1.jpg"
+        src="./assets/images/home-curoseul1.jpg"
         alt="new arrive image"
         class="d-block w-100"
       />
@@ -48,9 +48,19 @@
       >
         <h2 class="text-uppercase text-light">new style</h2>
         <h6 class="text-capitalize text-light">boof's collection for men</h6>
+        <a routerLink="shoes">
+          <button
+            type="button  "
+            data-aos="fade-up"
+            data-aos-duration="1800"
+            class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+          >
+            shop now
+          </button></a
+        >
       </div>
       <img
-        src="./assets/images/home-2.jpg"
+        src="./assets/images/home-curoseul2.jpg"
         alt="new arrive image"
         class="d-block w-100"
       />
@@ -75,3 +85,40 @@
     <span class="visually-hidden">Next</span>
   </button>
 </section>
+<!-- ======================CATEGORIES====================== -->
+<section class="categories container py-5">
+  <div class="categories__text text-center w-50 mx-auto"
+  data-aos="fade-up"
+            data-aos-duration="1000">
+    <h6 class="text-secondary text-break opacity-75 text-uppercase">
+      make the hard way
+    </h6>
+    <h4 class="text-uppercase text-black">featured categories</h4>
+    <hr class="border-1 opacity-75 border-secondary mx-auto" />
+    <p class="text-secondary">
+      Basel & Co. is a powerful eCommerce theme for Shopify. Visit our shop page
+      to see all main features
+    </p>
+  </div>
+
+<div class="categories__images row container mx-auto my-4"
+data-aos="fade-up"
+            data-aos-duration="2000">
+
+  <figure class="categories__img col-md-6 col-12" >
+
+    <div class="overflow-hidden shadow"><img class="shadow w-100" src={{this.womanBag[2].images[3]}} alt="woman bag image"></div>
+
+  </figure>
+  <figure class="categories__img col-md-3 col-12  d-flex flex-column justify-content-between">
+    <div class="overflow-hidden shadow"><img class=" w-100" src={{this.manShoes[0].images[3]}} alt="woman bag image"></div>
+    <div class="overflow-hidden shadow"><img class=" w-100" src={{this.watches[3].images[2]}} alt="woman bag image"></div>
+  </figure>
+  <figure class="categories__img col-md-3 col-12">
+    <div class="overflow-hidden shadow"><img class=" w-100" src={{this.womanDress[4].images[0]}} alt="woman bag image"></div>
+  </figure>
+
+</div>
+</section>
+<!-- ======================C====================== -->
+

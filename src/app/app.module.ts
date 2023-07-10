@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -15,7 +16,7 @@ import { ElectronicsComponent } from './pages/categories/electronics/electronics
 import { LightingComponent } from './pages/categories/lighting/lighting.component';
 import { WatchesComponent } from './pages/categories/watches/watches.component';
 import { ShoesComponent } from './pages/categories/shoes/shoes.component';
-import { MenBagsComponent } from './pages/categories/men-bags/men-bags.component';
+
 import { WomenBagsComponent } from './pages/categories/women-bags/women-bags.component';
 import { WomenDressesComponent } from './pages/categories/women-dresses/women-dresses.component';
 import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.component';
@@ -35,13 +36,18 @@ import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.co
     LightingComponent,
     WatchesComponent,
     ShoesComponent,
-    MenBagsComponent,
+
     WomenBagsComponent,
     WomenDressesComponent,
     MenShirtsComponent,
     SunglassesComponent,
   ],
-  imports: [BrowserModule, FontAwesomeModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

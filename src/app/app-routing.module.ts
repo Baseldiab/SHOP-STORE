@@ -10,7 +10,6 @@ import { ElectronicsComponent } from './pages/categories/electronics/electronics
 import { LightingComponent } from './pages/categories/lighting/lighting.component';
 import { WatchesComponent } from './pages/categories/watches/watches.component';
 import { ShoesComponent } from './pages/categories/shoes/shoes.component';
-import { MenBagsComponent } from './pages/categories/men-bags/men-bags.component';
 import { WomenBagsComponent } from './pages/categories/women-bags/women-bags.component';
 import { WomenDressesComponent } from './pages/categories/women-dresses/women-dresses.component';
 import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.component';
@@ -28,7 +27,6 @@ const routes: Routes = [
   { path: 'lighting', component: LightingComponent },
   { path: 'watches', component: WatchesComponent },
   { path: 'shoes', component: ShoesComponent },
-  { path: 'men-bags', component: MenBagsComponent },
   { path: 'women-bags', component: WomenBagsComponent },
   { path: 'women-dresses', component: WomenDressesComponent },
   { path: 'men-shirts', component: MenShirtsComponent },
