@@ -7,7 +7,6 @@ import * as AOS from 'aos';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  title = 'app';
   ngOnInit() {
     Aos.init();
   }
