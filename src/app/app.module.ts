@@ -26,6 +26,7 @@ import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.co
 import { SingleProductComponent } from './pages/single-product/single-product.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { WishComponent } from './pages/wish/wish.component';
+import { AllProductsComponent } from './pages/all-products/all-products.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { WishComponent } from './pages/wish/wish.component';
     SingleProductComponent,
     CartComponent,
     WishComponent,
+    AllProductsComponent,
   ],
   imports: [
     BrowserModule,

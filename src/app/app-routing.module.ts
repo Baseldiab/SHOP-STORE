@@ -17,6 +17,7 @@ import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.com
 import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.component';
 import { SingleProductComponent } from './pages/single-product/single-product.component';
 import { WishComponent } from './pages/wish/wish.component';
+import { AllProductsComponent } from './pages/all-products/all-products.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   // ==================
   { path: 'singleProduct', component: SingleProductComponent },
+  { path: 'allProduct', component: AllProductsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'wish', component: WishComponent },
   // ==================

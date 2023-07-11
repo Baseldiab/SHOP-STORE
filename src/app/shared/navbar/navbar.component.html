@@ -759,35 +759,54 @@
       ><img src="./assets/images/logo.png" alt="logo image"
     /></a>
     <!-- ===================== -->
-    <div class="navbar col-xl-4 justify-content-end">
-      <ul class="navbar-nav d-flex flex-wrap flex-row">
-        <li
-          class="nav-item px-2 d-none d-xl-inline border-end border-dark-subtle pe-lg-4"
+
+    <ul
+      class="navbar-nav col-xl-4 d-flex flex-wrap flex-row justify-content-end"
+    >
+      <li
+        class="nav-item px-2 d-none d-xl-inline border-end border-dark-subtle pe-lg-4"
+      >
+        <a
+          class="nav-link"
+          aria-current="page"
+          routerLink="login"
+          routerLinkActive="text-success border-bottom border-dark-subtle link-offset-1 border-2 "
+          >Login / Register</a
         >
-          <a
-            class="nav-link"
-            aria-current="page"
-            routerLink="login"
-            routerLinkActive="text-success border-bottom border-dark-subtle link-offset-1 border-2 "
-            >Login / Register</a
+      </li>
+      <li class="nav-item px-1 d-none d-xl-inline mx-2 my-md-2 my-4">
+        <a class="nav-link" href="#"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+      </li>
+      <li class="nav-item px-1 mx-2 my-md-2 my-4">
+        <a
+          class="nav-link position-relative"
+          routerLink="wish"
+          routerLinkActive="text-success"
+          ><i class="fa-regular fa-heart"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
           >
-        </li>
-        <li class="nav-item px-1 d-none d-xl-inline">
-          <a class="nav-link" href="#"
-            ><i class="fa-solid fa-magnifying-glass fs-6"></i
-          ></a>
-        </li>
-        <li class="nav-item px-1">
-          <a class="nav-link" routerLink="wish" routerLinkActive="text-success"
-            ><i class="fa-regular fa-heart fs-6"></i
-          ></a>
-        </li>
-        <li class="nav-item px-1">
-          <a class="nav-link" routerLink="cart" routerLinkActive="text-success"
-            ><i class="fa-solid fa-cart-shopping fs-6"></i
-          ></a>
-        </li>
-      </ul>
-    </div>
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span></a
+        >
+      </li>
+      <li class="nav-item px-1 mx-2 my-md-2 my-4">
+        <a
+          class="nav-link position-relative"
+          routerLink="cart"
+          routerLinkActive="text-success"
+          ><i class="fa-solid fa-cart-shopping"></i
+          ><span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          >
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span></a
+        >
+      </li>
+    </ul>
   </div>
 </nav>

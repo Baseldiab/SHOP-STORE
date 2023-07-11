@@ -43,8 +43,10 @@ export class HomeComponent {
   }
   calculateRating(value: number) {
     let val = value - Math.trunc(value);
-    if (val <= 0.5) return Math.floor(value) + 0.5;
-    else {
+    if (val <= 0.5 && val != 0) return Math.floor(value) + 0.5;
+    else if (val == 0) {
+      return value;
+    } else {
       return Math.ceil(value);
     }
   }

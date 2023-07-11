@@ -75,7 +75,11 @@
 .nav__home {
   max-height: 80vh !important;
 }
-
+.fa-magnifying-glass,
+.fa-heart,
+.fa-cart-shopping {
+  font-size: 25px !important;
+}
 /* ==================navbar=============== */
 /* ==================footer=============== */
 .footer__list a {
@@ -153,7 +157,8 @@
   font-family: "Lora", serif;
 }
 .categories img,
-.products__front {
+.products__front,
+.review__partners {
   overflow: hidden !important;
   filter: brightness(0.85);
   -webkit-filter: brightness(0.85);
@@ -219,5 +224,21 @@
 }
 .join__text {
   font-size: 0.9rem;
+}
+@media (max-width: 576px) {
+  .join__logo {
+    font-size: 0.9rem;
+  }
+  .join__head {
+    font-size: 1.5rem;
+  }
+  .join__text {
+    width: 100% !important;
+  }
+}
+
+.shop {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./assets/images/shop-bg.jpg) no-repeat top center / cover;
 }
 /* ==================HOME=============== */
