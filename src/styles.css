@@ -147,8 +147,10 @@
   width: 40px;
 }
 .categories__text p,
-.products__text p {
-  font-family: Lora, "MS Sans Serif", Geneva, sans-serif;
+.products__text p,
+.join__logo,
+.join__head {
+  font-family: "Lora", serif;
 }
 .categories img,
 .products__front {
@@ -194,10 +196,28 @@
 .products__card:hover :where(.product__price, .front__img) {
   display: none !important;
 }
+.products__card:hover .products__action {
+  display: flex !important;
+  right: 22px;
+  top: 10px;
+}
 .products__card:hover :where(.back__img, .product__addToCart) {
   display: block !important;
 }
 .products__front {
   min-height: 200px !important;
+}
+.join {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(./assets/images/home-curoseul1.jpg) no-repeat top center / cover;
+}
+.join__logo {
+  font-size: 1.8rem;
+}
+.join__head {
+  font-size: 3.3rem;
+}
+.join__text {
+  font-size: 0.9rem;
 }
 /* ==================HOME=============== */

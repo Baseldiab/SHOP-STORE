@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { GlobalService } from 'src/app/services/global.service';
+// import $ from 'jquery';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -38,5 +40,12 @@ export class HomeComponent {
     this.global.getMensShirts().subscribe((data) => {
       this.menShirts = data.products;
     });
+  }
+  calculateRating(value: number) {
+    let val = value - Math.trunc(value);
+    if (val <= 0.5) return Math.floor(value) + 0.5;
+    else {
+      return Math.ceil(value);
+    }
   }
 }

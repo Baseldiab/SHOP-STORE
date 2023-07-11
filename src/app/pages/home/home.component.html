@@ -1,8 +1,4 @@
-<section
-  class="carousel slide home__carousel"
-  id="carouselExampleAutoplaying"
-  data-bs-ride="carousel"
->
+<section id="carouselExampleFade" class="carousel slide carousel-fade">
   <div class="carousel-inner">
     <div
       class="carousel-item home-carousel__image active p-0 position-relative"
@@ -69,7 +65,7 @@
   <button
     class="carousel-control-prev"
     type="button"
-    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-target="#carouselExampleFade"
     data-bs-slide="prev"
   >
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -78,7 +74,7 @@
   <button
     class="carousel-control-next"
     type="button"
-    data-bs-target="#carouselExampleAutoplaying"
+    data-bs-target="#carouselExampleFade"
     data-bs-slide="next"
   >
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -225,6 +221,12 @@
           alt="menShirts"
         />
       </figure>
+      <figcaption
+        class="products__action bg-white position-absolute d-none flex-column p-2"
+      >
+        <i class="fa-regular fa-heart my-2"></i>
+        <i class="fa-solid fa-cart-shopping my-2"></i>
+      </figcaption>
 
       <div class="card-body p-0">
         <a
@@ -234,10 +236,21 @@
         >
       </div>
       <div
-        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium opacity-50 border-0"
+        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
       >
-        <span class="product__price d-block">${{ item.price.toFixed(2) }}</span>
-        <span class="product__addToCart d-none"
+        <div class="rating">
+          <!--   <div class="rating-bg" style="width: 90%;"></div> -->
+          <progress
+            class="rating-bg"
+            value="{{ calculateRating(item.rating) }}"
+            max="5"
+          ></progress>
+          <svg><use xlink:href="#fivestars" /></svg>
+        </div>
+        <span class="product__price d-block opacity-50 mt-2"
+          >${{ item.price.toFixed(2) }}</span
+        >
+        <span class="product__addToCart d-none opacity-50 mt-2"
           ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
         >
       </div>
@@ -269,10 +282,21 @@
         >
       </div>
       <div
-        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium opacity-50 border-0"
+        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
       >
-        <span class="product__price d-block">${{ item.price.toFixed(2) }}</span>
-        <span class="product__addToCart d-none"
+        <div class="rating">
+          <!--   <div class="rating-bg" style="width: 90%;"></div> -->
+          <progress
+            class="rating-bg"
+            value="{{ calculateRating(item.rating) }}"
+            max="5"
+          ></progress>
+          <svg><use xlink:href="#fivestars" /></svg>
+        </div>
+        <span class="product__price d-block opacity-50 mt-2"
+          >${{ item.price.toFixed(2) }}</span
+        >
+        <span class="product__addToCart d-none opacity-50 mt-2"
           ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
         >
       </div>
@@ -296,7 +320,6 @@
           alt="menShirts"
         />
       </figure>
-
       <div class="card-body p-0">
         <a
           routerLink="singleProduct"
@@ -305,13 +328,80 @@
         >
       </div>
       <div
-        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium opacity-50 border-0"
+        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
       >
-        <span class="product__price d-block">${{ item.price.toFixed(2) }}</span>
-        <span class="product__addToCart d-none"
+        <div class="rating">
+          <!--   <div class="rating-bg" style="width: 90%;"></div> -->
+          <progress
+            class="rating-bg"
+            value="{{ calculateRating(item.rating) }}"
+            max="5"
+          ></progress>
+          <svg><use xlink:href="#fivestars" /></svg>
+        </div>
+        <span class="product__price d-block opacity-50 mt-2"
+          >${{ item.price.toFixed(2) }}</span
+        >
+        <span class="product__addToCart d-none opacity-50 mt-2"
           ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
         >
       </div>
     </div>
   </div>
 </section>
+<!-- ======================join====================== -->
+<article class="join py-5">
+  <div class="join__content container py-5 mx-auto text-center">
+    <h4 class="join__logo text-white text-center">Connect to Basel & Co.</h4>
+    <h2 class="join__head text-white text-center my-4 text-uppercase">
+      join our newsletter
+    </h2>
+    <p class="join__text text-white text-center w-50 mx-auto px-5">
+      Hey you, sign up it only takes a second to be the first to find out about
+      our latest news and promotionsâ¦
+    </p>
+    <button type="button" class="btn btn-light rounded-0">
+      <a
+        class="text-uppercase text-decoration-none text-black"
+        routerLink="login"
+        >login</a
+      >
+    </button>
+  </div>
+</article>
+<!-- =================================================== -->
+<svg style="display: none">
+  <defs>
+    <symbol id="fivestars">
+      <path
+        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+        fill="white"
+        fill-rule="evenodd"
+      />
+      <path
+        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+        fill="white"
+        fill-rule="evenodd"
+        transform="translate(24)"
+      />
+      <path
+        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+        fill="white"
+        fill-rule="evenodd"
+        transform="translate(48)"
+      />
+      <path
+        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+        fill="white"
+        fill-rule="evenodd"
+        transform="translate(72)"
+      />
+      <path
+        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z M0 0 h24 v24 h-24 v-24"
+        fill="white"
+        fill-rule="evenodd"
+        transform="translate(96)"
+      />
+    </symbol>
+  </defs>
+</svg>
