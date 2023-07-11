@@ -110,9 +110,9 @@
       data-aos-duration="2000"
     >
       <figure class="categories__img col-md-6 col-12 position-relative">
-        <div class="overflow-hidden shadow">
+        <div class="overflow-hidden">
           <img
-            class="shadow w-100"
+            class="w-100"
             src="{{ this.womanBag[0].images[1] }}"
             alt="woman bag image"
           />
@@ -120,7 +120,7 @@
         <figcaption class="position-absolute">
           <a
             routerLink="women-bags"
-            class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+            class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
             >bag</a
           >
         </figcaption>
@@ -128,7 +128,7 @@
       <figure
         class="categories__img col-md-3 col-12 d-flex flex-column justify-content-between"
       >
-        <div class="overflow-hidden shadow position-relative">
+        <div class="overflow-hidden position-relative">
           <img
             class="w-100"
             src="{{ this.manShoes[1].images[0] }}"
@@ -137,12 +137,12 @@
           <figcaption class="position-absolute">
             <a
               routerLink="shoes"
-              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
               >footwear</a
             >
           </figcaption>
         </div>
-        <div class="overflow-hidden shadow position-relative mt-md-0 mt-3">
+        <div class="overflow-hidden position-relative mt-md-0 mt-3">
           <img
             class="w-100"
             src="{{ this.watches[0].images[1] }}"
@@ -151,7 +151,7 @@
           <figcaption class="position-absolute">
             <a
               routerLink="watches"
-              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
               >watches</a
             >
           </figcaption>
@@ -160,7 +160,7 @@
       <figure
         class="categories__img col-md-3 col-12 d-flex flex-column justify-content-between"
       >
-        <div class="overflow-hidden shadow position-relative">
+        <div class="overflow-hidden position-relative">
           <img
             class="w-100"
             src="{{ this.womanDress[4].images[1] }}"
@@ -169,12 +169,12 @@
           <figcaption class="position-absolute">
             <a
               routerLink="women-dresses"
-              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
               >woman</a
             >
           </figcaption>
         </div>
-        <div class="overflow-hidden shadow position-relative mt-md-0 mt-3">
+        <div class="overflow-hidden position-relative mt-md-0 mt-3">
           <img
             class="w-100"
             src="{{ this.sunglasses[0].images[2] }}"
@@ -183,7 +183,7 @@
           <figcaption class="position-absolute">
             <a
               routerLink="sunglasses"
-              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
               >sunglasses</a
             >
           </figcaption>
@@ -279,7 +279,7 @@
     </div>
   </div>
   <!-- =============== -->
-  <div class="row justify-content-center my-2">
+  <div class="row products__cards justify-content-center my-2">
     <div
       class="card products__card border-0 col-lg-2 col-md-4 col-6 my-3 rounded-0"
       *ngFor="let item of this.womanBag; let i = index"
