@@ -15,6 +15,8 @@ export class HomeComponent {
   manShoes: any[] = [];
   womanDress: any[] = [];
   watches: any[] = [];
+  sunglasses: any[] = [];
+  menShirts: any[] = [];
 
   image: any[] = [];
   constructor(public global: GlobalService) {
@@ -29,6 +31,13 @@ export class HomeComponent {
     });
     this.global.getMenWatches().subscribe((data) => {
       this.watches = data.products;
+    });
+    this.global.getMensSunglasses().subscribe((data) => {
+      this.sunglasses = data.products;
+    });
+    this.global.getMensShirts().subscribe((data) => {
+      this.menShirts = data.products;
+      this.image = data.products.images;
     });
   }
 }

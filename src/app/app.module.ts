@@ -21,6 +21,7 @@ import { WomenBagsComponent } from './pages/categories/women-bags/women-bags.com
 import { WomenDressesComponent } from './pages/categories/women-dresses/women-dresses.component';
 import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.component';
 import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.component';
+import { SingleProductComponent } from './pages/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.co
     WomenDressesComponent,
     MenShirtsComponent,
     SunglassesComponent,
+    SingleProductComponent,
   ],
   imports: [
     BrowserModule,

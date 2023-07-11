@@ -14,12 +14,15 @@ import { WomenBagsComponent } from './pages/categories/women-bags/women-bags.com
 import { WomenDressesComponent } from './pages/categories/women-dresses/women-dresses.component';
 import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.component';
 import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.component';
+import { SingleProductComponent } from './pages/single-product/single-product.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   // ==================
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  // ==================
+  { path: 'singleProduct', component: SingleProductComponent },
   // ==================
   { path: 'furniture', component: FurnitureComponent },
   { path: 'groceries', component: GroceriesComponent },

@@ -86,39 +86,186 @@
   </button>
 </section>
 <!-- ======================CATEGORIES====================== -->
-<section class="categories container py-5">
-  <div class="categories__text text-center w-50 mx-auto"
-  data-aos="fade-up"
-            data-aos-duration="1000">
+<section class="categories shadow-sm py-5">
+  <div class="container">
+    <div
+      class="categories__text text-center w-50 mx-auto"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <h6 class="text-secondary text-break opacity-75 text-uppercase">
+        make the hard way
+      </h6>
+      <h4 class="text-uppercase text-black text-center">featured categories</h4>
+      <hr class="border-1 opacity-75 border-secondary mx-auto" />
+      <p class="text-secondary">
+        Basel & Co. is a powerful eCommerce theme for Shopify. Visit our shop
+        page to see all main features
+      </p>
+    </div>
+
+    <div
+      class="categories__images row container mx-auto my-4"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
+      <figure class="categories__img col-md-6 col-12 position-relative">
+        <div class="overflow-hidden shadow">
+          <img
+            class="shadow w-100"
+            src="{{ this.womanBag[0].images[1] }}"
+            alt="woman bag image"
+          />
+        </div>
+        <figcaption class="position-absolute">
+          <a
+            routerLink="women-bags"
+            class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+            >bag</a
+          >
+        </figcaption>
+      </figure>
+      <figure
+        class="categories__img col-md-3 col-12 d-flex flex-column justify-content-between"
+      >
+        <div class="overflow-hidden shadow position-relative">
+          <img
+            class="w-100"
+            src="{{ this.manShoes[1].images[0] }}"
+            alt="woman bag image"
+          />
+          <figcaption class="position-absolute">
+            <a
+              routerLink="shoes"
+              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              >footwear</a
+            >
+          </figcaption>
+        </div>
+        <div class="overflow-hidden shadow position-relative mt-md-0 mt-3">
+          <img
+            class="w-100"
+            src="{{ this.watches[0].images[1] }}"
+            alt="woman bag image"
+          />
+          <figcaption class="position-absolute">
+            <a
+              routerLink="watches"
+              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              >watches</a
+            >
+          </figcaption>
+        </div>
+      </figure>
+      <figure
+        class="categories__img col-md-3 col-12 d-flex flex-column justify-content-between"
+      >
+        <div class="overflow-hidden shadow position-relative">
+          <img
+            class="w-100"
+            src="{{ this.womanDress[4].images[1] }}"
+            alt="woman bag image"
+          />
+          <figcaption class="position-absolute">
+            <a
+              routerLink="women-dresses"
+              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              >woman</a
+            >
+          </figcaption>
+        </div>
+        <div class="overflow-hidden shadow position-relative mt-md-0 mt-3">
+          <img
+            class="w-100"
+            src="{{ this.sunglasses[0].images[2] }}"
+            alt="woman bag image"
+          />
+          <figcaption class="position-absolute">
+            <a
+              routerLink="sunglasses"
+              class="text-decoration-none text-capitalize bg-dark-subtle text-black px-4 py-2 fs-6"
+              >sunglasses</a
+            >
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+    <article class="py-3 w-100 bg-black mx-auto">
+      <p class="text-uppercase text-center text-white p-0 m-0">
+        up to 70% off the entire store!. made with love by
+        <a class="text-white link-offset-2" href="">the4 studio</a>
+      </p>
+    </article>
+  </div>
+</section>
+<!-- ======================products====================== -->
+<section class="products container-fluid py-5">
+  <div
+    class="products__text text-center w-50 mx-auto"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
     <h6 class="text-secondary text-break opacity-75 text-uppercase">
       make the hard way
     </h6>
-    <h4 class="text-uppercase text-black">featured categories</h4>
+    <h4 class="text-uppercase text-black text-center">featured products</h4>
     <hr class="border-1 opacity-75 border-secondary mx-auto" />
-    <p class="text-secondary">
-      Basel & Co. is a powerful eCommerce theme for Shopify. Visit our shop page
-      to see all main features
-    </p>
   </div>
 
-<div class="categories__images row container mx-auto my-4"
-data-aos="fade-up"
-            data-aos-duration="2000">
-
-  <figure class="categories__img col-md-6 col-12" >
-
-    <div class="overflow-hidden shadow"><img class="shadow w-100" src={{this.womanBag[2].images[3]}} alt="woman bag image"></div>
-
-  </figure>
-  <figure class="categories__img col-md-3 col-12  d-flex flex-column justify-content-between">
-    <div class="overflow-hidden shadow"><img class=" w-100" src={{this.manShoes[0].images[3]}} alt="woman bag image"></div>
-    <div class="overflow-hidden shadow"><img class=" w-100" src={{this.watches[3].images[2]}} alt="woman bag image"></div>
-  </figure>
-  <figure class="categories__img col-md-3 col-12">
-    <div class="overflow-hidden shadow"><img class=" w-100" src={{this.womanDress[4].images[0]}} alt="woman bag image"></div>
-  </figure>
-
-</div>
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+          <div class="col-2" *ngFor="let item of this.menShirts; let i = index">
+            <img
+              src="{{ item.images[0] }}"
+              class="w-100 d-block"
+              alt="menShirts"
+            />
+            <a routerLink="singleProduct" class="link link-secondary">{{
+              item.title
+            }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+          <div class="col-2" *ngFor="let item of this.menShirts; let i = index">
+            <img
+              src="{{ item.images[1] }}"
+              class="w-100 d-block"
+              alt="menShirts"
+            />
+            <a routerLink="singleProduct" class="link link-secondary">{{
+              item.title
+            }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev text-black"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="prev"
+    >
+      <span
+        class="carousel-control-prev-icon bg-black"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="next"
+    >
+      <span
+        class="carousel-control-next-icon bg-black"
+        aria-hidden="true"
+      ></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </section>
-<!-- ======================C====================== -->
-
