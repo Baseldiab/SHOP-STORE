@@ -1,3 +1,4 @@
+import { CartComponent } from './pages/cart/cart.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,6 +16,7 @@ import { WomenDressesComponent } from './pages/categories/women-dresses/women-dr
 import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.component';
 import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.component';
 import { SingleProductComponent } from './pages/single-product/single-product.component';
+import { WishComponent } from './pages/wish/wish.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   // ==================
   { path: 'singleProduct', component: SingleProductComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'wish', component: WishComponent },
   // ==================
   { path: 'furniture', component: FurnitureComponent },
   { path: 'groceries', component: GroceriesComponent },

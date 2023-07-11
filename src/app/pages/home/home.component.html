@@ -200,72 +200,118 @@
 </section>
 <!-- ======================products====================== -->
 <section class="products container-fluid py-5">
-  <div
-    class="products__text text-center w-50 mx-auto"
-    data-aos="fade-up"
-    data-aos-duration="1000"
-  >
+  <div class="products__text text-center w-50 mx-auto">
     <h6 class="text-secondary text-break opacity-75 text-uppercase">
       make the hard way
     </h6>
     <h4 class="text-uppercase text-black text-center">featured products</h4>
     <hr class="border-1 opacity-75 border-secondary mx-auto" />
   </div>
+  <!-- =============== -->
+  <div class="row justify-content-center my-2">
+    <div
+      class="card products__card border-0 col-lg-2 col-md-4 col-6 my-3 rounded-0"
+      *ngFor="let item of this.menShirts; let i = index"
+    >
+      <figure class="products__front shadow-sm">
+        <img
+          src="{{ item.images[0] }}"
+          class="card-img-top rounded-0 front__img d-block"
+          alt="menShirts"
+        />
+        <img
+          src="{{ item.images[1] }}"
+          class="card-img-top rounded-0 back__img d-none"
+          alt="menShirts"
+        />
+      </figure>
 
-  <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row justify-content-center">
-          <div class="col-2" *ngFor="let item of this.menShirts; let i = index">
-            <img
-              src="{{ item.images[0] }}"
-              class="w-100 d-block"
-              alt="menShirts"
-            />
-            <a routerLink="singleProduct" class="link link-secondary">{{
-              item.title
-            }}</a>
-          </div>
-        </div>
+      <div class="card-body p-0">
+        <a
+          routerLink="singleProduct"
+          class="card-title link link-secondary mx-auto text-start fw-medium"
+          >{{ item.title }}</a
+        >
       </div>
-      <div class="carousel-item">
-        <div class="row justify-content-center">
-          <div class="col-2" *ngFor="let item of this.menShirts; let i = index">
-            <img
-              src="{{ item.images[1] }}"
-              class="w-100 d-block"
-              alt="menShirts"
-            />
-            <a routerLink="singleProduct" class="link link-secondary">{{
-              item.title
-            }}</a>
-          </div>
-        </div>
+      <div
+        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium opacity-50 border-0"
+      >
+        <span class="product__price d-block">${{ item.price.toFixed(2) }}</span>
+        <span class="product__addToCart d-none"
+          ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+        >
       </div>
     </div>
-    <button
-      class="carousel-control-prev text-black"
-      type="button"
-      data-bs-target="#carouselExample"
-      data-bs-slide="prev"
+  </div>
+  <!-- =============== -->
+  <div class="row justify-content-center my-2">
+    <div
+      class="card products__card border-0 col-lg-2 col-md-4 col-6 my-3 rounded-0"
+      *ngFor="let item of this.sunglasses; let i = index"
     >
-      <span
-        class="carousel-control-prev-icon bg-black"
-        aria-hidden="true"
-      ></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExample"
-      data-bs-slide="next"
+      <figure class="products__front shadow-sm">
+        <img
+          src="{{ item.images[2] }}"
+          class="card-img-top rounded-0 front__img d-block"
+          alt="menShirts"
+        />
+        <img
+          src="{{ item.images[0] }}"
+          class="card-img-top rounded-0 back__img d-none"
+          alt="menShirts"
+        />
+      </figure>
+      <div class="card-body p-0">
+        <a
+          routerLink="singleProduct"
+          class="card-title link link-secondary mx-auto text-start fw-medium"
+          >{{ item.title }}</a
+        >
+      </div>
+      <div
+        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium opacity-50 border-0"
+      >
+        <span class="product__price d-block">${{ item.price.toFixed(2) }}</span>
+        <span class="product__addToCart d-none"
+          ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+        >
+      </div>
+    </div>
+  </div>
+  <!-- =============== -->
+  <div class="row justify-content-center my-2">
+    <div
+      class="card products__card border-0 col-lg-2 col-md-4 col-6 my-3 rounded-0"
+      *ngFor="let item of this.womanBag; let i = index"
     >
-      <span
-        class="carousel-control-next-icon bg-black"
-        aria-hidden="true"
-      ></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+      <figure class="products__front shadow-sm">
+        <img
+          src="{{ item.images[0] }}"
+          class="card-img-top rounded-0 front__img d-block"
+          alt="menShirts"
+        />
+        <img
+          src="{{ item.images[2] }}"
+          class="card-img-top rounded-0 back__img d-none"
+          alt="menShirts"
+        />
+      </figure>
+
+      <div class="card-body p-0">
+        <a
+          routerLink="singleProduct"
+          class="card-title link link-secondary mx-auto text-start fw-medium"
+          >{{ item.title }}</a
+        >
+      </div>
+      <div
+        class="card-footer p-0 mt-4 bg-transparent text-black fw-medium opacity-50 border-0"
+      >
+        <span class="product__price d-block">${{ item.price.toFixed(2) }}</span>
+        <span class="product__addToCart d-none"
+          ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+        >
+      </div>
+    </div>
   </div>
 </section>

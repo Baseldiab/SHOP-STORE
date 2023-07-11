@@ -37,7 +37,6 @@ export class HomeComponent {
     });
     this.global.getMensShirts().subscribe((data) => {
       this.menShirts = data.products;
-      this.image = data.products.images;
     });
   }
 }
