@@ -17,7 +17,7 @@ export class SingleProductComponent {
   singleProduct: any;
 
   constructor(
-    private global: GlobalService,
+    public global: GlobalService,
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {
@@ -29,5 +29,11 @@ export class SingleProductComponent {
         // this.product = data.id;
       });
     });
+  }
+  inStock(value: any) {
+    if (value > 0) return 'IN STOCK';
+    else {
+      return 'OUT STOCK';
+    }
   }
 }

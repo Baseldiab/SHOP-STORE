@@ -50,6 +50,9 @@
 .products__text {
   font-family: Karla, "MS Sans Serif", Geneva, sans-serif;
 }
+.singleProduct__head {
+  font-family: Lora, "MS Sans Serif", Geneva, sans-serif;
+}
 .categories__text p,
 .products__text p,
 .join__logo,
@@ -58,7 +61,8 @@
 }
 .categories img,
 .products__front,
-.review__partners {
+.review__partners,
+.singleProduct img {
   overflow: hidden !important;
   filter: brightness(0.85);
   -webkit-filter: brightness(0.85);
