@@ -10,6 +10,10 @@ export class GlobalService {
 
   baseUrl = 'https://dummyjson.com/';
   // =====================================================
+  getSingleProduct(id: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}products/${id}`);
+  }
+  // =====================================================
   // Get products of a category
   getFurniture(): Observable<any> {
     return this.http.get(`${this.baseUrl}products/category/furniture`);

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { GlobalService } from 'src/app/services/global.service';
+
 // import $ from 'jquery';
 
 @Component({
@@ -19,8 +20,8 @@ export class HomeComponent {
   watches: any[] = [];
   sunglasses: any[] = [];
   menShirts: any[] = [];
-
   image: any[] = [];
+
   constructor(public global: GlobalService) {
     this.global.getWomenBags().subscribe((data) => {
       this.womanBag = data.products;

@@ -27,6 +27,8 @@ import { SingleProductComponent } from './pages/single-product/single-product.co
 import { CartComponent } from './pages/cart/cart.component';
 import { WishComponent } from './pages/wish/wish.component';
 import { AllProductsComponent } from './pages/all-products/all-products.component';
+import { WomensShoesComponent } from './pages/categories/womens-shoes/womens-shoes.component';
+import { WomensWatchesComponent } from './pages/categories/womens-watches/womens-watches.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { AllProductsComponent } from './pages/all-products/all-products.componen
     CartComponent,
     WishComponent,
     AllProductsComponent,
+    WomensShoesComponent,
+    WomensWatchesComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,8 @@ import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.co
 import { SingleProductComponent } from './pages/single-product/single-product.component';
 import { WishComponent } from './pages/wish/wish.component';
 import { AllProductsComponent } from './pages/all-products/all-products.component';
+import { WomensShoesComponent } from './pages/categories/womens-shoes/womens-shoes.component';
+import { WomensWatchesComponent } from './pages/categories/womens-watches/womens-watches.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,20 +27,28 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   // ==================
-  { path: 'singleProduct', component: SingleProductComponent },
-  { path: 'allProduct', component: AllProductsComponent },
+  {
+    path: 'Product',
+    children: [
+      { path: '', component: AllProductsComponent },
+      { path: ':singleProduct', component: SingleProductComponent },
+    ],
+  },
+  // ==================
   { path: 'cart', component: CartComponent },
   { path: 'wish', component: WishComponent },
   // ==================
   { path: 'furniture', component: FurnitureComponent },
   { path: 'groceries', component: GroceriesComponent },
-  { path: 'electronics', component: ElectronicsComponent },
+  { path: 'smartphones', component: ElectronicsComponent },
   { path: 'lighting', component: LightingComponent },
-  { path: 'watches', component: WatchesComponent },
-  { path: 'shoes', component: ShoesComponent },
-  { path: 'women-bags', component: WomenBagsComponent },
-  { path: 'women-dresses', component: WomenDressesComponent },
-  { path: 'men-shirts', component: MenShirtsComponent },
+  { path: 'mens-watches', component: WatchesComponent },
+  { path: 'womens-watches', component: WomensWatchesComponent },
+  { path: 'mens-shoes', component: ShoesComponent },
+  { path: 'womens-shoes', component: WomensShoesComponent },
+  { path: 'womens-bags', component: WomenBagsComponent },
+  { path: 'womens-dresses', component: WomenDressesComponent },
+  { path: 'mens-shirts', component: MenShirtsComponent },
   { path: 'sunglasses', component: SunglassesComponent },
 ];
 
