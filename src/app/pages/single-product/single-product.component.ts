@@ -30,10 +30,7 @@ export class SingleProductComponent {
       });
     });
   }
-  inStock(value: any) {
-    if (value > 0) return 'IN STOCK';
-    else {
-      return 'OUT STOCK';
-    }
+  img(x: number, y: any) {
+    if (x <= 2) return y[x];
   }
 }

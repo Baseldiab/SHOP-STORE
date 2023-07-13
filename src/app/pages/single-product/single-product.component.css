@@ -1,6 +1,7 @@
 .singleProduct .carousel-indicators button {
   padding: 1px !important;
 }
+/* =============================================================== */
 /* 3 */
 .btn-3 {
   background: rgba(var(--bs-success-rgb));
@@ -78,3 +79,8 @@
 .btn-3 span:hover:after {
   width: 100%;
 }
+/* ===================================================== */
+.singleProduct__addWish:hover {
+  color: rgba(var(--bs-success-rgb)) !important;
+}
+/* ===================================================== */

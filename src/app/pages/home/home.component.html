@@ -1,8 +1,10 @@
 <main id="homePage">
+  <!-- ======================CAROUSEL====================== -->
   <section id="carouselExampleFade" class="carousel slide carousel-fade">
     <div class="carousel-inner">
-      <div
-        class="carousel-item home-carousel__image active p-0 position-relative"
+      <a
+        class="carousel-item home-carousel__image active p-0 position-relative text-decoration-none"
+        routerLink="womens-dresses"
       >
         <div
           class="home-curousel__text mx-auto position-absolute top-50 start-50 translate-middle"
@@ -38,8 +40,11 @@
           alt="new arrive image"
           class="d-block w-100"
         />
-      </div>
-      <div class="carousel-item home-carousel__image p-0 position-relative">
+      </a>
+      <a
+        class="carousel-item home-carousel__image p-0 position-relative text-decoration-none"
+        routerLink="mens-shoes"
+      >
         <div
           class="home-curousel__text mx-auto position-absolute top-50 start-50 translate-middle"
         >
@@ -61,7 +66,7 @@
           alt="new arrive image"
           class="d-block w-100"
         />
-      </div>
+      </a>
     </div>
     <button
       class="carousel-control-prev"
@@ -103,20 +108,22 @@
         </p>
       </div>
       <div
-        class="categories__images row mx-auto px-0 my-4"
+        class="categories__images row mx-auto my-4 justify-content-between align-content-between d-flex"
         data-aos="fade-up"
         data-aos-duration="2000"
       >
         <figure
-          class="categories__img col-md-6 col-12 position-relative ps-md-0"
+          class="categories__img col-md-5 col-12 position-relative ps-md-0"
         >
-          <div class="overflow-hidden">
-            <img
-              class="w-100"
-              src="{{ this.womanBag[0].images[1] }}"
-              alt="woman bag image"
-            />
-          </div>
+          <a class="text-decoration-none" routerLink="womens-bags">
+            <div class="categories__bags overflow-hidden">
+              <img
+                class="w-100"
+                src="{{ this.womanBag[3].images[3] }}"
+                alt="woman bag image"
+              />
+            </div>
+          </a>
           <figcaption class="position-absolute">
             <a
               routerLink="womens-bags"
@@ -125,70 +132,99 @@
             >
           </figcaption>
         </figure>
-        <figure
-          class="categories__img col-md-3 col-12 d-flex flex-column justify-content-between"
+        <div
+          class="categories__img col-md-7 col-12 row-md align-content-md-between justify-content-md-center"
         >
-          <div class="overflow-hidden position-relative">
-            <img
-              class="w-100"
-              src="{{ this.manShoes[1].images[0] }}"
-              alt="woman bag image"
-            />
-            <figcaption class="position-absolute">
-              <a
-                routerLink="mens-shoes"
-                class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                >footwear</a
-              >
-            </figcaption>
+          <div
+            class="categories__img-row-1 d-flex row justify-content-md-between justify-content-center"
+          >
+            <figure
+              class="categories__shoes overflow-hidden col-md-6 col-12 position-relative"
+            >
+              <a class="text-decoration-none" routerLink="mens-shoes">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-100"
+                    src="{{ this.manShoes[2].images[4] }}"
+                    alt="men-shoes image"
+                  />
+                </div>
+              </a>
+              <figcaption class="position-absolute">
+                <a
+                  routerLink="mens-shoes"
+                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                  >footwear</a
+                >
+              </figcaption>
+            </figure>
+            <figure
+              class="categories__sunglasses overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
+            >
+              <a class="text-decoration-none" routerLink="sunglasses">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-100"
+                    src="{{ this.sunglasses[0].images[2] }}"
+                    alt="sunglasses image"
+                  />
+                </div>
+              </a>
+              <figcaption class="position-absolute">
+                <a
+                  routerLink="sunglasses"
+                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                  >sunglasses</a
+                >
+              </figcaption>
+            </figure>
           </div>
-          <div class="overflow-hidden position-relative mt-md-0 mt-3">
-            <img
-              class="w-100"
-              src="{{ this.watches[0].images[1] }}"
-              alt="woman bag image"
-            />
-            <figcaption class="position-absolute">
-              <a
-                routerLink="mens-watches"
-                class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                >watches</a
-              >
-            </figcaption>
+
+          <div
+            class="categories__img-row2 d-flex row justify-content-md-between justify-content-center"
+          >
+            <figure
+              class="categories__watches overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
+            >
+              <a class="text-decoration-none" routerLink="mens-watches">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-100"
+                    src="{{ this.watches[2].thumbnail }}"
+                    alt="watches image"
+                  />
+                </div>
+              </a>
+              <figcaption class="position-absolute">
+                <a
+                  routerLink="mens-watches"
+                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                  >watches</a
+                >
+              </figcaption>
+            </figure>
+            <figure
+              class="categories__menShirts overflow-hidden col-md-6 col-12 position-relative"
+            >
+              <a class="text-decoration-none" routerLink="mens-shirts">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-100"
+                    src="{{ this.menShirts[3].thumbnail }}"
+                    alt="men-shirts image"
+                  />
+                </div>
+              </a>
+              <figcaption class="position-absolute">
+                <a
+                  routerLink="mens-shirts"
+                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                  >men</a
+                >
+              </figcaption>
+            </figure>
           </div>
-        </figure>
-        <figure
-          class="categories__img col-md-3 col-12 d-flex flex-column justify-content-between pe-md-0"
-        >
-          <div class="overflow-hidden position-relative">
-            <img
-              class="w-100"
-              src="{{ this.womanDress[4].images[1] }}"
-              alt="woman bag image"
-            />
-            <figcaption class="position-absolute">
-              <a
-                routerLink="womens-dresses"
-                class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                >woman</a
-              >
-            </figcaption>
-          </div>
-          <div class="overflow-hidden position-relative mt-md-0 mt-3">
-            <img
-              class="w-100"
-              src="{{ this.sunglasses[0].images[2] }}"
-              alt="woman bag image"
-            />
-            <figcaption class="position-absolute">
-              <a
-                routerLink="sunglasses"
-                class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                >sunglasses</a
-              >
-            </figcaption>
-          </div>
-        </figure>
+        </div>
       </div>
       <article class="py-3 w-100 bg-black mx-auto">
         <p class="text-uppercase text-center text-white p-0 m-0">
@@ -198,7 +234,7 @@
       </article>
     </div>
   </section>
-  <!-- ======================join============================ -->
+  <!-- ======================JOIN============================ -->
   <article class="join py-5">
     <div
       class="join__content container py-5 mx-auto text-center"
@@ -222,7 +258,7 @@
       </button>
     </div>
   </article>
-  <!-- ======================products======================== -->
+  <!-- ======================PRODUCTS======================== -->
   <section class="products container-fluid py-5">
     <div class="products__text text-center w-50 mx-auto">
       <h6 class="text-secondary text-break opacity-75 text-uppercase">
@@ -399,7 +435,7 @@
     </div>
     <!-- =============== -->
   </section>
-  <!-- ======================shop============================ -->
+  <!-- ======================SHOP============================ -->
   <section class="shop py-5">
     <div
       class="shop__content container-sm border border-5 border-dark-50 mx-auto py-5 bg-white row"
@@ -455,7 +491,7 @@
       </div>
     </div>
   </section>
-  <!-- ======================review========================== -->
+  <!-- ======================REVIEW========================== -->
   <section class="review py-5">
     <div class="container">
       <div class="products__text text-center w-50 mx-auto">
@@ -552,7 +588,7 @@
       <!-- =============== -->
     </div>
   </section>
-  <!-- ======================partners=========================-->
+  <!-- ======================PARTNERS=========================-->
   <article class="partners bg-body-secondary py-2">
     <div
       class="container align-items-center row justify-content-center mx-auto py-2"

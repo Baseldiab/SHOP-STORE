@@ -32,7 +32,7 @@ export class HomeComponent {
     this.global.getWomenDresses().subscribe((data) => {
       this.womanDress = data.products;
     });
-    this.global.getMenWatches().subscribe((data) => {
+    this.global.getWomenWatches().subscribe((data) => {
       this.watches = data.products;
     });
     this.global.getMensSunglasses().subscribe((data) => {

@@ -71,6 +71,7 @@
   font-family: Lora, "MS Sans Serif", Geneva, sans-serif;
 }
 .categories__img img {
+  overflow: hidden;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -79,12 +80,11 @@
 }
 .categories__img img:hover {
   padding: 0;
-  overflow: hidden;
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .join__logo {

@@ -18,6 +18,13 @@ export class GlobalService {
     }
   }
   // =====================================================
+  inStock(value: any) {
+    if (value > 0) return 'IN STOCK';
+    else {
+      return 'OUT STOCK';
+    }
+  }
+  // =====================================================
   baseUrl = 'https://dummyjson.com/';
   // =====================================================
   getSingleProduct(id: any): Observable<any> {
