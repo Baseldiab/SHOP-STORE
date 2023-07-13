@@ -62,7 +62,7 @@
 .categories img,
 .products__front,
 .review__partners,
-.singleProduct img {
+.singleProduct__imgs img {
   overflow: hidden !important;
   filter: brightness(0.85);
   -webkit-filter: brightness(0.85);
@@ -100,5 +100,9 @@
 .products__front {
   min-height: 200px !important;
   cursor: pointer;
+}
+.categories__text hr,
+.products__text hr {
+  width: 40px;
 }
 /* ====================================================== */

@@ -55,10 +55,7 @@
     font-size: 0.8rem;
   }
 }
-.categories__text hr,
-.products__text hr {
-  width: 40px;
-}
+
 
 .categories__img figcaption {
   bottom: 20%;

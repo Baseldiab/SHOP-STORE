@@ -6,6 +6,23 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GlobalService {
+  manShoes: any[] = [];
+  womanShoes: any[] = [];
+  womanDress: any[] = [];
+  watches: any[] = [];
+  menWatches: any[] = [];
+  sunglasses: any[] = [];
+  menShirts: any[] = [];
+  womanBag: any[] = [];
+  lighting: any[] = [];
+  laptops: any[] = [];
+  smartPhones: any[] = [];
+  groceries: any[] = [];
+  furniture: any[] = [];
+  image: any[] = [];
+  limited: any[] = [];
+
+  // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(private http: HttpClient) {}
   // =====================================================
   calculateRating(value: number) {
@@ -29,6 +46,12 @@ export class GlobalService {
   // =====================================================
   getSingleProduct(id: any): Observable<any> {
     return this.http.get(`${this.baseUrl}products/${id}`);
+  }
+  // =====================================================
+  getLimitedProduct(id: any): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}products?limit=5&skip=${id}&select=title,price`
+    );
   }
   // =====================================================
   // Get products of a category

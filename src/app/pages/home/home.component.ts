@@ -14,32 +14,24 @@ export class HomeComponent {
     Aos.init();
   }
 
-  womanBag: any[] = [];
-  manShoes: any[] = [];
-  womanDress: any[] = [];
-  watches: any[] = [];
-  sunglasses: any[] = [];
-  menShirts: any[] = [];
-  image: any[] = [];
-
   constructor(public global: GlobalService) {
     this.global.getWomenBags().subscribe((data) => {
-      this.womanBag = data.products;
+      this.global.womanBag = data.products;
     });
     this.global.getMensShoes().subscribe((data) => {
-      this.manShoes = data.products;
+      this.global.manShoes = data.products;
     });
     this.global.getWomenDresses().subscribe((data) => {
-      this.womanDress = data.products;
+      this.global.womanDress = data.products;
     });
     this.global.getWomenWatches().subscribe((data) => {
-      this.watches = data.products;
+      this.global.watches = data.products;
     });
     this.global.getMensSunglasses().subscribe((data) => {
-      this.sunglasses = data.products;
+      this.global.sunglasses = data.products;
     });
     this.global.getMensShirts().subscribe((data) => {
-      this.menShirts = data.products;
+      this.global.menShirts = data.products;
     });
   }
 }

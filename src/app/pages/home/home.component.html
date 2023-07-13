@@ -119,7 +119,7 @@
             <div class="categories__bags overflow-hidden">
               <img
                 class="w-100"
-                src="{{ this.womanBag[3].images[3] }}"
+                src="{{ this.global.womanBag[3].images[3] }}"
                 alt="woman bag image"
               />
             </div>
@@ -145,7 +145,7 @@
                 <div class="overflow-hidden">
                   <img
                     class="w-100"
-                    src="{{ this.manShoes[2].images[4] }}"
+                    src="{{ this.global.manShoes[2].images[4] }}"
                     alt="men-shoes image"
                   />
                 </div>
@@ -165,7 +165,7 @@
                 <div class="overflow-hidden">
                   <img
                     class="w-100"
-                    src="{{ this.sunglasses[0].images[2] }}"
+                    src="{{ this.global.sunglasses[0].images[2] }}"
                     alt="sunglasses image"
                   />
                 </div>
@@ -190,7 +190,7 @@
                 <div class="overflow-hidden">
                   <img
                     class="w-100"
-                    src="{{ this.watches[2].thumbnail }}"
+                    src="{{ this.global.watches[2].thumbnail }}"
                     alt="watches image"
                   />
                 </div>
@@ -210,7 +210,7 @@
                 <div class="overflow-hidden">
                   <img
                     class="w-100"
-                    src="{{ this.menShirts[3].thumbnail }}"
+                    src="{{ this.global.menShirts[3].thumbnail }}"
                     alt="men-shirts image"
                   />
                 </div>
@@ -271,22 +271,21 @@
     <div class="row justify-content-center my-2">
       <div
         class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
-        *ngFor="let item of this.menShirts; let i = index"
+        *ngFor="let item of this.global.menShirts; let i = index"
       >
-        <figure
-          class="products__front shadow-sm"
-          routerLink="/Product/{{ item.id }}"
-        >
-          <img
-            src="{{ item.images[0] }}"
-            class="card-img-top rounded-0 front__img d-block"
-            alt="menShirts"
-          />
-          <img
-            src="{{ item.images[1] }}"
-            class="card-img-top rounded-0 back__img d-none"
-            alt="menShirts"
-          />
+        <figure class="products__front shadow-sm">
+          <a href="/Product/{{ item.id }}">
+            <img
+              src="{{ item.images[0] }}"
+              class="card-img-top rounded-0 front__img d-block"
+              alt="menShirts"
+            />
+            <img
+              src="{{ item.images[1] }}"
+              class="card-img-top rounded-0 back__img d-none"
+              alt="menShirts"
+            />
+          </a>
         </figure>
         <figcaption
           class="products__action bg-white position-absolute d-none flex-column p-2"
@@ -297,7 +296,7 @@
 
         <div class="card-body p-0">
           <a
-            routerLink="/Product/{{ item.id }}"
+            href="/Product/{{ item.id }}"
             class="card-title link link-secondary mx-auto text-start fw-medium"
             >{{ item.title }}</a
           >
@@ -327,22 +326,19 @@
     <div class="row justify-content-center my-2">
       <div
         class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
-        *ngFor="let item of this.sunglasses; let i = index"
+        *ngFor="let item of this.global.sunglasses; let i = index"
       >
-        <figure
-          class="products__front shadow-sm"
-          routerLink="/Product/{{ item.id }}"
-        >
-          <img
-            src="{{ item.images[2] }}"
-            class="card-img-top rounded-0 front__img d-block"
-            alt="menShirts"
-          />
-          <img
-            src="{{ item.images[0] }}"
-            class="card-img-top rounded-0 back__img d-none"
-            alt="menShirts"
-          />
+        <figure class="products__front shadow-sm">
+          <a href="/Product/{{ item.id }}">
+            <img
+              src="{{ item.images[2] }}"
+              class="card-img-top rounded-0 front__img d-block"
+              alt="menShirts" />
+            <img
+              src="{{ item.images[0] }}"
+              class="card-img-top rounded-0 back__img d-none"
+              alt="menShirts"
+          /></a>
         </figure>
         <figcaption
           class="products__action bg-white position-absolute d-none flex-column p-2"
@@ -352,7 +348,7 @@
         </figcaption>
         <div class="card-body p-0">
           <a
-            routerLink="/Product/{{ item.id }}"
+            href="/Product/{{ item.id }}"
             class="card-title link link-secondary mx-auto text-start fw-medium"
             >{{ item.title }}</a
           >
@@ -382,22 +378,19 @@
     <div class="row products__cards justify-content-center my-2">
       <div
         class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
-        *ngFor="let item of this.womanBag; let i = index"
+        *ngFor="let item of this.global.womanBag; let i = index"
       >
-        <figure
-          class="products__front shadow-sm"
-          routerLink="/Product/{{ item.id }}"
-        >
-          <img
-            src="{{ item.images[0] }}"
-            class="card-img-top rounded-0 front__img d-block"
-            alt="menShirts"
-          />
-          <img
-            src="{{ item.images[2] }}"
-            class="card-img-top rounded-0 back__img d-none"
-            alt="menShirts"
-          />
+        <figure class="products__front shadow-sm">
+          <a href="/Product/{{ item.id }}"
+            ><img
+              src="{{ item.images[0] }}"
+              class="card-img-top rounded-0 front__img d-block"
+              alt="menShirts" />
+            <img
+              src="{{ item.images[2] }}"
+              class="card-img-top rounded-0 back__img d-none"
+              alt="menShirts"
+          /></a>
         </figure>
         <figcaption
           class="products__action bg-white position-absolute d-none flex-column p-2"
@@ -407,7 +400,7 @@
         </figcaption>
         <div class="card-body p-0">
           <a
-            routerLink="/Product/{{ item.id }}"
+            href="/Product/{{ item.id }}"
             class="card-title link link-secondary mx-auto text-start fw-medium"
             >{{ item.title }}</a
           >
