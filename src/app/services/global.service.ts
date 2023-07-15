@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GlobalService {
+  loadingFlag = true
   manShoes: any[] = [];
   womanShoes: any[] = [];
   womanDress: any[] = [];

@@ -1,631 +1,718 @@
 <main id="homePage">
-  <!-- ======================CAROUSEL====================== -->
-  <section id="carouselExampleFade" class="carousel slide carousel-fade">
-    <div class="carousel-inner">
-      <a
-        class="carousel-item home-carousel__image active p-0 position-relative text-decoration-none"
-        routerLink="womens-dresses"
-      >
-        <div
-          class="home-curousel__text mx-auto position-absolute top-50 start-50 translate-middle"
+  <div
+    class="col-3 pb-5 mb-5 mx-auto"
+    *ngIf="this.global.loadingFlag; else ShowGallery"
+  >
+    <img src="assets/images/loading.gif" class="w-100 mb-5" />
+  </div>
+  <ng-template #ShowGallery>
+    <!-- ======================CAROUSEL====================== -->
+    <section id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <a
+          class="carousel-item home-carousel__image active p-0 position-relative text-decoration-none"
+          routerLink="./collection/womens-dresses"
         >
-          <h2
-            class="text-uppercase text-light"
-            data-aos="fade-up"
-            data-aos-duration="2000"
+          <div
+            class="home-curousel__text mx-auto position-absolute top-50 start-50 translate-middle"
           >
-            new arrival
-          </h2>
-          <h6
-            class="text-capitalize text-light"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            hot trending
-          </h6>
-
-          <a routerLink="womens-dresses">
-            <button
-              type="button  "
-              class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+            <h2
+              class="text-uppercase text-light"
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              shop now
-            </button></a
-          >
-        </div>
-        <img
-          src="./assets/images/home-curoseul1.jpg"
-          alt="new arrive image"
-          class="d-block w-100"
-        />
-      </a>
-      <a
-        class="carousel-item home-carousel__image p-0 position-relative text-decoration-none"
-        routerLink="mens-shoes"
-      >
-        <div
-          class="home-curousel__text mx-auto position-absolute top-50 start-50 translate-middle"
-        >
-          <h2 class="text-uppercase text-light">new style</h2>
-          <h6 class="text-capitalize text-light">boof's collection for men</h6>
-          <a routerLink="mens-shoes">
-            <button
-              type="button  "
+              new arrival
+            </h2>
+            <h6
+              class="text-capitalize text-light"
               data-aos="fade-up"
-              data-aos-duration="1800"
-              class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+              data-aos-duration="2000"
             >
-              shop now
-            </button></a
+              hot trending
+            </h6>
+
+            <a routerLink="./collection/womens-dresses">
+              <button
+                type="button  "
+                class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                shop now
+              </button></a
+            >
+          </div>
+          <img
+            src="./assets/images/home-curoseul1.jpg"
+            alt="new arrive image"
+            class="d-block w-100"
+          />
+        </a>
+        <a
+          class="carousel-item home-carousel__image p-0 position-relative text-decoration-none"
+          routerLink="./collection/mens-shoes"
+        >
+          <div
+            class="home-curousel__text mx-auto position-absolute top-50 start-50 translate-middle"
           >
+            <h2 class="text-uppercase text-light">new style</h2>
+            <h6 class="text-capitalize text-light">
+              boof's collection for men
+            </h6>
+            <a routerLink="./collection/mens-shoes">
+              <button
+                type="button  "
+                data-aos="fade-up"
+                data-aos-duration="1800"
+                class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+              >
+                shop now
+              </button></a
+            >
+          </div>
+          <img
+            src="./assets/images/home-curoseul2.jpg"
+            alt="new arrive image"
+            class="d-block w-100"
+          />
+        </a>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </section>
+    <!-- ======================CATEGORIES====================== -->
+    <section class="categories shadow-sm py-5">
+      <div class="container categories__container">
+        <div
+          class="categories__text text-center w-50 mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h6 class="text-secondary text-break opacity-75 text-uppercase">
+            make the hard way
+          </h6>
+          <h4 class="text-uppercase text-black text-center">
+            featured categories
+          </h4>
+          <hr class="border-1 opacity-75 border-secondary mx-auto" />
+          <p class="text-secondary">
+            Basel & Co. is a powerful eCommerce theme for Shopify. Visit our
+            shop page to see all main features
+          </p>
         </div>
-        <img
-          src="./assets/images/home-curoseul2.jpg"
-          alt="new arrive image"
-          class="d-block w-100"
-        />
-      </a>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#carouselExampleFade"
-      data-bs-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#carouselExampleFade"
-      data-bs-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </section>
-  <!-- ======================CATEGORIES====================== -->
-  <section class="categories shadow-sm py-5">
-    <div class="container">
+        <div
+          class="categories__images row mx-auto my-4 justify-content-between align-content-between d-flex"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <figure
+            class="categories__img col-md-5 col-12 position-relative ps-md-0"
+          >
+            <a
+              class="text-decoration-none"
+              routerLink="./collection/womens-bags"
+            >
+              <div class="categories__bags overflow-hidden">
+                <img
+                  class="w-100"
+                  src="{{ this.global.womanBag[3].images[3] }}"
+                  alt="woman bag image"
+                />
+              </div>
+            </a>
+            <figcaption class="position-absolute">
+              <a
+                routerLink="./collection/womens-bags"
+                class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                >bag</a
+              >
+            </figcaption>
+          </figure>
+          <div
+            class="categories__img col-md-7 col-12 row-md align-content-md-between justify-content-md-center"
+          >
+            <div
+              class="categories__img-row-1 d-flex row justify-content-md-between justify-content-center"
+            >
+              <figure
+                class="categories__shoes overflow-hidden col-md-6 col-12 position-relative"
+              >
+                <a
+                  class="text-decoration-none"
+                  routerLink="./collection/mens-shoes"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="w-100"
+                      [src]="this.global.manShoes[2]?.images[4]"
+                      alt="men-shoes image"
+                    />
+                  </div>
+                </a>
+                <figcaption class="position-absolute">
+                  <a
+                    routerLink="./collection/mens-shoes"
+                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    >footwear</a
+                  >
+                </figcaption>
+              </figure>
+              <figure
+                class="categories__sunglasses overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
+              >
+                <a
+                  class="text-decoration-none"
+                  routerLink="./collection/sunglasses"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="w-100"
+                      src="{{ this.global.sunglasses[0].images[2] }}"
+                      alt="sunglasses image"
+                    />
+                  </div>
+                </a>
+                <figcaption class="position-absolute">
+                  <a
+                    routerLink="./collection/sunglasses"
+                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    >sunglasses</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              class="categories__img-row2 d-flex row justify-content-md-between justify-content-center"
+            >
+              <figure
+                class="categories__watches overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
+              >
+                <a
+                  class="text-decoration-none"
+                  routerLink="./collection/mens-watches"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="w-100"
+                      src="{{ this.global.watches[2].thumbnail }}"
+                      alt="watches image"
+                    />
+                  </div>
+                </a>
+                <figcaption class="position-absolute">
+                  <a
+                    routerLink="./collection/mens-watches"
+                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    >watches</a
+                  >
+                </figcaption>
+              </figure>
+              <figure
+                class="categories__menShirts overflow-hidden col-md-6 col-12 position-relative"
+              >
+                <a
+                  class="text-decoration-none"
+                  routerLink="./collection/mens-shirts"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="w-100"
+                      src="{{ this.global.menShirts[3].thumbnail }}"
+                      alt="men-shirts image"
+                    />
+                  </div>
+                </a>
+                <figcaption class="position-absolute">
+                  <a
+                    routerLink="./collection/mens-shirts"
+                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    >men</a
+                  >
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <article class="py-3 w-100 bg-black mx-auto">
+          <p class="text-uppercase text-center text-white p-0 m-0">
+            up to 70% off the entire store!. made with love by
+            <a class="text-white link-offset-2" href="">the4 studio</a>
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- ======================JOIN============================ -->
+    <article class="join py-5">
       <div
-        class="categories__text text-center w-50 mx-auto"
+        class="join__content container py-5 mx-auto text-center"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
+        <h4 class="join__logo text-white text-center">
+          Connect to Basel & Co.
+        </h4>
+        <h2 class="join__head text-white text-center my-4 text-uppercase">
+          join our newsletter
+        </h2>
+        <p class="join__text text-white text-center w-50 mx-auto px-5">
+          Hey you, sign up it only takes a second to be the first to find out
+          about our latest news and promotionsâ¦
+        </p>
+        <button type="button" class="btn btn-light rounded-0">
+          <a
+            class="text-uppercase text-decoration-none text-black"
+            routerLink="register"
+            >sign up</a
+          >
+        </button>
+      </div>
+    </article>
+    <!-- ======================PRODUCTS======================== -->
+    <section class="products container-fluid py-5">
+      <div class="products__text text-center w-50 mx-auto">
         <h6 class="text-secondary text-break opacity-75 text-uppercase">
           make the hard way
         </h6>
-        <h4 class="text-uppercase text-black text-center">
-          featured categories
-        </h4>
+        <h4 class="text-uppercase text-black text-center">featured products</h4>
         <hr class="border-1 opacity-75 border-secondary mx-auto" />
-        <p class="text-secondary">
-          Basel & Co. is a powerful eCommerce theme for Shopify. Visit our shop
-          page to see all main features
-        </p>
       </div>
-      <div
-        class="categories__images row mx-auto my-4 justify-content-between align-content-between d-flex"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-      >
-        <figure
-          class="categories__img col-md-5 col-12 position-relative ps-md-0"
+      <!-- =============== -->
+      <div class="row justify-content-center my-2">
+        <div
+          class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
+          *ngFor="let item of this.global.menShirts; let i = index"
         >
-          <a class="text-decoration-none" routerLink="womens-bags">
-            <div class="categories__bags overflow-hidden">
-              <img
-                class="w-100"
-                src="{{ this.global.womanBag[3].images[3] }}"
-                alt="woman bag image"
-              />
-            </div>
-          </a>
-          <figcaption class="position-absolute">
-            <a
-              routerLink="womens-bags"
-              class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-              >bag</a
-            >
+          <figure class="products_card shadow-sm">
+            <a href="/Product/{{ item.id }}" class="position-relative">
+              <div class="products__front">
+                <img
+                  src="{{ item.images[0] }}"
+                  class="card-img-top rounded-0 front__img d-block"
+                  alt="menShirts"
+                />
+                <img
+                  src="{{ item.images[1] }}"
+                  class="card-img-top rounded-0 back__img d-none"
+                  alt="menShirts"
+                />
+              </div>
+              <div
+                class="product__onSale-circle d-block bg-success position-absolute z-3"
+              >
+                <span
+                  class="text-center text-light position-absolute top-50 start-50 translate-middle fw-bold"
+                  >{{ item.discountPercentage.toFixed() }}%</span
+                >
+              </div>
+            </a>
+          </figure>
+
+          <figcaption
+            class="products__action bg-white position-absolute d-none flex-column p-2"
+          >
+            <i class="fa-regular fa-heart my-2"></i>
+            <i class="fa-solid fa-cart-shopping my-2"></i>
           </figcaption>
-        </figure>
-        <div
-          class="categories__img col-md-7 col-12 row-md align-content-md-between justify-content-md-center"
-        >
+          <div class="card-body p-0">
+            <a
+              href="/Product/{{ item.id }}"
+              class="card-title link link-secondary mx-auto text-start fw-medium"
+              >{{ item.title }}</a
+            >
+          </div>
           <div
-            class="categories__img-row-1 d-flex row justify-content-md-between justify-content-center"
+            class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
           >
-            <figure
-              class="categories__shoes overflow-hidden col-md-6 col-12 position-relative"
-            >
-              <a class="text-decoration-none" routerLink="mens-shoes">
-                <div class="overflow-hidden">
-                  <img
-                    class="w-100"
-                    src="{{ this.global.manShoes[2].images[4] }}"
-                    alt="men-shoes image"
-                  />
-                </div>
-              </a>
-              <figcaption class="position-absolute">
-                <a
-                  routerLink="mens-shoes"
-                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                  >footwear</a
-                >
-              </figcaption>
-            </figure>
-            <figure
-              class="categories__sunglasses overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
-            >
-              <a class="text-decoration-none" routerLink="sunglasses">
-                <div class="overflow-hidden">
-                  <img
-                    class="w-100"
-                    src="{{ this.global.sunglasses[0].images[2] }}"
-                    alt="sunglasses image"
-                  />
-                </div>
-              </a>
-              <figcaption class="position-absolute">
-                <a
-                  routerLink="sunglasses"
-                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                  >sunglasses</a
-                >
-              </figcaption>
-            </figure>
+            <div class="rating">
+              <!--   <div class="rating-bg" style="width: 90%;"></div> -->
+              <progress
+                class="rating-bg"
+                value="{{ this.global.calculateRating(item.rating) }}"
+                max="5"
+              ></progress>
+              <svg><use xlink:href="#fivestars" /></svg>
+            </div>
+            <div class="product__price d-block text-dark-50 fw-medium mt-2">
+              <del class="text-black-50"
+                >${{
+                  (
+                    item.price +
+                    item.price * (item.discountPercentage.toFixed() / 100)
+                  ).toFixed(2)
+                }}</del
+              >
+              ${{ item.price.toFixed(2) }}
+            </div>
           </div>
-
+          <span class="product__addToCart d-none opacity-50 mt-2"
+            ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+          >
+        </div>
+      </div>
+      <!-- =============== -->
+      <div class="row justify-content-center my-2">
+        <div
+          class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
+          *ngFor="let item of this.global.sunglasses; let i = index"
+        >
+          <figure class="products_card shadow-sm">
+            <a href="/Product/{{ item.id }}" class="position-relative">
+              <div class="products__front">
+                <img
+                  src="{{ item.images[0] }}"
+                  class="card-img-top rounded-0 front__img d-block"
+                  alt="menShirts"
+                />
+                <img
+                  src="{{ item.images[1] }}"
+                  class="card-img-top rounded-0 back__img d-none"
+                  alt="menShirts"
+                />
+              </div>
+              <div
+                class="product__onSale-circle d-block bg-success position-absolute z-3"
+              >
+                <span
+                  class="text-center text-light position-absolute top-50 start-50 translate-middle fw-bold"
+                  >{{ item.discountPercentage.toFixed() }}%</span
+                >
+              </div>
+            </a>
+          </figure>
+          <figcaption
+            class="products__action bg-white position-absolute d-none flex-column p-2"
+          >
+            <i class="fa-regular fa-heart my-2"></i>
+            <i class="fa-solid fa-cart-shopping my-2"></i>
+          </figcaption>
+          <div class="card-body p-0">
+            <a
+              href="/Product/{{ item.id }}"
+              class="card-title link link-secondary mx-auto text-start fw-medium"
+              >{{ item.title }}</a
+            >
+          </div>
           <div
-            class="categories__img-row2 d-flex row justify-content-md-between justify-content-center"
+            class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
           >
-            <figure
-              class="categories__watches overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
+            <div class="rating">
+              <!--   <div class="rating-bg" style="width: 90%;"></div> -->
+              <progress
+                class="rating-bg"
+                value="{{ this.global.calculateRating(item.rating) }}"
+                max="5"
+              ></progress>
+              <svg><use xlink:href="#fivestars" /></svg>
+            </div>
+            <div class="product__price d-block text-secondary fw-medium mt-2">
+              <del class="text-black-50"
+                >${{
+                  (
+                    item.price +
+                    item.price * (item.discountPercentage.toFixed() / 100)
+                  ).toFixed(2)
+                }}</del
+              >
+              ${{ item.price.toFixed(2) }}
+            </div>
+            <span class="product__addToCart d-none opacity-50 mt-2"
+              ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
             >
-              <a class="text-decoration-none" routerLink="mens-watches">
-                <div class="overflow-hidden">
-                  <img
-                    class="w-100"
-                    src="{{ this.global.watches[2].thumbnail }}"
-                    alt="watches image"
-                  />
-                </div>
-              </a>
-              <figcaption class="position-absolute">
-                <a
-                  routerLink="mens-watches"
-                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                  >watches</a
-                >
-              </figcaption>
-            </figure>
-            <figure
-              class="categories__menShirts overflow-hidden col-md-6 col-12 position-relative"
-            >
-              <a class="text-decoration-none" routerLink="mens-shirts">
-                <div class="overflow-hidden">
-                  <img
-                    class="w-100"
-                    src="{{ this.global.menShirts[3].thumbnail }}"
-                    alt="men-shirts image"
-                  />
-                </div>
-              </a>
-              <figcaption class="position-absolute">
-                <a
-                  routerLink="mens-shirts"
-                  class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
-                  >men</a
-                >
-              </figcaption>
-            </figure>
           </div>
         </div>
       </div>
-      <article class="py-3 w-100 bg-black mx-auto">
-        <p class="text-uppercase text-center text-white p-0 m-0">
-          up to 70% off the entire store!. made with love by
-          <a class="text-white link-offset-2" href="">the4 studio</a>
-        </p>
-      </article>
-    </div>
-  </section>
-  <!-- ======================JOIN============================ -->
-  <article class="join py-5">
-    <div
-      class="join__content container py-5 mx-auto text-center"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
-      <h4 class="join__logo text-white text-center">Connect to Basel & Co.</h4>
-      <h2 class="join__head text-white text-center my-4 text-uppercase">
-        join our newsletter
-      </h2>
-      <p class="join__text text-white text-center w-50 mx-auto px-5">
-        Hey you, sign up it only takes a second to be the first to find out
-        about our latest news and promotionsâ¦
-      </p>
-      <button type="button" class="btn btn-light rounded-0">
-        <a
-          class="text-uppercase text-decoration-none text-black"
-          routerLink="register"
-          >sign up</a
+      <!-- =============== -->
+      <div class="row products__cards justify-content-center my-2">
+        <div
+          class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
+          *ngFor="let item of this.global.womanBag; let i = index"
         >
-      </button>
-    </div>
-  </article>
-  <!-- ======================PRODUCTS======================== -->
-  <section class="products container-fluid py-5">
-    <div class="products__text text-center w-50 mx-auto">
-      <h6 class="text-secondary text-break opacity-75 text-uppercase">
-        make the hard way
-      </h6>
-      <h4 class="text-uppercase text-black text-center">featured products</h4>
-      <hr class="border-1 opacity-75 border-secondary mx-auto" />
-    </div>
-    <!-- =============== -->
-    <div class="row justify-content-center my-2">
+          <figure class="products_card shadow-sm">
+            <a href="/Product/{{ item.id }}" class="position-relative">
+              <div class="products__front">
+                <img
+                  src="{{ item.images[0] }}"
+                  class="card-img-top rounded-0 front__img d-block"
+                  alt="menShirts"
+                />
+                <img
+                  src="{{ item.images[1] }}"
+                  class="card-img-top rounded-0 back__img d-none"
+                  alt="menShirts"
+                />
+              </div>
+              <div
+                class="product__onSale-circle d-block bg-success position-absolute z-3"
+              >
+                <span
+                  class="text-center text-light position-absolute top-50 start-50 translate-middle fw-bold"
+                  >{{ item.discountPercentage.toFixed() }}%</span
+                >
+              </div>
+            </a>
+          </figure>
+          <figcaption
+            class="products__action bg-white position-absolute d-none flex-column p-2"
+          >
+            <i class="fa-regular fa-heart my-2"></i>
+            <i class="fa-solid fa-cart-shopping my-2"></i>
+          </figcaption>
+          <div class="card-body p-0">
+            <a
+              href="/Product/{{ item.id }}"
+              class="card-title link link-secondary mx-auto text-start fw-medium"
+              >{{ item.title }}</a
+            >
+          </div>
+          <div
+            class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
+          >
+            <div class="rating">
+              <!--   <div class="rating-bg" style="width: 90%;"></div> -->
+              <progress
+                class="rating-bg"
+                value="{{ this.global.calculateRating(item.rating) }}"
+                max="5"
+              ></progress>
+              <svg><use xlink:href="#fivestars" /></svg>
+            </div>
+            <div class="product__price d-block text-secondary fw-medium mt-2">
+              <del class="text-black-50"
+                >${{
+                  (
+                    item.price +
+                    item.price * (item.discountPercentage.toFixed() / 100)
+                  ).toFixed(2)
+                }}</del
+              >
+              ${{ item.price.toFixed(2) }}
+            </div>
+            <span class="product__addToCart d-none opacity-50 mt-2"
+              ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- =============== -->
+    </section>
+    <!-- ======================SHOP============================ -->
+    <section class="shop py-5">
       <div
-        class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
-        *ngFor="let item of this.global.menShirts; let i = index"
+        class="shop__content container-sm border border-5 border-dark-50 mx-auto py-5 bg-white row"
       >
-        <figure class="products__front shadow-sm">
-          <a href="/Product/{{ item.id }}">
-            <img
-              src="{{ item.images[0] }}"
-              class="card-img-top rounded-0 front__img d-block"
-              alt="menShirts"
-            />
-            <img
-              src="{{ item.images[1] }}"
-              class="card-img-top rounded-0 back__img d-none"
-              alt="menShirts"
-            />
-          </a>
-        </figure>
-        <figcaption
-          class="products__action bg-white position-absolute d-none flex-column p-2"
+        <div
+          class="shop__purchase container-sm mx-auto py-3 px-sm-5 text-center col-md-6 col-12"
         >
-          <i class="fa-regular fa-heart my-2"></i>
-          <i class="fa-solid fa-cart-shopping my-2"></i>
-        </figcaption>
+          <figure>
+            <img
+              class="d-block w-100"
+              src="./assets/images/logo.png"
+              alt="logo of site"
+            />
+          </figure>
+          <h6 class="text-uppercase text-secondary">
+            minimalistic ajax e-commerce theme
+          </h6>
+          <p class="text-secondary">
+            Adipiscing dignissim euismod ad venenatis volutpat sociis feugiat
+            purus ridiculus rhoncus nullam sodales euismod ad venenatis volutpa
+            ridiculus.
+          </p>
+          <button type="button" class="btn btn-dark rounded-0">
+            <a
+              class="text-uppercase text-decoration-none text-white"
+              routerLink="./collection/all"
+              >purchase basel</a
+            >
+          </button>
+        </div>
+        <div
+          class="shop__about container-sm col-md-6 px-2 py-3 mt-3 mx-auto text-center d-md-block d-none"
+        >
+          <h3 class="text-black text-center">About the shop</h3>
+          <h5 class="text-center my-3">
+            <i class="fa-regular fa-heart fs-1"></i>
+          </h5>
+          <p class="text-secondary text-center">
+            <span class="text-black fw-bold">Basel & Company</span>
+            – is a famous worldwide fashion store dipiscing dignissim euismod ad
+            venenatis volutpat sociis feugiat purus ridiculus.
+          </p>
+          <button
+            type="button"
+            class="btn btn-outline-secondary rounded-0 text-center mx-auto"
+          >
+            <a
+              class="text-uppercase text-decoration-none text-black"
+              routerLink="./collection/all"
+              >shop now</a
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ======================REVIEW========================== -->
+    <section class="review py-5">
+      <div class="container">
+        <div class="products__text text-center w-50 mx-auto">
+          <h4 class="text-uppercase text-black text-center">
+            WHAT THEY SAY ABOUT US
+          </h4>
+          <hr class="border-1 opacity-75 border-secondary mx-auto" />
+        </div>
+        <!-- =============== -->
+        <div class="container mx-auto row justify-content-center">
+          <div
+            id="carouselExampleIndicators"
+            class="review__carousel container carousel slide col-md-6 col-10"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active bg-dark"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+                class="bg-dark"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <figure class="justify-content-center">
+                  <img
+                    src="./assets/images/review1.jpg"
+                    class="d-block mx-auto rounded-circle"
+                    alt="person image"
+                  />
+                  <figcaption class="review__text px-5">
+                    <p class="text-center text-secondary my-5">
+                      Fringilla iaculis ante torquent a diam a vestibulum diam
+                      nisi augue dictumst parturient a vestibulum tortor viverra
+                      inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam
+                      rutrum.
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="carousel-item mx-auto">
+                <figure class="justify-content-center">
+                  <img
+                    src="./assets/images/review2.jpg"
+                    class="d-block mx-auto rounded-circle"
+                    alt="person image"
+                  />
+                  <figcaption class="review__text px-5">
+                    <p class="text-center text-secondary my-5">
+                      Fringilla iaculis ante torquent a diam a vestibulum diam
+                      nisi augue dictumst parturient a vestibulum tortor viverra
+                      inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam
+                      rutrum.
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon bg-black"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon bg-black"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!-- =============== -->
+      </div>
+    </section>
+    <!-- ======================PARTNERS=========================-->
 
-        <div class="card-body p-0">
-          <a
-            href="/Product/{{ item.id }}"
-            class="card-title link link-secondary mx-auto text-start fw-medium"
-            >{{ item.title }}</a
-          >
-        </div>
-        <div
-          class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
-        >
-          <div class="rating">
-            <!--   <div class="rating-bg" style="width: 90%;"></div> -->
-            <progress
-              class="rating-bg"
-              value="{{ this.global.calculateRating(item.rating) }}"
-              max="5"
-            ></progress>
-            <svg><use xlink:href="#fivestars" /></svg>
-          </div>
-          <span class="product__price d-block opacity-50 mt-2"
-            >${{ item.price.toFixed(2) }}</span
-          >
-          <span class="product__addToCart d-none opacity-50 mt-2"
-            ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
-          >
-        </div>
-      </div>
-    </div>
-    <!-- =============== -->
-    <div class="row justify-content-center my-2">
+    <article class="partners bg-body-secondary py-2">
       <div
-        class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
-        *ngFor="let item of this.global.sunglasses; let i = index"
+        class="container align-items-center row justify-content-center mx-auto py-2"
       >
-        <figure class="products__front shadow-sm">
-          <a href="/Product/{{ item.id }}">
-            <img
-              src="{{ item.images[2] }}"
-              class="card-img-top rounded-0 front__img d-block"
-              alt="menShirts" />
-            <img
-              src="{{ item.images[0] }}"
-              class="card-img-top rounded-0 back__img d-none"
-              alt="menShirts"
-          /></a>
-        </figure>
-        <figcaption
-          class="products__action bg-white position-absolute d-none flex-column p-2"
+        <h3
+          class="col-md-2 col-12 text-center justify-content-center border-end border-2 text-uppercase fw-medium fs-5 lh-lg text-secondary m-md-0 mt-2"
         >
-          <i class="fa-regular fa-heart my-2"></i>
-          <i class="fa-solid fa-cart-shopping my-2"></i>
-        </figcaption>
-        <div class="card-body p-0">
-          <a
-            href="/Product/{{ item.id }}"
-            class="card-title link link-secondary mx-auto text-start fw-medium"
-            >{{ item.title }}</a
-          >
-        </div>
-        <div
-          class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
-        >
-          <div class="rating">
-            <!--   <div class="rating-bg" style="width: 90%;"></div> -->
-            <progress
-              class="rating-bg"
-              value="{{ this.global.calculateRating(item.rating) }}"
-              max="5"
-            ></progress>
-            <svg><use xlink:href="#fivestars" /></svg>
-          </div>
-          <span class="product__price d-block opacity-50 mt-2"
-            >${{ item.price.toFixed(2) }}</span
-          >
-          <span class="product__addToCart d-none opacity-50 mt-2"
-            ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
-          >
-        </div>
-      </div>
-    </div>
-    <!-- =============== -->
-    <div class="row products__cards justify-content-center my-2">
-      <div
-        class="card products__card border-0 col-lg-2 col-md-4 col-sm-6 col-12 my-3 rounded-0"
-        *ngFor="let item of this.global.womanBag; let i = index"
-      >
-        <figure class="products__front shadow-sm">
-          <a href="/Product/{{ item.id }}"
-            ><img
-              src="{{ item.images[0] }}"
-              class="card-img-top rounded-0 front__img d-block"
-              alt="menShirts" />
-            <img
-              src="{{ item.images[2] }}"
-              class="card-img-top rounded-0 back__img d-none"
-              alt="menShirts"
-          /></a>
-        </figure>
-        <figcaption
-          class="products__action bg-white position-absolute d-none flex-column p-2"
-        >
-          <i class="fa-regular fa-heart my-2"></i>
-          <i class="fa-solid fa-cart-shopping my-2"></i>
-        </figcaption>
-        <div class="card-body p-0">
-          <a
-            href="/Product/{{ item.id }}"
-            class="card-title link link-secondary mx-auto text-start fw-medium"
-            >{{ item.title }}</a
-          >
-        </div>
-        <div
-          class="card-footer p-0 mt-4 bg-transparent text-black fw-medium border-0"
-        >
-          <div class="rating">
-            <!--   <div class="rating-bg" style="width: 90%;"></div> -->
-            <progress
-              class="rating-bg"
-              value="{{ this.global.calculateRating(item.rating) }}"
-              max="5"
-            ></progress>
-            <svg><use xlink:href="#fivestars" /></svg>
-          </div>
-          <span class="product__price d-block opacity-50 mt-2"
-            >${{ item.price.toFixed(2) }}</span
-          >
-          <span class="product__addToCart d-none opacity-50 mt-2"
-            ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
-          >
-        </div>
-      </div>
-    </div>
-    <!-- =============== -->
-  </section>
-  <!-- ======================SHOP============================ -->
-  <section class="shop py-5">
-    <div
-      class="shop__content container-sm border border-5 border-dark-50 mx-auto py-5 bg-white row"
-    >
-      <div
-        class="shop__purchase container-sm mx-auto py-3 px-sm-5 text-center col-md-6 col-12"
-      >
-        <figure>
+          our partners
+        </h3>
+        <figure class="col-md-2 col-6 m-md-0 mt-2">
           <img
-            class="d-block w-100"
-            src="./assets/images/logo.png"
-            alt="logo of site"
+            class="w-100"
+            src="./assets/images/logo-1_250x.png"
+            alt="logo image"
           />
         </figure>
-        <h6 class="text-uppercase text-secondary">
-          minimalistic ajax e-commerce theme
-        </h6>
-        <p class="text-secondary">
-          Adipiscing dignissim euismod ad venenatis volutpat sociis feugiat
-          purus ridiculus rhoncus nullam sodales euismod ad venenatis volutpa
-          ridiculus.
-        </p>
-        <button type="button" class="btn btn-dark rounded-0">
-          <a
-            class="text-uppercase text-decoration-none text-white"
-            routerLink="Product"
-            >purchase basel</a
-          >
-        </button>
+        <figure class="col-md-2 col-6 m-md-0 mt-2">
+          <img
+            class="w-100"
+            src="./assets/images/logo-2_250x.png"
+            alt="logo image"
+          />
+        </figure>
+        <figure class="col-md-2 col-6 m-md-0 mt-2">
+          <img
+            class="w-100"
+            src="./assets/images/logo-3_250x.png"
+            alt="logo image"
+          />
+        </figure>
+        <figure class="col-md-2 col-6 m-md-0 mt-2">
+          <img
+            class="w-100"
+            src="./assets/images/logo-4_250x.png"
+            alt="logo image"
+          />
+        </figure>
+        <figure class="col-md-2 col-6 m-md-0 mt-2">
+          <img
+            class="w-100"
+            src="./assets/images/logo-6_250x.png"
+            alt="logo image"
+          />
+        </figure>
       </div>
-      <div
-        class="shop__about container-sm col-md-6 px-2 py-3 mt-3 mx-auto text-center d-md-block d-none"
-      >
-        <h3 class="text-black text-center">About the shop</h3>
-        <h5 class="text-center my-3">
-          <i class="fa-regular fa-heart fs-1"></i>
-        </h5>
-        <p class="text-secondary text-center">
-          <span class="text-black fw-bold">Basel & Company</span>
-          – is a famous worldwide fashion store dipiscing dignissim euismod ad
-          venenatis volutpat sociis feugiat purus ridiculus.
-        </p>
-        <button
-          type="button"
-          class="btn btn-outline-secondary rounded-0 text-center mx-auto"
-        >
-          <a
-            class="text-uppercase text-decoration-none text-black"
-            routerLink="Product"
-            >shop now</a
-          >
-        </button>
-      </div>
-    </div>
-  </section>
-  <!-- ======================REVIEW========================== -->
-  <section class="review py-5">
-    <div class="container">
-      <div class="products__text text-center w-50 mx-auto">
-        <h4 class="text-uppercase text-black text-center">
-          WHAT THEY SAY ABOUT US
-        </h4>
-        <hr class="border-1 opacity-75 border-secondary mx-auto" />
-      </div>
-      <!-- =============== -->
-      <div class="container mx-auto row justify-content-center">
-        <div
-          id="carouselExampleIndicators"
-          class="review__carousel container carousel slide col-md-6 col-10"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active bg-dark"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-              class="bg-dark"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <figure class="justify-content-center">
-                <img
-                  src="./assets/images/review1.jpg"
-                  class="d-block mx-auto rounded-circle"
-                  alt="person image"
-                />
-                <figcaption class="review__text px-5">
-                  <p class="text-center text-secondary my-5">
-                    Fringilla iaculis ante torquent a diam a vestibulum diam
-                    nisi augue dictumst parturient a vestibulum tortor viverra
-                    inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam
-                    rutrum.
-                  </p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="carousel-item mx-auto">
-              <figure class="justify-content-center">
-                <img
-                  src="./assets/images/review2.jpg"
-                  class="d-block mx-auto rounded-circle"
-                  alt="person image"
-                />
-                <figcaption class="review__text px-5">
-                  <p class="text-center text-secondary my-5">
-                    Fringilla iaculis ante torquent a diam a vestibulum diam
-                    nisi augue dictumst parturient a vestibulum tortor viverra
-                    inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam
-                    rutrum.
-                  </p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-control-prev-icon bg-black"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon bg-black"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <!-- =============== -->
-    </div>
-  </section>
-  <!-- ======================PARTNERS=========================-->
-  <article class="partners bg-body-secondary py-2">
-    <div
-      class="container align-items-center row justify-content-center mx-auto py-2"
-    >
-      <h3
-        class="col-md-2 col-12 text-center justify-content-center border-end border-2 text-uppercase fw-medium fs-5 lh-lg text-secondary m-md-0 mt-2"
-      >
-        our partners
-      </h3>
-      <figure class="col-md-2 col-6 m-md-0 mt-2">
-        <img
-          class="w-100"
-          src="./assets/images/logo-1_250x.png"
-          alt="logo image"
-        />
-      </figure>
-      <figure class="col-md-2 col-6 m-md-0 mt-2">
-        <img
-          class="w-100"
-          src="./assets/images/logo-2_250x.png"
-          alt="logo image"
-        />
-      </figure>
-      <figure class="col-md-2 col-6 m-md-0 mt-2">
-        <img
-          class="w-100"
-          src="./assets/images/logo-3_250x.png"
-          alt="logo image"
-        />
-      </figure>
-      <figure class="col-md-2 col-6 m-md-0 mt-2">
-        <img
-          class="w-100"
-          src="./assets/images/logo-4_250x.png"
-          alt="logo image"
-        />
-      </figure>
-      <figure class="col-md-2 col-6 m-md-0 mt-2">
-        <img
-          class="w-100"
-          src="./assets/images/logo-6_250x.png"
-          alt="logo image"
-        />
-      </figure>
-    </div>
-  </article>
+    </article>
+    <!-- ================================================================-->
+  </ng-template>
 </main>

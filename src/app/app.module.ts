@@ -12,23 +12,23 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FurnitureComponent } from './pages/categories/furniture/furniture.component';
-import { GroceriesComponent } from './pages/categories/groceries/groceries.component';
-import { ElectronicsComponent } from './pages/categories/electronics/electronics.component';
-import { LightingComponent } from './pages/categories/lighting/lighting.component';
-import { WatchesComponent } from './pages/categories/watches/watches.component';
-import { ShoesComponent } from './pages/categories/shoes/shoes.component';
+import { FurnitureComponent } from './pages/collections/furniture/furniture.component';
+import { GroceriesComponent } from './pages/collections/groceries/groceries.component';
+import { ElectronicsComponent } from './pages/collections/electronics/electronics.component';
+import { LightingComponent } from './pages/collections/lighting/lighting.component';
+import { WatchesComponent } from './pages/collections/watches/watches.component';
+import { ShoesComponent } from './pages/collections/shoes/shoes.component';
 
-import { WomenBagsComponent } from './pages/categories/women-bags/women-bags.component';
-import { WomenDressesComponent } from './pages/categories/women-dresses/women-dresses.component';
-import { MenShirtsComponent } from './pages/categories/men-shirts/men-shirts.component';
-import { SunglassesComponent } from './pages/categories/sunglasses/sunglasses.component';
+import { WomenBagsComponent } from './pages/collections/women-bags/women-bags.component';
+import { WomenDressesComponent } from './pages/collections/women-dresses/women-dresses.component';
+import { MenShirtsComponent } from './pages/collections/men-shirts/men-shirts.component';
+import { SunglassesComponent } from './pages/collections/sunglasses/sunglasses.component';
 import { SingleProductComponent } from './pages/single-product/single-product.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { WishComponent } from './pages/wish/wish.component';
-import { AllProductsComponent } from './pages/all-products/all-products.component';
-import { WomensShoesComponent } from './pages/categories/womens-shoes/womens-shoes.component';
-import { WomensWatchesComponent } from './pages/categories/womens-watches/womens-watches.component';
+import { AllProductsComponent } from './pages/collections/all-products/all-products.component';
+import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
+import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
 
 @NgModule({
   declarations: [

@@ -764,24 +764,33 @@
       class="navbar-nav col-xl-4 d-flex flex-wrap flex-row justify-content-end"
     >
       <li
-        class="nav-item px-2 d-none d-xl-inline border-end border-dark-subtle pe-lg-4"
+        class="nav-item px-2 d-none d-xl-flex align-items-center border-end border-dark-subtle pe-lg-4"
       >
         <a
           class="nav-link"
           aria-current="page"
           routerLink="login"
           routerLinkActive="text-success border-bottom border-dark-subtle link-offset-1 border-2 "
-          >Login / Register</a
         >
+          Login / Register
+        </a>
       </li>
       <li class="nav-item px-1 d-none d-xl-inline mx-2 my-md-2 my-4">
-        <a class="nav-link" href="#"
-          ><i class="fa-solid fa-magnifying-glass"></i
-        ></a>
+        <button
+          class="nav-link searchIcon"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <!-- ==================== -->
+
+        <!-- ============ -->
       </li>
       <li class="nav-item px-1 mx-2 my-md-2 my-4">
         <a
-          class="nav-link position-relative"
+          class="nav-link position-relative wishIcon"
           routerLink="wish"
           routerLinkActive="text-success"
           ><i class="fa-regular fa-heart"></i>
@@ -795,7 +804,7 @@
       </li>
       <li class="nav-item px-1 mx-2 my-md-2 my-4">
         <a
-          class="nav-link position-relative"
+          class="nav-link position-relative cartIcon"
           routerLink="cart"
           routerLinkActive="text-success"
           ><i class="fa-solid fa-cart-shopping"></i
@@ -810,3 +819,32 @@
     </ul>
   </div>
 </nav>
+<!-- ==================================================================== -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+  data-bs-theme="dark"
+>
+  <div class="offcanvas-header">
+    <form id="offcanvasRightLabel" class="offcanvas-title d-flex" role="search">
+      <input
+        class="search-input form-control me-2 bg-dark text-light border-0 border-bottom rounded-0"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-close-white" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    <button
+      type="button"
+      class="btn-close bg-white"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">...</div>
+</div>

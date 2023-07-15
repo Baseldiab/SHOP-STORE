@@ -65,4 +65,18 @@
 .navbar :where(.fa-magnifying-glass, .fa-heart, .fa-cart-shopping) {
   font-size: 25px !important;
 }
+.product__quantity input:focus-visible,
+.product__quantity input:focus,
+.product__quantity input:hover {
+  border: none !important;
+  padding: 6px !important;
+  outline: none !important;
+}
+.search-input:focus {
+  box-shadow: none !important;
+}
+.search-input::placeholder,
+.search-input:hover {
+  color: #fff !important;
+}
 /* ==================navbar=============== */
