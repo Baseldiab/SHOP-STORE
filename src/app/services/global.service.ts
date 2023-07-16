@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GlobalService {
-  loadingFlag = true
+  loadingFlag = true;
   manShoes: any[] = [];
   womanShoes: any[] = [];
   womanDress: any[] = [];
@@ -49,9 +49,9 @@ export class GlobalService {
     return this.http.get(`${this.baseUrl}products/${id}`);
   }
   // =====================================================
-  getLimitedProduct(id: any): Observable<any> {
+  getLimitedProduct(numberProduct: any, id: any): Observable<any> {
     return this.http.get(
-      `${this.baseUrl}products?limit=5&skip=${id}&select=title,price`
+      `${this.baseUrl}products?limit=${numberProduct}&skip=${id}&select=title,price`
     );
   }
   // =====================================================

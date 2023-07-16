@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { JQueryStyleEventEmitter } from 'rxjs/internal/observable/fromEvent';
 // import
@@ -61,6 +62,8 @@ import { WomensWatchesComponent } from './pages/collections/womens-watches/women
     FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxImageZoomModule,
+    // NgxImageZoomModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,6 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Pacifico&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@700&display=swap");
+
 :root {
   --bs-success-rgb: 26, 173, 163 !important;
 }
@@ -47,7 +50,9 @@
 }
 /* ====================================================== */
 .categories__text,
-.products__text {
+.products__text,
+.allProduct__nav-head,
+.allProduct__main-head {
   font-family: Karla, "MS Sans Serif", Geneva, sans-serif;
 }
 .singleProduct__head {
@@ -56,6 +61,10 @@
 /* .product__price {
   font-family: "Dosis", Helvetica, Arial, sans-serif;
 } */
+.allProduct__main-head {
+  font-family: "Dosis", Helvetica, Arial, sans-serif;
+  letter-spacing: 4px;
+}
 .categories__text p,
 .products__text p,
 .join__logo,
@@ -80,6 +89,12 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(./assets/images/home-curoseul1.jpg) no-repeat top center / cover;
 }
+.allProduct {
+  background: url(./assets/images/shop-header-bg.webp) no-repeat top center /
+    cover;
+  /* height: 60vh; */
+}
+/* linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), */
 /* ==========================products============================ */
 .products__card {
   overflow: hidden;

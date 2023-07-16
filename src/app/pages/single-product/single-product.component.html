@@ -6,6 +6,7 @@
     <img src="assets/images/loading.gif" class="w-100 mb-5" />
   </div>
   <ng-template #ShowGallery>
+    <!-- =========================NAV====================================== -->
     <nav
       aria-label="breadcrumb"
       class="singleProduct__navbar bg-body-secondary py-2 container-fluid"
@@ -73,11 +74,18 @@
                   *ngIf="img(i, item)"
                   [ngClass]="{ active: first }"
                 >
-                  <img
-                    class="d-block w-100"
-                    src="{{ item }}"
-                    alt="{{ singleProduct.title }} image"
-                  />
+                  <!-- <i class="fa-solid fa-magnifying-glass-plus"></i> -->
+                  <lib-ngx-image-zoom
+                    [thumbImage]="item"
+                    [magnification]="1.5"
+                    [enableScrollZoom]="true"
+                    [enableLens]="false"
+                    [lensWidth]="50"
+                    [lensHeight]="50"
+                    [circularLens]="true"
+                    class="singleProduct__image-zoom d-block w-100"
+                  ></lib-ngx-image-zoom>
+                  <!-- <img [src]="item" alt="" /> -->
                 </div>
               </ng-container>
               <!-- <div class="carousel-item" data-bs-interval="2000">
@@ -163,9 +171,10 @@
               "
               >
                 <span
-                  class="product__quantity border-bottom border-success px-4 py-3 fs-6 fw-medium"
+                  class="product__quantity border-bottom border-success fs-6 fw-medium"
                   ><input
-                    class="border-0"
+                    class="border-0 text-center px-4 py-3"
+                    placeholder="1"
                     type="number"
                     id="quantity"
                     name="quantity"

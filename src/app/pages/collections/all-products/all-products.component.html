@@ -1,1 +1,136 @@
-<p>all-products works!</p>
+<main id="allProduct" #allProduct>
+  <!-- ==================================================================== -->
+  <section class="allProduct d-flex flex-column align-items-center py-5">
+    <div class="container allProduct__container mx-auto">
+      <nav class="allProduct__nav-head text-center mt-5">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item allProduct__nav-list position-relative">
+            <a
+              class="text-decoration-none text-dark text-uppercase"
+              routerLink=""
+              >Home</a
+            >
+          </li>
+          <li class="mx-2 fw-bolder text-success allProduct__nav-list">></li>
+          <li
+            class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
+            aria-current="page"
+          >
+            product
+          </li>
+        </ol>
+      </nav>
+      <!-- ================ -->
+      <h1
+        class="allProduct__main-head fw-medium text-uppercase text-center text-success"
+      >
+        all product
+      </h1>
+    </div>
+    <!-- =============== -->
+    <div
+      class="accordion position-relative mx-auto w-100 my-5"
+      id="accordionPanelsStayOpenExample"
+    >
+      <div class="accordion-item mb-5">
+        <h2 class="accordion-header mx-auto">
+          <button
+            class="accordion-button text-uppercase bg-white z-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne"
+            aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne"
+          >
+            collections
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="accordion-collapse collapse w-100 show text-bg-white position-absolute mb-5"
+        >
+          <div class="accordion-body bg-white z-1">
+            <ul
+              class="container mx-auto d-flex flex-wrap justify-content-center align-items-center"
+            >
+              <li
+                class="me-2 pe-2 position-relative text-uppercase list-unstyled"
+              >
+                all products
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                >
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </li>
+              <li
+                class="mx-2 px-2 my-2 position-relative text-uppercase list-unstyled"
+              >
+                furniture
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                >
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </li>
+              <li
+                class="mx-2 px-2 my-2 position-relative text-uppercase list-unstyled"
+              >
+                groceries
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                >
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </li>
+              <li
+                class="mx-2 px-2 position-relative text-uppercase list-unstyled"
+              >
+                electronics
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                >
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </li>
+              <li
+                class="mx-2 px-2 position-relative text-uppercase list-unstyled"
+              >
+                lighting
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                >
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </li>
+              <li class="mx-2 px-2 dropdown position-relative list-unstyled">
+                <button
+                  class="btn dropdown-toggle text-uppercase"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  other
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =============== -->
+  </section>
+  <!-- ===================================================================== -->
+</main>

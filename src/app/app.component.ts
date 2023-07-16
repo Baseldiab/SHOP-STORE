@@ -10,4 +10,5 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = 'shop-store';
   constructor(public global: GlobalService) {}
+  allProduct = true;
 }

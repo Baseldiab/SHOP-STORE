@@ -98,3 +98,13 @@
 
   /* --bs-nav-pills-link-active-bg: #999; */
 }
+.singleProduct__image-zoom {
+  cursor: zoom-in;
+  width: 100% !important;
+}
+
+::ng-deep .ngxImageZoomContainer,
+::ng-deep .ngxImageZoomThumbnail {
+  width: 100% !important;
+  height: 100% !important;
+}

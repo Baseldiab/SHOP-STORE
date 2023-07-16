@@ -72,6 +72,9 @@
   padding: 6px !important;
   outline: none !important;
 }
+:focus-visible {
+  outline: none !important;
+}
 .search-input:focus {
   box-shadow: none !important;
 }

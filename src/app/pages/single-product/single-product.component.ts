@@ -38,7 +38,7 @@ export class SingleProductComponent {
       );
       // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
       // get related products
-      global.getLimitedProduct(id).subscribe((data) => {
+      global.getLimitedProduct(5, id).subscribe((data) => {
         this.product = data.products;
         console.log(this.product.length);
         this.relNumber = this.product.length;
