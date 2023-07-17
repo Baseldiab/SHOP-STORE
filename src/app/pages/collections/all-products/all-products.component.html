@@ -1,136 +1,465 @@
-<main id="allProduct" #allProduct>
-  <!-- ==================================================================== -->
-  <section class="allProduct d-flex flex-column align-items-center py-5">
-    <div class="container allProduct__container mx-auto">
-      <nav class="allProduct__nav-head text-center mt-5">
-        <ol class="breadcrumb justify-content-center">
-          <li class="breadcrumb-item allProduct__nav-list position-relative">
-            <a
-              class="text-decoration-none text-dark text-uppercase"
-              routerLink=""
-              >Home</a
+<main id="allProduct ">
+  <!-- =========================ALL PRODUCT HEADER======================== -->
+  <!-- NAVBAR================================== -->
+  <section class="allProduct-firstSection">
+    <app-navbar class="allProduct-navbar w-100"></app-navbar>
+    <!-- HEADER TEXT=========================== -->
+    <article class="allProduct-header d-flex flex-column align-items-center">
+      <!-- HEADER TEXT=========================== -->
+      <div class="container allProduct__container mx-auto">
+        <nav class="allProduct__nav-head text-center mt-5">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item allProduct__nav-list position-relative">
+              <a
+                class="text-decoration-none text-dark text-uppercase"
+                routerLink=""
+                >Home</a
+              >
+            </li>
+            <li class="mx-2 fw-bolder text-success allProduct__nav-list">></li>
+            <li
+              class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
+              aria-current="page"
             >
-          </li>
-          <li class="mx-2 fw-bolder text-success allProduct__nav-list">></li>
-          <li
-            class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
-            aria-current="page"
-          >
-            product
-          </li>
-        </ol>
-      </nav>
-      <!-- ================ -->
-      <h1
-        class="allProduct__main-head fw-medium text-uppercase text-center text-success"
-      >
-        all product
-      </h1>
-    </div>
-    <!-- =============== -->
-    <div
-      class="accordion position-relative mx-auto w-100 my-5"
-      id="accordionPanelsStayOpenExample"
-    >
-      <div class="accordion-item mb-5">
-        <h2 class="accordion-header mx-auto">
-          <button
-            class="accordion-button text-uppercase bg-white z-3"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseOne"
-            aria-expanded="true"
-            aria-controls="panelsStayOpen-collapseOne"
-          >
-            collections
-          </button>
-        </h2>
-        <div
-          id="panelsStayOpen-collapseOne"
-          class="accordion-collapse collapse w-100 show text-bg-white position-absolute mb-5"
+              product
+            </li>
+          </ol>
+        </nav>
+        <!-- ================ -->
+        <h1
+          class="allProduct__main-head fw-medium text-uppercase text-center text-success"
         >
-          <div class="accordion-body bg-white z-1">
-            <ul
-              class="container mx-auto d-flex flex-wrap justify-content-center align-items-center"
+          all product
+        </h1>
+      </div>
+      <!-- COLLECTION LIST======================= -->
+      <div
+        class="accordion position-relative mx-auto w-100 my-3 z-2"
+        id="accordionPanelsStayOpenExample"
+      >
+        <div class="accordion-item mb-5">
+          <h2 class="accordion-header z-2">
+            <button
+              class="accordion-button rounded-0 mx-auto collapsed text-uppercase bg-white z-2"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapse"
             >
-              <li
-                class="me-2 pe-2 position-relative text-uppercase list-unstyled"
+              collections
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse"
+            class="accordion-collapse collapse text-bg-white mb-5"
+          >
+            <div class="accordion-body bg-white w-100 position-absolute">
+              <ul
+                class="container m-auto d-flex flex-wrap justify-content-center align-items-center"
               >
-                all products
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                <li
+                  class="me-md-2 pe-md-2 px-2 my-2 position-relative text-uppercase list-unstyled"
                 >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </li>
-              <li
-                class="mx-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-              >
-                furniture
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                  <a
+                    routerLink="../all"
+                    class="text-decoration-none text-black fw-medium"
+                  >
+                    all products
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge text-success"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
                 >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </li>
-              <li
-                class="mx-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-              >
-                groceries
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                  <a
+                    routerLink="../mens-shirts"
+                    class="text-decoration-none text-black fw-medium"
+                  >
+                    men's shirts
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge text-success"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
                 >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </li>
-              <li
-                class="mx-2 px-2 position-relative text-uppercase list-unstyled"
-              >
-                electronics
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                  <a
+                    routerLink="../womens-dresses"
+                    class="text-decoration-none text-black fw-medium"
+                  >
+                    women's dresses
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge text-success"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
                 >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </li>
-              <li
-                class="mx-2 px-2 position-relative text-uppercase list-unstyled"
-              >
-                lighting
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge text-success"
+                  <a
+                    routerLink="../womens-bags"
+                    class="text-decoration-none text-black fw-medium"
+                  >
+                    bags
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge text-success"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
                 >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </li>
-              <li class="mx-2 px-2 dropdown position-relative list-unstyled">
-                <button
-                  class="btn dropdown-toggle text-uppercase"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  other
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+                  <a
+                    routerLink="../sunglasses"
+                    class="text-decoration-none text-black fw-medium"
+                  >
+                    sunglasses
+                    <span
+                      class="position-absolute top-0 start-100 translate-middle badge text-success"
+                    >
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </li>
+                <li class="m-2 px-2 dropdown position-relative list-unstyled">
+                  <button
+                    class="btn dropdown-toggle list-otherCollection text-uppercase fw-medium"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    other
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../mens-watches  "
+                        >men's watches
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../womens-watches   "
+                        >women's watches
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../mens-shoes   "
+                        >men's shoes
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../womens-shoes   "
+                        >women's shoes
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item position-relative fw-medium text-uppercase"
+                        routerLink="../smartphones"
+                        >smartphones
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../lighting"
+                        >lighting
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../womens-dresses   "
+                        >groceries
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
+                        routerLink="../furniture   "
+                        >furniture
+                        <span
+                          class="position-absolute top-0 translate-middle badge text-success"
+                        >
+                          99+
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- =============== -->
+      <!-- ======================================= -->
+    </article>
   </section>
-  <!-- ===================================================================== -->
+  <!-- ==========================PRODUCTS================================= -->
+  <section class="all-products my-5">
+    <div class="container-fluid row">
+      <ul
+        class="all-products__categories py-4 col-md-3 d-md-flex flex-column d-none container mx-auto my-auto flex-wrap justify-content-center align-items-start"
+      >
+        <li
+          class="m-2 pe-md-2 px-2 my-2 position-relative text-uppercase list-unstyled text-start"
+        >
+          <a
+            routerLink="../all"
+            class="text-decoration-none text-black fw-medium"
+          >
+            all products
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li
+          class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
+        >
+          <a
+            routerLink="../mens-shirts"
+            class="text-decoration-none text-black fw-medium"
+          >
+            men's shirts
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li
+          class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
+        >
+          <a
+            routerLink="../womens-dresses"
+            class="text-decoration-none text-black fw-medium"
+          >
+            women's dresses
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li
+          class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
+        >
+          <a
+            routerLink="../womens-bags"
+            class="text-decoration-none text-black fw-medium"
+          >
+            bags
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li
+          class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
+        >
+          <a
+            routerLink="../sunglasses"
+            class="text-decoration-none text-black fw-medium"
+          >
+            sunglasses
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../mens-watches  "
+            >men's watches
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../womens-watches   "
+            >women's watches
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../mens-shoes   "
+            >men's shoes
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../womens-shoes   "
+            >women's shoes
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="dropdown-item position-relative fw-medium text-uppercase"
+            routerLink="../smartphones"
+            >smartphones
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../lighting"
+            >lighting
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../womens-dresses   "
+            >groceries
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+        <li class="m-2 pe-2 dropdown position-relative list-unstyled">
+          <a
+            class="text-decoration-none text-black fw-medium"
+            routerLink="../furniture   "
+            >furniture
+            <span
+              class="position-absolute top-0 translate-middle badge text-success"
+            >
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <!-- ============ -->
+      <div class="all-products__products col-md-9 col-12">
+        <div class="row justify-content-between">
+          <h6 class="col-6 text-start">Showing: 1-10 of 100 products</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================ -->
 </main>

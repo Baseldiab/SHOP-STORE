@@ -89,7 +89,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(./assets/images/home-curoseul1.jpg) no-repeat top center / cover;
 }
-.allProduct {
+.allProduct-firstSection {
   background: url(./assets/images/shop-header-bg.webp) no-repeat top center /
     cover;
   /* height: 60vh; */
@@ -182,4 +182,24 @@
     90.68% 44.86%
   );
 }
-/* ====================================================== */
+/* ===========================navbar=========================== */
+.home-navbar #main-navbar {
+  background-color: #fff !important;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+.allProduct-navbar #top-nav {
+  background-color: #000 !important;
+}
+.allProduct-navbar .main-navbar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  display: block !important;
+}
+
+.allProduct-navbar #main-navbar .nav-item {
+  font-weight: 700 !important;
+}

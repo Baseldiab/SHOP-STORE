@@ -2,6 +2,7 @@
 .home-curousel__text h6 {
   font-family: Pacifico, serif;
 }
+
 .home__carousel {
   filter: brightness(0.95) !important;
   -webkit-filter: brightness(0.95) !important;
@@ -56,7 +57,6 @@
   }
 }
 
-
 .categories__img figcaption {
   bottom: 20%;
   left: 50%;
@@ -107,3 +107,6 @@
 /* ./assets/images/shop-bg.jpg */
 
 /* ==================HOME=============== */
+.home-navbar #main-navbar {
+  background-color: red !important;
+}

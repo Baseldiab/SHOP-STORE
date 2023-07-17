@@ -1,4 +1,7 @@
 <main id="homePage">
+  <!-- ======================Navbar====================== -->
+  <app-navbar class="shadow-sm home-navbar" id=""></app-navbar>
+  <!-- ======================LOADING IMG====================== -->
   <div
     class="col-3 pb-5 mb-5 mx-auto"
     *ngIf="this.global.loadingFlag; else ShowGallery"
@@ -666,7 +669,6 @@
       </div>
     </section>
     <!-- ======================PARTNERS=========================-->
-
     <article class="partners bg-body-secondary py-2">
       <div
         class="container align-items-center row justify-content-center mx-auto py-2"

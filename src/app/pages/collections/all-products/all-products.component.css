@@ -1,7 +1,3 @@
-#main-navbar {
-  background-color: red !important;
-  box-shadow: none !important;
-}
 .allProduct__nav-list {
   font-size: 0.85rem;
   letter-spacing: 2px;
@@ -33,12 +29,17 @@
   box-shadow: none;
   background-color: transparent;
 }
-.accordion-header {
+.accordion-button {
   width: 170px;
+  border: 1px solid rgba(var(--bs-success-rgb)) !important;
+}
+.accordion-collapse .accordion-body {
+  top: 25px;
+  padding: 30px 0;
   border: 1px solid rgba(var(--bs-success-rgb));
 }
-.accordion-collapse {
-  top: 25px;
-  padding: 50px 0 0;
-  border: 1px solid rgba(var(--bs-success-rgb));
+.list-otherCollection.show,
+.list-otherCollection,
+.list-otherCollection:active {
+  border: none !important;
 }
