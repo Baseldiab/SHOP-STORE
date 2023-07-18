@@ -30,6 +30,7 @@ import { WishComponent } from './pages/wish/wish.component';
 import { AllProductsComponent } from './pages/collections/all-products/all-products.component';
 import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
+// import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { WomensWatchesComponent } from './pages/collections/womens-watches/women
     AppRoutingModule,
     HttpClientModule,
     NgxImageZoomModule,
+
     // NgxImageZoomModule.forRoot(),
   ],
   providers: [],

@@ -37,6 +37,7 @@ export class HomeComponent {
         this.global.loadingFlag = false;
       }
     );
+
     this.global.getWomenDresses().subscribe(
       (data) => {
         this.global.womanDress = data.products;

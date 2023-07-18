@@ -9,8 +9,6 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class SingleProductComponent {
   product: any;
-
-  // catogor: any;
   productId: any;
   category: any;
   productName: any;

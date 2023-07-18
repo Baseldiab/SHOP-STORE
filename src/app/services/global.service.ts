@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class GlobalService {
   loadingFlag = true;
+  allProduct: any[] = [];
   manShoes: any[] = [];
   womanShoes: any[] = [];
   womanDress: any[] = [];
@@ -44,6 +45,10 @@ export class GlobalService {
   }
   // =====================================================
   baseUrl = 'https://dummyjson.com/';
+  // =====================================================
+  getAllProduct(): Observable<any> {
+    return this.http.get(`${this.baseUrl}products/`);
+  }
   // =====================================================
   getSingleProduct(id: any): Observable<any> {
     return this.http.get(`${this.baseUrl}products/${id}`);
