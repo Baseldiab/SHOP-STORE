@@ -47,7 +47,7 @@ export class MenShirtsComponent {
     const number = window.scrollY || 0;
     if (number > 100) {
       this.mainNavbar.style =
-        ' background-color: #fff !important; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;';
+        ' background-color: #fff !important; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;';
       console.log('You are 100px from the top to bottom');
     } else if (number <= 20) {
       this.mainNavbar.style =

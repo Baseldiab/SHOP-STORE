@@ -17,7 +17,7 @@ export class HomeComponent {
   constructor(public global: GlobalService) {
     this.global.getWomenBags().subscribe(
       (data) => {
-        this.global.womanBag = data.products;
+        this.global.womanBag = data.products.slice(0, 4);
       },
       (e) => {
         console.log(e);
@@ -62,7 +62,7 @@ export class HomeComponent {
     );
     this.global.getMensSunglasses().subscribe(
       (data) => {
-        this.global.sunglasses = data.products;
+        this.global.sunglasses = data.products.slice(0, 4);
       },
       (e) => {
         console.log(e);
@@ -73,7 +73,7 @@ export class HomeComponent {
     );
     this.global.getMensShirts().subscribe(
       (data) => {
-        this.global.menShirts = data.products;
+        this.global.menShirts = data.products.slice(0, 4);
       },
       (e) => {
         console.log(e);

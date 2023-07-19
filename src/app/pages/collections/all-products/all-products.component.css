@@ -1,0 +1,6 @@
+.accordion-button {
+  font-size: 16px !important;
+}
+.accordion-button::after {
+  --bs-accordion-btn-icon-width: 16px !important;
+}

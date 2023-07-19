@@ -6,8 +6,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@700&display=swap");
 
 :root {
-  color: #1aada3;
+  --main-color: #1aada3;
   --bs-success-rgb: 26, 173, 163 !important;
+  --bs-body-font-size: 16px !important;
 }
 .container-nav {
   width: 95% !important;
@@ -182,21 +183,25 @@
     90.68% 44.86%
   );
 }
+.card-body,
+.card-footer {
+  font-size: 16px;
+}
 @media (max-width: 576px) {
   .product__onSale-circle {
     width: 25px !important ;
-    font-size: 0.55rem;
+    font-size: 9px;
   }
   .card-body,
   .card-footer {
-    font-size: 0.8rem;
+    font-size: 14px;
   }
 }
 /* ===========================navbar=========================== */
 .home-navbar #main-navbar {
   background-color: #fff !important;
   z-index: 1000;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
 }
 .allProduct-navbar #top-nav {
   background-color: #000 !important;
@@ -215,7 +220,7 @@
 }
 /* ============================COLLECTION============================= */
 .collection-products .allProduct__nav-list {
-  font-size: 0.85rem;
+  font-size: 13px;
   letter-spacing: 2px;
 }
 .collection-products .allProduct__nav-list:first-of-type::before {
@@ -261,7 +266,7 @@
 }
 @media (max-width: 576px) {
   .collection-products .allProduct__nav-list {
-    font-size: 0.65rem;
+    font-size: 11px;
     letter-spacing: 1px;
   }
   .collection-products .allProduct__nav-list:first-of-type::before {
@@ -275,24 +280,15 @@
 
   .all-products__header,
   .form-select {
-    font-size: 0.55rem;
+    font-size: 9px;
   }
 }
 
 .card-img-top {
   object-fit: contain;
-  max-height: 15vw;
-  min-height: 15vw;
-  max-width: 100%;
-}
-.card-img-top {
-  object-fit: contain;
   max-height: 12vw;
   min-height: 12vw;
   max-width: 100%;
-}
-.card-img-top {
-  /* background: transparent; */
   border: none;
 }
 @media (max-width: 768px) {

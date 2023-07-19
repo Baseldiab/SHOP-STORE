@@ -1,7 +1,7 @@
 /* ===================navbar=================== */
 .navbar-brand,
 .link-underline {
-  font-size: 0.75rem !important;
+  font-size: 12px !important;
 }
 @media (max-width: 992px) {
   .border-end {
@@ -37,11 +37,10 @@
 .fa-angle-down {
   font-size: 12px;
 }
-@media (max-width: 992px) {
-  .nav-link {
-    font-size: 0.8rem !important;
-  }
+.nav-link {
+  font-size: 14px;
 }
+
 @media (max-width: 1200px) {
   .offcanvas-body .nav-link {
     color: white !important;
@@ -63,7 +62,7 @@
   max-height: 80vh !important;
 }
 .navbar :where(.fa-magnifying-glass, .fa-heart, .fa-cart-shopping) {
-  font-size: 25px !important;
+  font-size: 18px !important;
 }
 .product__quantity input:focus-visible,
 .product__quantity input:focus,

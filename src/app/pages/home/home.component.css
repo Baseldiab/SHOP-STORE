@@ -29,20 +29,20 @@
 }
 @media (max-width: 576px) {
   .home-curousel__text h2 {
-    font-size: 1rem;
+    font-size: 16px;
   }
   .home-curousel__text h6 {
-    font-size: 0.9rem;
+    font-size: 15px;
   }
 }
 @media (max-width: 200px) {
   .home__carousel {
   }
   .home-curousel__text h2 {
-    font-size: 0.6rem;
+    font-size: 10px;
   }
   .home-curousel__text h6 {
-    font-size: 0.5rem !important;
+    font-size: 8px !important;
   }
 }
 
@@ -53,7 +53,7 @@
 @media (max-width: 576px) {
   .categories__text :where(h6, h4),
   .products__text :where(h6, h4) {
-    font-size: 0.8rem;
+    font-size: 13px;
   }
 }
 
@@ -85,23 +85,41 @@
 }
 
 .join__logo {
-  font-size: 1.8rem;
+  font-size: 29px;
 }
 .join__head {
-  font-size: 3.3rem;
+  font-size: 53px;
 }
 .join__text {
-  font-size: 0.9rem;
+  font-size: 13px;
 }
 @media (max-width: 576px) {
   .join__logo {
-    font-size: 0.9rem;
+    font-size: 13px;
   }
   .join__head {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   .join__text {
     width: 100% !important;
+  }
+}
+@media (min-width: 993px) {
+  .card-img-top {
+    max-height: 19vw !important;
+    min-height: 19vw !important;
+  }
+}
+@media (max-width: 992px) and (min-width: 576px) {
+  .card-img-top {
+    max-height: 36vw !important;
+    min-height: 36vw !important;
+  }
+}
+@media (max-width: 576px) {
+  .card-img-top {
+    max-height: 50vw !important;
+    min-height: 50vw !important;
   }
 }
 /* ./assets/images/shop-bg.jpg */
