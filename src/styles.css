@@ -287,8 +287,8 @@
 
 .card-img-top {
   object-fit: contain;
-  max-height: 12vw;
-  min-height: 12vw;
+  max-height: 16vw;
+  min-height: 16vw;
   max-width: 100%;
   border: none;
 }
@@ -311,6 +311,11 @@
 .accordion-button::after {
   --bs-accordion-btn-icon-width: 16px !important;
 }
+.collection-products .form-select,
+.all-products__header {
+  font-size: 16px;
+}
+
 /* .card-img-top {
     object-fit: contain;
     max-height: 50vw;

@@ -35,17 +35,12 @@ export class AllProductsComponent {
     this.getProductId(0, 100);
   }
   // ===================================================
-
-  // ===================================================
   getProduct(ele: any) {
     ele.forEach((e: any) => {
       this.global.getSingleProduct(e.id).subscribe((data: any) => {
         this.global.limited.push(data);
-        this.firstProduct = this.global.limited.slice(0, 9);
       });
-      // this.firstProduct = this.global.limited.slice(0, 9);
     });
-    // this.firstProduct = this.global.limited.slice(0, 10);
   }
   // ===================================================
   getProductId(n: any, i: any) {
@@ -55,7 +50,6 @@ export class AllProductsComponent {
         this.product.sort(
           (a: any, b: any) => Number(a.price) - Number(b.price)
         );
-
         this.getProduct(this.product.slice(n, i));
       },
       (e) => {
@@ -66,31 +60,13 @@ export class AllProductsComponent {
       }
     );
   }
-
-  //====================SORT PRODUCTS======================
-  sortProductByPrice(option: any) {
-    if (option.value == 'Low') {
-      this.global.limited
-        .sort((a: any, b: any) => Number(a.price) - Number(b.price))
-        .slice(0, 9);
-    } else if (option.value == 'High') {
-      this.global.limited
-        .sort((a: any, b: any) => Number(b.price) - Number(a.price))
-        .slice(0, 9);
-    }
-    // console.log(this.global.limited.slice(0, 9));
-  }
+  
   //====================BUTTON SHOW MORE======================
   idFirst: number = 0;
   idLast: number = 9;
   showMore() {
-    // this.global.limited.push(x);
-    this.idFirst = this.idFirst + 9;
+    // this.idFirst = this.idFirst + 9;
     this.idLast = this.idLast + 9;
-    // this.global.limited.slice(this.idFirst, this.idLast);
-    // console.log(this.global.limited.slice(this.idFirst, this.idLast));
-    // this.getProductId(this.idFirst, this.idLast);
-
     console.log(this.idLast);
   }
   // =========================================================

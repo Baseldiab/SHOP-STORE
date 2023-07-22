@@ -33,7 +33,20 @@
                 class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
                 aria-current="page"
               >
-                product
+                <a
+                  class="text-decoration-none text-dark text-uppercase"
+                  href="./collection/all"
+                  >product</a
+                >
+              </li>
+              <li class="mx-2 fw-bolder text-success allProduct__nav-list">
+                >
+              </li>
+              <li
+                class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
+                aria-current="page"
+              >
+                men's shirts
               </li>
             </ol>
           </nav>
@@ -41,236 +54,18 @@
           <h1
             class="allProduct__main-head fw-medium text-uppercase text-center text-success"
           >
-            all product
+            Men's Shirts
           </h1>
-        </div>
-        <!-- COLLECTION LIST======================= -->
-        <div
-          class="accordion position-relative mx-auto w-100 my-3 z-2"
-          id="accordionPanelsStayOpenExample"
-        >
-          <div class="accordion-item mb-5">
-            <h2 class="accordion-header z-2">
-              <button
-                class="accordion-button rounded-0 mx-auto collapsed text-uppercase bg-white z-2"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapse"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapse"
-              >
-                collections
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapse"
-              class="accordion-collapse collapse text-bg-white mb-5"
+          <h5 class="text-center">
+            <i class="fa-solid fa-caret-left fs-6 text-success me-2"></i>
+            <a
+              class="text-decoration-none text-center text-center text-uppercase text-dark"
+              href="./collection/all"
+              >back to all</a
             >
-              <div class="accordion-body bg-white w-100 position-absolute">
-                <ul
-                  class="container m-auto d-flex flex-wrap justify-content-center align-items-center"
-                >
-                  <li
-                    class="me-md-2 pe-md-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-                  >
-                    <a
-                      routerLink="../all"
-                      class="text-decoration-none text-black fw-medium"
-                    >
-                      all products
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge text-success"
-                      >
-                        100
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-                  >
-                    <a
-                      routerLink="../mens-shirts"
-                      class="text-decoration-none text-black fw-medium"
-                    >
-                      men's shirts
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge text-success"
-                      >
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-                  >
-                    <a
-                      routerLink="../womens-dresses"
-                      class="text-decoration-none text-black fw-medium"
-                    >
-                      women's dresses
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge text-success"
-                      >
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-                  >
-                    <a
-                      routerLink="../womens-bags"
-                      class="text-decoration-none text-black fw-medium"
-                    >
-                      bags
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge text-success"
-                      >
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li
-                    class="m-2 px-2 my-2 position-relative text-uppercase list-unstyled"
-                  >
-                    <a
-                      routerLink="../sunglasses"
-                      class="text-decoration-none text-black fw-medium"
-                    >
-                      sunglasses
-                      <span
-                        class="position-absolute top-0 start-100 translate-middle badge text-success"
-                      >
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li class="m-2 px-2 dropdown position-relative list-unstyled">
-                    <button
-                      class="btn dropdown-toggle list-otherCollection text-uppercase fw-medium"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      other
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../mens-watches  "
-                          >men's watches
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../womens-watches   "
-                          >women's watches
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../mens-shoes   "
-                          >men's shoes
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../womens-shoes   "
-                          >women's shoes
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item position-relative fw-medium text-uppercase"
-                          routerLink="../smartphones"
-                          >smartphones
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../lighting"
-                          >lighting
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../womens-dresses   "
-                          >groceries
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
-                          routerLink="../furniture   "
-                          >furniture
-                          <span
-                            class="position-absolute top-0 translate-middle badge text-success"
-                          >
-                            99+
-                            <span class="visually-hidden">unread messages</span>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          </h5>
         </div>
+
         <!-- ======================================= -->
       </article>
     </section>
@@ -323,7 +118,7 @@
               <span
                 class="position-absolute top-0 start-100 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -339,7 +134,7 @@
               <span
                 class="position-absolute top-0 start-100 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -355,7 +150,7 @@
               <span
                 class="position-absolute top-0 start-100 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -370,7 +165,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -385,7 +180,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -400,7 +195,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -415,7 +210,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -430,7 +225,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -445,7 +240,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -460,7 +255,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -475,7 +270,7 @@
               <span
                 class="position-absolute top-0 translate-middle badge text-success"
               >
-                99+
+                5
                 <span class="visually-hidden">unread messages</span>
               </span>
             </a>
@@ -487,18 +282,28 @@
             <h6 class="col-md-5 col-12 all-products__header text-start">
               Showing: 5 products
             </h6>
-            <form action="" class="col-md-3 col-12 text-md-end">
+            <form class="col-lg-4 col-md-6 col-12 text-md-end">
               <select
                 class="form-select text-uppercase"
                 aria-label="Default select example"
+                (change)="
+                  this.global.filterProduct(
+                    $event.target,
+                    this.global.menShirts
+                  )
+                "
               >
-                <option selected>filter</option>
-                <option value="1" class="text-uppercase">name</option>
-                <option value="2" class="text-uppercase">
+                <option value="Low" selected class="lowToHigh text-uppercase">
                   price low to high
                 </option>
-                <option value="3" class="text-uppercase">
+                <option value="High" class="highToLow text-uppercase">
                   price high to low
+                </option>
+                <option value="A-Z" class="A-Z text-uppercase">
+                  Alphabetically, A-Z
+                </option>
+                <option value="Z-A" class="Z-A text-uppercase">
+                  Alphabetically, Z-A
                 </option>
               </select>
             </form>

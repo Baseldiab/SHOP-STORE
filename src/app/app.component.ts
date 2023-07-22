@@ -21,6 +21,8 @@ export class AppComponent {
     // }
   }
   // ===================================================
+
+  // ===================================================
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.mainNavbar = document.getElementById('main-navbar');
