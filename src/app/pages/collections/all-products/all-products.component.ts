@@ -1,6 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/global.service';
+import * as $ from 'jquery';
+import { DOCUMENT } from '@angular/common';
+// const $ = require( "jquery" );
 
 @Component({
   selector: 'app-all-products',
@@ -8,37 +11,52 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./all-products.component.css'],
 })
 export class AllProductsComponent {
-  mainNavbar: any = [];
+  // const $ = require( "jquery" );
+
+  fromLowToHigh = true;
+  highToLow = true;
+  option = '';
   product: any;
   productId: any;
   category: any;
   productName: any;
   singleProduct: any;
   smartphones: any = [];
+  firstProduct: any = [];
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(
     public global: GlobalService,
     private _activatedRoute: ActivatedRoute,
-    private _route: Router
+    private _route: Router,
+    @Inject(DOCUMENT) private document: any
   ) {
-    this._activatedRoute.paramMap.subscribe((params) => {
-      this.getLimitProductId(9, 0);
-    });
+    this._activatedRoute.paramMap.subscribe((params) => {});
+
+    this.getProductId(0, 100);
   }
+  // ===================================================
+
   // ===================================================
   getProduct(ele: any) {
     ele.forEach((e: any) => {
       this.global.getSingleProduct(e.id).subscribe((data: any) => {
         this.global.limited.push(data);
+        this.firstProduct = this.global.limited.slice(0, 9);
       });
+      // this.firstProduct = this.global.limited.slice(0, 9);
     });
+    // this.firstProduct = this.global.limited.slice(0, 10);
   }
   // ===================================================
-  getLimitProductId(n: any, i: any) {
-    this.global.getLimitedProduct(n, i).subscribe(
+  getProductId(n: any, i: any) {
+    this.global.getLimitedProduct(0, 0).subscribe(
       (data) => {
         this.product = data?.products;
-        this.getProduct(this.product);
+        this.product.sort(
+          (a: any, b: any) => Number(a.price) - Number(b.price)
+        );
+
+        this.getProduct(this.product.slice(n, i));
       },
       (e) => {
         console.log(e);
@@ -48,37 +66,34 @@ export class AllProductsComponent {
       }
     );
   }
-  // ===================================================
-  id: number = 0;
+
+  //====================SORT PRODUCTS======================
+  sortProductByPrice(option: any) {
+    if (option.value == 'Low') {
+      this.global.limited
+        .sort((a: any, b: any) => Number(a.price) - Number(b.price))
+        .slice(0, 9);
+    } else if (option.value == 'High') {
+      this.global.limited
+        .sort((a: any, b: any) => Number(b.price) - Number(a.price))
+        .slice(0, 9);
+    }
+    // console.log(this.global.limited.slice(0, 9));
+  }
+  //====================BUTTON SHOW MORE======================
+  idFirst: number = 0;
+  idLast: number = 9;
   showMore() {
     // this.global.limited.push(x);
-    this.id = this.id + 9;
-    this.getLimitProductId(10, this.id);
+    this.idFirst = this.idFirst + 9;
+    this.idLast = this.idLast + 9;
+    // this.global.limited.slice(this.idFirst, this.idLast);
+    // console.log(this.global.limited.slice(this.idFirst, this.idLast));
+    // this.getProductId(this.idFirst, this.idLast);
 
-    // let counter = num + 1;
-    console.log(this.id);
+    console.log(this.idLast);
   }
+  // =========================================================
+
   // ===================================================
-  // ===================================================
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.mainNavbar = document.getElementById('main-navbar');
-    const number = window.scrollY || 0;
-    if (number > 100) {
-      this.mainNavbar.style =
-        ' background-color: #fff !important; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;';
-      console.log('You are 100px from the top to bottom');
-    } else if (number <= 20) {
-      this.mainNavbar.style =
-        'background-color:  transparent !important; box-shadow: none !important;';
-    }
-  }
 }
-
-// navPosition() {
-//   this.mainNavbar = document.getElementById('main-navbar');
-//   if (this.mainNavbar.scrollHeight !== 0) {
-//     this.mainNavbar.style =
-//       'top: 0; background-color: #fff !important; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;';
-//   }
-// }

@@ -8,7 +8,6 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./men-shirts.component.css'],
 })
 export class MenShirtsComponent {
-  mainNavbar: any = [];
   product: any;
   productId: any;
   category: any;
@@ -40,18 +39,4 @@ export class MenShirtsComponent {
   // ===================================================
 
   // ===================================================
-  // ===================================================
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.mainNavbar = document.getElementById('main-navbar');
-    const number = window.scrollY || 0;
-    if (number > 100) {
-      this.mainNavbar.style =
-        ' background-color: #fff !important; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;';
-      console.log('You are 100px from the top to bottom');
-    } else if (number <= 20) {
-      this.mainNavbar.style =
-        'background-color:  transparent !important; box-shadow: none !important;';
-    }
-  }
 }

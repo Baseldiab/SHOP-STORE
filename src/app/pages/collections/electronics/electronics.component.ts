@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app-electronics',
   templateUrl: './electronics.component.html',
-  styleUrls: ['./electronics.component.css']
+  styleUrls: ['./electronics.component.css'],
 })
-export class ElectronicsComponent {
-
-}
+export class ElectronicsComponent {}

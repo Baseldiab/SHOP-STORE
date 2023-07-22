@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { JQueryStyleEventEmitter } from 'rxjs/internal/observable/fromEvent';
+import * as $ from 'jquery';
 // import
 
 import { HomeComponent } from './pages/home/home.component';
@@ -30,6 +31,7 @@ import { WishComponent } from './pages/wish/wish.component';
 import { AllProductsComponent } from './pages/collections/all-products/all-products.component';
 import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
+import { PipePipe } from './pipe.pipe';
 // import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
@@ -57,6 +59,7 @@ import { WomensWatchesComponent } from './pages/collections/womens-watches/women
     AllProductsComponent,
     WomensShoesComponent,
     WomensWatchesComponent,
+    PipePipe,
   ],
   imports: [
     BrowserModule,
