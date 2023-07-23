@@ -820,7 +820,7 @@
     </ul>
   </div>
 </nav>
-<!-- ==================================================================== -->
+<!-- SEARCH RESULT==================================== -->
 <div
   class="offcanvas offcanvas-end"
   tabindex="-1"
@@ -829,17 +829,19 @@
   data-bs-theme="dark"
 >
   <div class="offcanvas-header">
-    <form id="offcanvasRightLabel" class="offcanvas-title d-flex" role="search">
+    <div id="offcanvasRightLabel" class="offcanvas-title d-flex">
       <input
         class="search-input form-control me-2 bg-dark text-light border-0 border-bottom rounded-0"
         type="search"
         placeholder="Search"
         aria-label="Search"
+        [(ngModel)]="searchValue"
+        (input)="searchBox()"
       />
-      <button class="btn btn-close-white" type="submit">
+      <button class="btn btn-white">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
-    </form>
+    </div>
     <button
       type="button"
       class="btn-close bg-white"
@@ -847,5 +849,27 @@
       aria-label="Close"
     ></button>
   </div>
-  <div class="offcanvas-body">...</div>
+  <div class="offcanvas-body">
+    <div
+      class="card mb-3"
+      style="max-width: 540px"
+      *ngFor="let item of this.global.searchBox"
+    >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            [src]="item.images[0]"
+            class="img-fluid rounded-start"
+            [alt]="item.title"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h6 class="card-title">{{ item.title }}</h6>
+            <p class="card-text">${{ item.price.toFixed(2) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

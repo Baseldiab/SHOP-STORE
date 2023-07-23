@@ -68,7 +68,7 @@
             >
               <div class="accordion-body bg-white w-100 position-absolute">
                 <ul
-                  class="container m-auto d-flex flex-wrap justify-content-center align-items-center"
+                  class="collection-lists container m-auto d-flex flex-wrap justify-content-center align-items-center"
                 >
                   <li
                     class="me-md-2 pe-md-2 px-2 my-2 position-relative text-uppercase list-unstyled"
@@ -159,7 +159,7 @@
                     >
                       other
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu z-3 bg-white">
                       <li>
                         <a
                           class="dropdown-item my-2 fw-medium position-relative fw-medium text-uppercase"
@@ -216,7 +216,20 @@
                         <a
                           class="dropdown-item position-relative fw-medium text-uppercase"
                           routerLink="../laptops"
-                          >electronics
+                          >laptops
+                          <span
+                            class="position-absolute top-0 translate-middle badge text-success"
+                          >
+                            5
+                            <span class="visually-hidden">unread messages</span>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item position-relative fw-medium text-uppercase"
+                          routerLink="../smartphones"
+                          >smartphones
                           <span
                             class="position-absolute top-0 translate-middle badge text-success"
                           >
@@ -552,7 +565,7 @@
                         />
                       </div>
                       <div
-                        class="product__onSale-circle d-block bg-success position-absolute z-3"
+                        class="product__onSale-circle d-block bg-success position-absolute z-1"
                       >
                         <span
                           class="text-center text-light position-absolute top-50 start-50 translate-middle fw-bold"

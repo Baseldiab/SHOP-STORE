@@ -33,6 +33,7 @@ import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-sh
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
 import { PipePipe } from './pipe.pipe';
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
+import { FormsModule } from '@angular/forms';
 // import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
@@ -69,6 +70,7 @@ import { SmartphonesComponent } from './pages/collections/smartphones/smartphone
     AppRoutingModule,
     HttpClientModule,
     NgxImageZoomModule,
+    FormsModule,
 
     // NgxImageZoomModule.forRoot(),
   ],

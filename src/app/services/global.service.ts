@@ -22,8 +22,8 @@ export class GlobalService {
   electronics: any[] = [];
   groceries: any[] = [];
   furniture: any[] = [];
-  image: any[] = [];
   limited: any[] = [];
+  searchBox: any[] = [];
 
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(private http: HttpClient) {}
@@ -61,9 +61,7 @@ export class GlobalService {
       );
     }
   }
-
   // =====================================================
-
   calculateRating(value: number) {
     let val = value - Math.trunc(value);
     if (val <= 0.5 && val != 0) return Math.floor(value) + 0.5;
@@ -97,7 +95,11 @@ export class GlobalService {
     );
   }
   // =====================================================
-  // Get products of a category
+  getProductBySearch(searchText: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}products/search?q=${searchText}`);
+  }
+  // =====================================================
+  // Get collections
   getFurniture(): Observable<any> {
     return this.http.get(`${this.baseUrl}products/category/furniture`);
   }
