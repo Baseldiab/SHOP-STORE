@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FunctionService } from 'src/app/services/function.service';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { GlobalService } from 'src/app/services/global.service';
 export class ShoesComponent {
   constructor(
     public global: GlobalService,
+    public functions: FunctionService,
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {

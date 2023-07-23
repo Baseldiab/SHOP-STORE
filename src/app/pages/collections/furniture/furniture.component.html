@@ -10,7 +10,7 @@
     <!-- =========================ALL PRODUCT HEADER======================== -->
     <!-- NAVBAR================================== -->
     <section class="allProduct-firstSection">
-      <app-navbar class="allProduct-navbar w-100"></app-navbar>
+      <app-navbar class="allProduct-navbar w-100"> </app-navbar>
       <!-- HEADER TEXT=========================== -->
       <article class="allProduct-header d-flex flex-column align-items-center">
         <!-- HEADER TEXT=========================== -->
@@ -300,7 +300,7 @@
                 class="form-select text-uppercase"
                 aria-label="Default select example"
                 (change)="
-                  this.global.filterProduct(
+                  this.functions.filterProduct(
                     $event.target,
                     this.global.furniture
                   )
@@ -377,7 +377,9 @@
                       <!--   <div class="rating-bg" style="width: 90%;"></div> -->
                       <progress
                         class="rating-bg"
-                        value="{{ this.global.calculateRating(item.rating) }}"
+                        value="{{
+                          this.functions.calculateRating(item.rating)
+                        }}"
                         max="5"
                       ></progress>
                       <svg><use xlink:href="#fivestars" /></svg>

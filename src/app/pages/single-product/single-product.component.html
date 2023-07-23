@@ -137,7 +137,9 @@
               <!--   <div class="rating-bg" style="width: 90%;"></div> -->
               <progress
                 class="rating-bg"
-                value="{{ this.global.calculateRating(singleProduct.rating) }}"
+                value="{{
+                  this.functions.calculateRating(singleProduct.rating)
+                }}"
                 max="5"
               ></progress>
               <svg><use xlink:href="#fivestars" /></svg>
@@ -161,7 +163,7 @@
               {{ singleProduct.description }}
             </p>
             <p class="text-secondary opacity-75 text-start my-md-4 my-2">
-              {{ this.global.inStock(singleProduct.stock) }}
+              {{ this.functions.inStock(singleProduct.stock) }}
             </p>
             <div
               class="product__purchace py-2 d-flex flex-row align-items-start"
@@ -398,7 +400,7 @@
               <!--   <div class="rating-bg" style="width: 90%;"></div> -->
               <progress
                 class="rating-bg"
-                value="{{ this.global.calculateRating(item.rating) }}"
+                value="{{ this.functions.calculateRating(item.rating) }}"
                 max="5"
               ></progress>
               <svg><use xlink:href="#fivestars" /></svg>

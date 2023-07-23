@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as Aos from 'aos';
+import { FunctionService } from 'src/app/services/function.service';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
@@ -16,12 +17,14 @@ export class WomenDressesComponent {
 
   constructor(
     public global: GlobalService,
+    public functions: FunctionService,
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {
-    this.global.getWomenDresses().subscribe((data) => {
-         this.global.womanDress = data.products;
-       },
+    this.global.getWomenDresses().subscribe(
+      (data) => {
+        this.global.womanDress = data.products;
+      },
       (e) => {
         console.log(e);
       },

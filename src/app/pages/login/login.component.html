@@ -1,1 +1,99 @@
-<p>login works!</p>
+<main id="login" class="collection-products">
+  <!-- ======================LOADING IMG====================== -->
+
+  <!-- =========================ALL PRODUCT HEADER======================== -->
+  <!-- NAVBAR================================== -->
+  <section class="login-navbar allProduct-firstSection">
+    <app-navbar class="login-navbar allProduct-navbar w-100"></app-navbar>
+    <!-- HEADER TEXT=========================== -->
+    <article class="login-header d-flex flex-column align-items-center">
+      <!-- HEADER TEXT=========================== -->
+      <div class="container allProduct__container mx-auto">
+        <nav class="allProduct__nav-head text-center mt-5">
+          <ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item allProduct__nav-list position-relative">
+              <a class="text-decoration-none text-dark text-uppercase" href=""
+                >Home</a
+              >
+            </li>
+            <li class="mx-2 fw-bolder text-success allProduct__nav-list">></li>
+            <li
+              class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
+              aria-current="page"
+            >
+              <a
+                class="text-decoration-none text-dark text-uppercase"
+                href="./collection/all"
+                >Account</a
+              >
+            </li>
+          </ol>
+        </nav>
+        <!-- ================ -->
+        <h1
+          class="allProduct__main-head fw-medium text-uppercase text-center text-success"
+        >
+          Account
+        </h1>
+        <nav aria-label="breadcrumb mx-auto text-center">
+          <ol class="breadcrumb mx-auto justify-content-center">
+            <li class="breadcrumb-item">
+              <a
+                class="text-capitalize text-black text-decoration-none fs-6"
+                href="./login"
+                >login</a
+              >
+            </li>
+            <li
+              class="breadcrumb-item text-capitalize text-black text-decoration-none fs-6"
+              aria-current="page"
+            >
+              create account
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- ======================================= -->
+    </article>
+  </section>
+  <!-- ==========================FORM================================= -->
+  <section class="login-form mb-5">
+    <div class="login-container container mb-5">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control rounded-0 border-0 border-bottom"
+          id="floatingInput"
+          placeholder="name"
+          value="kminchelle"
+        />
+        <label
+          for="floatingInput"
+          class="text-capitalize fw-medium text-success"
+          >Name *</label
+        >
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control rounded-0 border-0 border-bottom"
+          id="floatingPassword"
+          placeholder="Password"
+          value="0lelplR"
+        />
+        <label
+          class="text-capitalize fw-medium text-success"
+          for="floatingPassword"
+          >Password *</label
+        >
+      </div>
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-success text-capitalize px-5 my-3">
+          login
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================ -->
+</main>

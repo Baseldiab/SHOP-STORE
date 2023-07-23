@@ -1,3 +1,4 @@
+import { FunctionService } from './../../services/function.service';
 import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { GlobalService } from 'src/app/services/global.service';
@@ -14,7 +15,7 @@ export class HomeComponent {
     Aos.init();
   }
 
-  constructor(public global: GlobalService) {
+  constructor(public global: GlobalService, public functions: FunctionService) {
     this.global.getWomenBags().subscribe(
       (data) => {
         this.global.womanBag = data.products.slice(0, 4);

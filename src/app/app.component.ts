@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { GlobalService } from './services/global.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { FunctionService } from './services/function.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent {
 
   constructor(
     public global: GlobalService,
+    public functions: FunctionService,
     private router: Router,
     private _activatedRoute: ActivatedRoute
   ) {

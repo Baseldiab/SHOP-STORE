@@ -300,7 +300,10 @@
                 class="form-select text-uppercase"
                 aria-label="Default select example"
                 (change)="
-                  this.global.filterProduct($event.target, this.global.lighting)
+                  this.functions.filterProduct(
+                    $event.target,
+                    this.global.lighting
+                  )
                 "
               >
                 <option value="Low" selected class="lowToHigh text-uppercase">
@@ -374,7 +377,9 @@
                       <!--   <div class="rating-bg" style="width: 90%;"></div> -->
                       <progress
                         class="rating-bg"
-                        value="{{ this.global.calculateRating(item.rating) }}"
+                        value="{{
+                          this.functions.calculateRating(item.rating)
+                        }}"
                         max="5"
                       ></progress>
                       <svg><use xlink:href="#fivestars" /></svg>

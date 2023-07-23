@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/global.service';
 import * as $ from 'jquery';
 import { DOCUMENT } from '@angular/common';
+import { FunctionService } from 'src/app/services/function.service';
 // const $ = require( "jquery" );
 
 @Component({
@@ -26,6 +27,7 @@ export class AllProductsComponent {
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(
     public global: GlobalService,
+    public functions: FunctionService,
     private _activatedRoute: ActivatedRoute,
     private _route: Router,
     @Inject(DOCUMENT) private document: any
