@@ -1,0 +1,13 @@
+@media (min-width: 769px) {
+  .card-img-top {
+    object-fit: cover !important;
+    max-height: 22vw !important;
+    min-height: 22vw !important;
+  }
+}
+
+/* @media (max-width: 576px) {
+  .card-img-top {
+    max-height: 45vw !important ;
+    min-height: 45vw !important;
+  } */

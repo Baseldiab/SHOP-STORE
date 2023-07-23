@@ -21,7 +21,7 @@ export class AllProductsComponent {
   category: any;
   productName: any;
   singleProduct: any;
-  smartphones: any = [];
+  electronics: any = [];
   firstProduct: any = [];
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(
@@ -60,7 +60,7 @@ export class AllProductsComponent {
       }
     );
   }
-  
+
   //====================BUTTON SHOW MORE======================
   idFirst: number = 0;
   idLast: number = 9;

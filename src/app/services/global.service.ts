@@ -1,3 +1,4 @@
+import { SmartphonesComponent } from './../pages/collections/smartphones/smartphones.component';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -17,8 +18,8 @@ export class GlobalService {
   menShirts: any[] = [];
   womanBag: any[] = [];
   lighting: any[] = [];
-  laptops: any[] = [];
-  smartPhones: any[] = [];
+  smartphones: any[] = [];
+  electronics: any[] = [];
   groceries: any[] = [];
   furniture: any[] = [];
   image: any[] = [];
@@ -103,11 +104,11 @@ export class GlobalService {
   getGroceries(): Observable<any> {
     return this.http.get(`${this.baseUrl}products/category/groceries`);
   }
-  getSmartphones(): Observable<any> {
-    return this.http.get(`${this.baseUrl}products/category/smartphones`);
-  }
-  getLaptops(): Observable<any> {
+  getelectronics(): Observable<any> {
     return this.http.get(`${this.baseUrl}products/category/laptops`);
+  }
+  getSmartPhones(): Observable<any> {
+    return this.http.get(`${this.baseUrl}products/category/smartphones`);
   }
   getLighting(): Observable<any> {
     return this.http.get(`${this.baseUrl}products/category/lighting`);

@@ -90,8 +90,8 @@ export class SingleProductComponent {
     // this.global.getLaptops().subscribe((data) => {
     //   this.global.laptops = data.products;
     // });
-    // this.global.getSmartphones().subscribe((data) => {
-    //   this.global.smartPhones = data.products;
+    // this.global.getelectronics().subscribe((data) => {
+    //   this.global.electronics = data.products;
     // });
     // this.global.getFurniture().subscribe((data) => {
     //   this.global.furniture = data.products;

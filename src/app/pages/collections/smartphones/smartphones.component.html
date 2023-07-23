@@ -1,4 +1,4 @@
-<main id="womenWatches" class="collection-products">
+<main id="smartphones" class="collection-products">
   <!-- ======================LOADING IMG====================== -->
   <div
     class="col-3 py-5 my-5 mx-auto"
@@ -44,7 +44,7 @@
                 class="breadcrumb-item text-uppercase allProduct__nav-list position-relative"
                 aria-current="page"
               >
-                WOMEN'S WATCHES
+                smartphones
               </li>
             </ol>
           </nav>
@@ -52,7 +52,7 @@
           <h1
             class="allProduct__main-head fw-medium text-uppercase text-center text-success"
           >
-            WOMEN'S WATCHES
+            smartphones
           </h1>
           <h5 class="text-center">
             <i class="fa-solid fa-caret-left fs-6 text-success me-2"></i>
@@ -300,7 +300,10 @@
                 class="form-select text-uppercase"
                 aria-label="Default select example"
                 (change)="
-                  this.global.filterProduct($event.target, this.global.watches)
+                  this.global.filterProduct(
+                    $event.target,
+                    this.global.smartphones
+                  )
                 "
               >
                 <option value="Low" selected class="lowToHigh text-uppercase">
@@ -325,7 +328,7 @@
                 <div
                   class="card products__card border-0 col-md-4 col-sm-6 col-8 mx-auto my-3 rounded-0"
                   *ngFor="
-                    let item of this.global.watches;
+                    let item of this.global.smartphones;
                     let i = index;
                     let last = last
                   "

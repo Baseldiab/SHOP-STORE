@@ -32,6 +32,7 @@ import { AllProductsComponent } from './pages/collections/all-products/all-produ
 import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
 import { PipePipe } from './pipe.pipe';
+import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 // import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
@@ -60,6 +61,7 @@ import { PipePipe } from './pipe.pipe';
     WomensShoesComponent,
     WomensWatchesComponent,
     PipePipe,
+    SmartphonesComponent,
   ],
   imports: [
     BrowserModule,

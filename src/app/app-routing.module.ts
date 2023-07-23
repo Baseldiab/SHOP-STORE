@@ -20,6 +20,7 @@ import { WishComponent } from './pages/wish/wish.component';
 import { AllProductsComponent } from './pages/collections/all-products/all-products.component';
 import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
+import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,7 +42,8 @@ const routes: Routes = [
       { path: 'all', component: AllProductsComponent },
       { path: 'furniture', component: FurnitureComponent },
       { path: 'groceries', component: GroceriesComponent },
-      { path: 'smartphones', component: ElectronicsComponent },
+      { path: 'laptops', component: ElectronicsComponent },
+      { path: 'smartphones', component: SmartphonesComponent },
       { path: 'lighting', component: LightingComponent },
       { path: 'mens-watches', component: WatchesComponent },
       { path: 'womens-watches', component: WomensWatchesComponent },

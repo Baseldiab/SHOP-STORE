@@ -13,7 +13,7 @@ export class MenShirtsComponent {
   category: any;
   productName: any;
   singleProduct: any;
-  smartphones: any = [];
+  electronics: any = [];
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(
     public global: GlobalService,
@@ -32,11 +32,4 @@ export class MenShirtsComponent {
       }
     );
   }
-  // ===================================================
-
-  // ===================================================
-
-  // ===================================================
-
-  // ===================================================
 }

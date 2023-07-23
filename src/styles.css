@@ -298,6 +298,11 @@
     max-height: 24vw;
     min-height: 24vw;
   }
+  .collection-products .card-img-top {
+    object-fit: cover;
+    max-height: 45vw;
+    min-height: 45vw;
+  }
 }
 @media (max-width: 576px) {
   .card-img-top {
@@ -305,6 +310,7 @@
     min-height: 33vw;
   }
 }
+
 .accordion-button {
   font-size: 16px !important;
 }

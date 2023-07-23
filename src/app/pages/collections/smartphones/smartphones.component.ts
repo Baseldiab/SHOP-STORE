@@ -3,19 +3,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-  selector: 'app-women-bags',
-  templateUrl: './women-bags.component.html',
-  styleUrls: ['./women-bags.component.css'],
+  selector: 'app-smartphones',
+  templateUrl: './smartphones.component.html',
+  styleUrls: ['./smartphones.component.css'],
 })
-export class WomenBagsComponent {
+export class SmartphonesComponent {
   constructor(
     public global: GlobalService,
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {
-    this.global.getWomenBags().subscribe(
+    this.global.getSmartPhones().subscribe(
       (data) => {
-        this.global.womanBag = data.products;
+        this.global.smartphones = data?.products;
       },
       (e) => {
         console.log(e);
