@@ -4,7 +4,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {
+  HTTP_INTERCEPTORS,
+  HttpClient,
+  HttpClientModule,
+} from '@angular/common/http';
 import { JQueryStyleEventEmitter } from 'rxjs/internal/observable/fromEvent';
 import * as $ from 'jquery';
 // import
@@ -34,6 +38,7 @@ import { WomensWatchesComponent } from './pages/collections/womens-watches/women
 import { PipePipe } from './pipe.pipe';
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 import { FormsModule } from '@angular/forms';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 // import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
@@ -74,7 +79,13 @@ import { FormsModule } from '@angular/forms';
 
     // NgxImageZoomModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

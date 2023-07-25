@@ -1,8 +1,6 @@
 export interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: 'atuny0@sohu.com';
-  phone: string;
-  gender: string;
+  username: string;
+  password: string | null;
 }
+// username: 'kminchelle',
+// password: '0lelplR',

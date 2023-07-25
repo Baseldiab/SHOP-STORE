@@ -21,6 +21,7 @@ import { AllProductsComponent } from './pages/collections/all-products/all-produ
 import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
+import { AuthInterceptor } from './interceptor/auth.interceptor';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

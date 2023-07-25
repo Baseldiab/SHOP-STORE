@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GlobalService {
+  isLogin = false
   loadingFlag = true;
   allProduct: any[] = [];
   manShoes: any[] = [];
@@ -31,9 +32,10 @@ export class GlobalService {
   // =====================================================
   baseUrl = 'https://dummyjson.com/';
   // =====================================================
-  register(): Observable<any> {
-    return this.http.get(`${this.baseUrl}products/`);
+  login(data: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}auth/login`, data);
   }
+
   // =====================================================
   getAllProduct(): Observable<any> {
     return this.http.get(`${this.baseUrl}products/`);

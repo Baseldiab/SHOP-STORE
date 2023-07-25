@@ -16,11 +16,12 @@ export class AppComponent {
     public global: GlobalService,
     public functions: FunctionService,
     private router: Router,
-    private _activatedRoute: ActivatedRoute
+    private ActivatedRoute: ActivatedRoute
   ) {
-    // if ( ) {
-    //   this.global.navbarShow = true;
-    // }
+    let token = localStorage.getItem('token');
+    if (token) {
+      global.isLogin = true;
+    }
   }
   // ===================================================
 
