@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+
 import { FurnitureComponent } from './pages/collections/furniture/furniture.component';
 import { GroceriesComponent } from './pages/collections/groceries/groceries.component';
 import { ElectronicsComponent } from './pages/collections/electronics/electronics.component';
@@ -22,12 +22,13 @@ import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-sh
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   // ==================
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'about-us', component: AboutUsComponent },
   // ==================
   { path: 'cart', component: CartComponent },
   { path: 'wish', component: WishComponent },

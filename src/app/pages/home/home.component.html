@@ -596,12 +596,19 @@
                 aria-label="Slide 2"
                 class="bg-dark"
               ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+                class="bg-dark"
+              ></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <figure class="justify-content-center">
                   <img
-                    src="./assets/images/review1.jpg"
+                    [src]="this.global.users[0].image"
                     class="d-block mx-auto rounded-circle"
                     alt="person image"
                   />
@@ -615,10 +622,13 @@
                   </figcaption>
                 </figure>
               </div>
-              <div class="carousel-item mx-auto">
+              <div
+                class="carousel-item"
+                *ngFor="let item of this.global.users.slice(3, 5)"
+              >
                 <figure class="justify-content-center">
                   <img
-                    src="./assets/images/review2.jpg"
+                    [src]="item?.image"
                     class="d-block mx-auto rounded-circle"
                     alt="person image"
                   />

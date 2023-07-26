@@ -15,7 +15,6 @@ import * as $ from 'jquery';
 
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FurnitureComponent } from './pages/collections/furniture/furniture.component';
@@ -39,6 +38,7 @@ import { PipePipe } from './pipe.pipe';
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
 // import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
@@ -46,7 +46,6 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent,
     FooterComponent,
     NavbarComponent,
     FurnitureComponent,
@@ -68,6 +67,7 @@ import { AuthInterceptor } from './interceptor/auth.interceptor';
     WomensWatchesComponent,
     PipePipe,
     SmartphonesComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,

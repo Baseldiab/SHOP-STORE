@@ -83,5 +83,16 @@ export class HomeComponent {
         this.global.loadingFlag = false;
       }
     );
+    this.global.getAllUsers().subscribe(
+      (data) => {
+        this.global.users = data.users;
+      },
+      (e) => {
+        console.log(e);
+      },
+      () => {
+        this.global.loadingFlag = false;
+      }
+    );
   }
 }

@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 import { GlobalService } from './services/global.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FunctionService } from './services/function.service';
@@ -24,7 +25,9 @@ export class AppComponent {
     }
   }
   // ===================================================
-
+  ngOnInit() {
+    Aos.init();
+  }
   // ===================================================
   @HostListener('window:scroll', [])
   onWindowScroll() {

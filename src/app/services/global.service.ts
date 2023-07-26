@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GlobalService {
-  isLogin = false
+  isLogin = false;
   loadingFlag = true;
   allProduct: any[] = [];
   manShoes: any[] = [];
@@ -25,6 +25,7 @@ export class GlobalService {
   furniture: any[] = [];
   limited: any[] = [];
   searchBox: any[] = [];
+  users: any[] = [];
 
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(private http: HttpClient) {}
@@ -55,6 +56,9 @@ export class GlobalService {
     return this.http.get(`${this.baseUrl}products/search?q=${searchText}`);
   }
   // =====================================================
+  getAllUsers(): Observable<any> {
+    return this.http.get(`${this.baseUrl}users`);
+  }
   // =====================================================
   // Get collections
   getFurniture(): Observable<any> {
