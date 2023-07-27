@@ -26,7 +26,7 @@
               <a routerLink="./collection/womens-dresses">
                 <button
                   type="button  "
-                  class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+                  class="curousel__shop-now btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
                 >
                   shop now
                 </button></a
@@ -55,7 +55,7 @@
                 type="button  "
                 data-aos="fade-up"
                 data-aos-duration="1800"
-                class="btn btn-success rounded-0 bg-success px-3 py-2 text-capitalize"
+                class="curousel__shop-now btn btn-success rounded-0 bg-success px-sm-3 py-sm-2 text-capitalize"
               >
                 shop now
               </button></a
@@ -130,7 +130,7 @@
             <figcaption class="position-absolute">
               <a
                 routerLink="./collection/womens-bags"
-                class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                class="categories__button text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
                 >bag</a
               >
             </figcaption>
@@ -159,7 +159,7 @@
                 <figcaption class="position-absolute">
                   <a
                     routerLink="./collection/mens-shoes"
-                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >footwear</a
                   >
                 </figcaption>
@@ -182,7 +182,7 @@
                 <figcaption class="position-absolute">
                   <a
                     routerLink="./collection/sunglasses"
-                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >sunglasses</a
                   >
                 </figcaption>
@@ -210,7 +210,7 @@
                 <figcaption class="position-absolute">
                   <a
                     routerLink="./collection/mens-watches"
-                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >watches</a
                   >
                 </figcaption>
@@ -233,7 +233,7 @@
                 <figcaption class="position-absolute">
                   <a
                     routerLink="./collection/mens-shirts"
-                    class="text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
+                    class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >men</a
                   >
                 </figcaption>
@@ -321,8 +321,14 @@
             <figcaption
               class="products__action bg-white position-absolute d-none flex-column p-2"
             >
-              <i class="fa-regular fa-heart my-2"></i>
-              <i class="fa-solid fa-cart-shopping my-2"></i>
+              <i
+                class="fa-regular fa-heart my-2"
+                (click)="this.functions.addToWish(item)"
+              ></i>
+              <i
+                class="fa-solid fa-cart-shopping my-2"
+                (click)="this.functions.addToCart(item, $event)"
+              ></i>
             </figcaption>
             <div class="card-body p-0">
               <a
@@ -355,9 +361,13 @@
                 ${{ item.price.toFixed(2) }}
               </div>
             </div>
-            <span class="product__addToCart d-none opacity-50 mt-2"
-              ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+            <button
+              type="button"
+              class="btn btn-outline-success product__addToCart d-none mt-2"
+              (click)="this.functions.addToCart(item, $event)"
             >
+              <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+            </button>
           </div>
         </div>
         <!-- =============== -->
@@ -393,8 +403,14 @@
             <figcaption
               class="products__action bg-white position-absolute d-none flex-column p-2"
             >
-              <i class="fa-regular fa-heart my-2"></i>
-              <i class="fa-solid fa-cart-shopping my-2"></i>
+              <i
+                class="fa-regular fa-heart my-2"
+                (click)="this.functions.addToWish(item)"
+              ></i>
+              <i
+                class="fa-solid fa-cart-shopping my-2"
+                (click)="this.functions.addToCart(item, $event)"
+              ></i>
             </figcaption>
             <div class="card-body p-0">
               <a
@@ -426,10 +442,13 @@
                 >
                 ${{ item.price.toFixed(2) }}
               </div>
-              <span class="product__addToCart d-none opacity-50 mt-2"
-                ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to
-                cart</span
+              <button
+                type="button"
+                class="btn btn-outline-success product__addToCart d-none mt-2"
+                (click)="this.functions.addToCart(item, $event)"
               >
+                <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+              </button>
             </div>
           </div>
         </div>
@@ -466,8 +485,14 @@
             <figcaption
               class="products__action bg-white position-absolute d-none flex-column p-2"
             >
-              <i class="fa-regular fa-heart my-2"></i>
-              <i class="fa-solid fa-cart-shopping my-2"></i>
+              <i
+                class="fa-regular fa-heart my-2"
+                (click)="this.functions.addToWish(item)"
+              ></i>
+              <i
+                class="fa-solid fa-cart-shopping my-2"
+                (click)="this.functions.addToCart(item, $event)"
+              ></i>
             </figcaption>
             <div class="card-body p-0">
               <a
@@ -499,10 +524,13 @@
                 >
                 ${{ item.price.toFixed(2) }}
               </div>
-              <span class="product__addToCart d-none opacity-50 mt-2"
-                ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to
-                cart</span
+              <button
+                type="button"
+                class="btn btn-outline-success product__addToCart d-none mt-2"
+                (click)="this.functions.addToCart(item, $event)"
               >
+                <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+              </button>
             </div>
           </div>
         </div>
@@ -532,7 +560,10 @@
             purus ridiculus rhoncus nullam sodales euismod ad venenatis volutpa
             ridiculus.
           </p>
-          <button type="button" class="btn btn-dark rounded-0">
+          <button
+            type="button"
+            class="shop__purchase-basel btn btn-dark rounded-0"
+          >
             <a
               class="text-uppercase text-decoration-none text-white"
               href="./collection/all"
@@ -554,7 +585,7 @@
           </p>
           <button
             type="button"
-            class="btn btn-outline-secondary rounded-0 text-center mx-auto"
+            class="shop__shop-now btn btn-outline-secondary rounded-0 text-center mx-auto"
           >
             <a
               class="text-uppercase text-decoration-none text-black"
@@ -575,10 +606,12 @@
           <hr class="border-1 opacity-75 border-secondary mx-auto" />
         </div>
         <!-- =============== -->
-        <div class="container mx-auto row justify-content-center">
+        <div
+          class="container-sm container-fluid mx-auto row justify-content-center"
+        >
           <div
             id="carouselExampleIndicators"
-            class="review__carousel container carousel slide col-md-6 col-10"
+            class="review__carousel container-sm container-fluid carousel slide col-md-8 col-12"
           >
             <div class="carousel-indicators">
               <button
@@ -609,15 +642,22 @@
                 <figure class="justify-content-center">
                   <img
                     [src]="this.global.users[0].image"
-                    class="d-block mx-auto rounded-circle"
+                    class="img-fluid d-block mx-auto rounded-circle"
                     alt="person image"
                   />
-                  <figcaption class="review__text px-5">
-                    <p class="text-center text-secondary my-5">
+                  <figcaption class="review__text px-sm-5 p-0 my-5">
+                    <p class="text-center text-secondary">
                       Fringilla iaculis ante torquent a diam a vestibulum diam
                       nisi augue dictumst parturient a vestibulum tortor viverra
                       inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam
                       rutrum.
+                    </p>
+                    <p class="text-center text-black">
+                      {{ this.global.users[0]?.firstName }}
+                      {{ this.global.users[0]?.lastName }}
+                      <span class="text-secondary"
+                        >- {{ this.global.users[0]?.company.title }}
+                      </span>
                     </p>
                   </figcaption>
                 </figure>
@@ -629,22 +669,29 @@
                 <figure class="justify-content-center">
                   <img
                     [src]="item?.image"
-                    class="d-block mx-auto rounded-circle"
+                    class="img-fluid d-block mx-auto rounded-circle"
                     alt="person image"
                   />
-                  <figcaption class="review__text px-5">
-                    <p class="text-center text-secondary my-5">
+                  <figcaption class="review__text px-sm-5 px-0 my-5">
+                    <p class="text-center text-secondary">
                       Fringilla iaculis ante torquent a diam a vestibulum diam
                       nisi augue dictumst parturient a vestibulum tortor viverra
                       inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam
                       rutrum.
+                    </p>
+                    <p class="text-center text-black">
+                      {{ item?.firstName }}
+                      {{ item?.lastName }}
+                      <span class="text-secondary"
+                        >- {{ item?.company.title }}
+                      </span>
                     </p>
                   </figcaption>
                 </figure>
               </div>
             </div>
             <button
-              class="carousel-control-prev"
+              class="carousel-control-prev d-sm-inline d-none"
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide="prev"
@@ -656,7 +703,7 @@
               <span class="visually-hidden">Previous</span>
             </button>
             <button
-              class="carousel-control-next"
+              class="carousel-control-next d-sm-inline d-none"
               type="button"
               data-bs-target="#carouselExampleIndicators"
               data-bs-slide="next"

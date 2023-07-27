@@ -7,20 +7,22 @@
   </div>
   <ng-template #ShowGallery>
     <!-- =========================NAV====================================== -->
+    <app-navbar></app-navbar>
+    <!-- =========================NAV====================================== -->
     <nav
       aria-label="breadcrumb"
       class="singleProduct__navbar bg-body-secondary py-2 container-fluid"
     >
-      <ol class="breadcrumb">
+      <ol class="breadcrumb align-items-center m-0">
         <li class="breadcrumb-item">
-          <a class="text-capitalize text-black" routerLink=""
+          <a class="text-capitalize text-black text-decoration-none" href=""
             ><i class="fa-solid fa-house-chimney pe-2"></i>home</a
           >
         </li>
 
         <li class="breadcrumb-item">
           <a
-            class="text-capitalize text-black"
+            class="text-capitalize text-black text-decoration-none"
             routerLink="{{ singleProduct.category.toLowerCase() }}"
             >{{ singleProduct.category }}</a
           >
@@ -168,34 +170,21 @@
             <div
               class="product__purchace py-2 d-flex flex-row align-items-start"
             >
-              <form
-                action="
-              "
+              <button
+                class="custom-btn btn-3 position-relative me-3"
+                (click)="this.functions.addToCart(singleProduct, $event)"
               >
-                <span
-                  class="product__quantity border-bottom border-success fs-6 fw-medium"
-                  ><input
-                    class="border-0 text-center px-4 py-3"
-                    placeholder="1"
-                    type="number"
-                    id="quantity"
-                    name="quantity"
-                    min="1"
-                    [max]="singleProduct.stock.toFixed()"
-                /></span>
-
-                <button class="custom-btn btn-3 position-relative mx-3">
-                  <span class="py-3 px-4 text-uppercase fs-6 fw-light"
-                    >add to cart</span
-                  >
-                </button>
-              </form>
+                <span class="py-3 px-4 text-uppercase fs-6 fw-light"
+                  >add to cart</span
+                >
+              </button>
             </div>
-            <a
-              routerLink="wish"
-              class="singleProduct__addWish text-uppercase mt-3 d-block text-decoration-none text-secondary"
-              ><i class="fa-solid fa-heart me-1"></i> add to wish
-            </a>
+            <button
+              class="singleProduct__addWish text-uppercase border-0 bg-transparent mt-3 d-block text-decoration-none text-secondary"
+              (click)="this.functions.addToWish(singleProduct)"
+            >
+              <i class="fa-solid fa-heart me-1"></i> add to wish
+            </button>
             <figure class="border-bottom border-black-50 py-2">
               <img
                 class="my-3 w-100"

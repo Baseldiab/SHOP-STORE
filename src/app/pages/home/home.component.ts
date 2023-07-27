@@ -94,5 +94,16 @@ export class HomeComponent {
         this.global.loadingFlag = false;
       }
     );
+    this.global.getFurniture().subscribe(
+      (data) => {
+        this.global.furniture = data.products;
+      },
+      (e) => {
+        console.log(e);
+      },
+      () => {
+        this.global.loadingFlag = false;
+      }
+    );
   }
 }

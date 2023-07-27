@@ -26,8 +26,11 @@ export class AppComponent {
   }
   // ===================================================
   ngOnInit() {
+    // localStorage.clear();
     Aos.init();
   }
+  // ===================================================
+  
   // ===================================================
   @HostListener('window:scroll', [])
   onWindowScroll() {

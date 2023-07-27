@@ -1,12 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import * as $ from 'jquery';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FunctionService {
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.myWish = this.readFromStorage('wish');
+    this.myCart = this.readFromStorage('cart');
+    this.wishCount = this.myWish.length;
+    this.cartCount = this.myCart.length;
+  }
 
   //====================SORT PRODUCTS======================
   filterProduct(option: any, product: any) {
@@ -53,10 +59,49 @@ export class FunctionService {
     }
   }
   // =====================================================
+  cartArray: any = [];
+  wishArray: any = [];
+  myCart: any;
+  myWish: any;
+  cartCount: any = 0;
+  wishCount: any = 0;
+
+  addToCart(data: any, eve: any) {
+    this.cartArray.push(data);
+    this.writeToStorage(this.cartArray, 'cart');
+    this.myCart = this.readFromStorage('cart');
+    this.cartCount = this.myCart.length;
+    // let cartCount = document.querySelector('.cart-count');
+    let button = document.querySelector('.product__addToCart');
+    eve.target.disabled = true;
+  }
+
+  // =====================================
+  addToWish(data: any) {
+    this.wishArray.push(data);
+    this.writeToStorage(this.wishArray, 'wish');
+    this.myWish = this.readFromStorage('wish');
+    this.wishCount = this.myWish.length;
+  }
+  // =====================================================
   inStock(value: any) {
     if (value > 0) return 'IN STOCK';
     else {
       return 'OUT STOCK';
     }
   }
+  // =========================================
+  cart: any[] = [];
+  all: any;
+  readFromStorage(key = `products`) {
+    this.all = localStorage.getItem(key) as String;
+
+    return (this.cart = JSON.parse(this.all));
+  }
+
+  //===================================
+  writeToStorage(data: any, key = `products`) {
+    localStorage.setItem(key, JSON.stringify(data));
+  }
+  // =========================================
 }

@@ -23,15 +23,16 @@ import { WomensWatchesComponent } from './pages/collections/womens-watches/women
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { AuthGuard } from './guard/auth.guard.guard.spec';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   // ==================
-  { path: 'login', component: LoginComponent },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'login', component: LoginComponent, pathMatch: 'full' },
   // ==================
+  { path: 'wish', component: WishComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent },
-  { path: 'wish', component: WishComponent },
   // ==================
   {
     path: 'Product',

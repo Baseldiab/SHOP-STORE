@@ -9,10 +9,14 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./wish.component.css'],
 })
 export class WishComponent {
+  id: any;
   constructor(
     public global: GlobalService,
     public functions: FunctionService,
     private _activatedRoute: ActivatedRoute,
     private _route: Router
-  ) {}
+  ) {
+    this.global.wish = this.functions.readFromStorage('wish');
+    // console.log(this.functions.readFromStorage('wish'));
+  }
 }

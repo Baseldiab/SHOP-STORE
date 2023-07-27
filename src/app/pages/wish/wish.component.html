@@ -1,1 +1,83 @@
-<p>wish works!</p>
+<main id="wish">
+  <!-- ================================================ -->
+  <app-navbar></app-navbar>
+  <!-- ================================================ -->
+  <section class="head bg-black m-0 py-3">
+    <div class="container mx-auto text-center">
+      <h1 class="text-uppercase text-white">wish</h1>
+      <nav aria-label="breadcrumb bg-black " data-bs-theme="dark">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item">
+            <a class="text-secondary text-decoration-none" href=""
+              ><i class="fa-solid fa-house me-1"></i> Home</a
+            >
+          </li>
+          <li
+            class="breadcrumb-item text-capitalize active"
+            aria-current="page"
+          >
+            wish
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <!-- ================================================ -->
+  <section class="cart-table">
+    <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr class="w-100">
+            <th class="col th1"></th>
+            <th class="col th2"></th>
+            <th class="col th3 text-uppercase">product</th>
+            <th class="col th4 text-uppercase">price</th>
+            <th class="col th5 text-uppercase">quantity</th>
+            <th class="col th6 text-uppercase">total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of this.global.wish; let i = index">
+            <th class="" scope="row">{{ i + 1 }}</th>
+            <td colspan="1">
+              <a href="/Product/{{ item.id }}">
+                <img
+                  class="wish-img"
+                  [src]="item.images[0]"
+                  alt="product image"
+                />
+              </a>
+            </td>
+            <td colspan="1">
+              <a
+                href="/Product/{{ item.id }}"
+                class="text-decoration-none text-black"
+                >{{ item.title }}
+              </a>
+              <br />
+              <a
+                href="./collection/{{ item.category }}"
+                class="text-decoration-none text-secondary"
+                >{{ item.category }}</a
+              >
+            </td>
+            <td colspan="1">${{ item.price.toFixed(2) }}</td>
+            <td colspan="1">
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                class="cart__box border rounded border-dark text-secondary fw-bold text-center w-25"
+              />
+            </td>
+            <td colspan="1">${{ item.price.toFixed(2) }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- ================================================ -->
+  <app-footer></app-footer>
+</main>

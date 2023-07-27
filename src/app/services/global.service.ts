@@ -9,6 +9,14 @@ import { Observable } from 'rxjs';
 export class GlobalService {
   isLogin = false;
   loadingFlag = true;
+  // ============
+  limited: any[] = [];
+  searchBox: any[] = [];
+  users: any[] = [];
+  cart: any[] = [];
+  wish: any[] = [];
+  productImage: any;
+  // =============
   allProduct: any[] = [];
   manShoes: any[] = [];
   womanShoes: any[] = [];
@@ -23,9 +31,6 @@ export class GlobalService {
   electronics: any[] = [];
   groceries: any[] = [];
   furniture: any[] = [];
-  limited: any[] = [];
-  searchBox: any[] = [];
-  users: any[] = [];
 
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(private http: HttpClient) {}
@@ -59,6 +64,7 @@ export class GlobalService {
   getAllUsers(): Observable<any> {
     return this.http.get(`${this.baseUrl}users`);
   }
+
   // =====================================================
   // Get collections
   getFurniture(): Observable<any> {

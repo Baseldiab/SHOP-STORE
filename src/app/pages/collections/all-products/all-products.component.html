@@ -580,8 +580,14 @@
                   <figcaption
                     class="products__action bg-white position-absolute d-none flex-column p-2"
                   >
-                    <i class="fa-regular fa-heart my-2"></i>
-                    <i class="fa-solid fa-cart-shopping my-2"></i>
+                    <i
+                      class="fa-regular fa-heart my-2"
+                      (click)="this.functions.addToWish(item)"
+                    ></i>
+                    <i
+                      class="fa-solid fa-cart-shopping my-2"
+                      (click)="this.functions.addToCart(item, $event)"
+                    ></i>
                   </figcaption>
                   <div class="card-body p-0">
                     <a
@@ -619,10 +625,13 @@
                       ${{ item.price.toFixed(2) }}
                     </div>
                   </div>
-                  <span class="product__addToCart d-none opacity-50 mt-2"
-                    ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to
-                    cart</span
+                  <button
+                    type="button"
+                    class="btn btn-outline-success product__addToCart d-none mt-2"
+                    (click)="this.functions.addToCart(item, $event)"
                   >
+                    <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+                  </button>
                 </div>
               </div>
               <!-- =============== -->

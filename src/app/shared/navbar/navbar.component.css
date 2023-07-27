@@ -27,6 +27,13 @@
     /* max-height: 60px; */
     max-width: 90px;
   }
+  .navbar-toggler {
+    padding: 5px;
+  }
+  .navbar-toggler-icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .navbar__phone {
