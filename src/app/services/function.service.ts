@@ -67,17 +67,16 @@ export class FunctionService {
   wishCount: any = 0;
 
   addToCart(data: any, eve: any) {
+    eve.target.disabled = true;
     this.cartArray.push(data);
     this.writeToStorage(this.cartArray, 'cart');
     this.myCart = this.readFromStorage('cart');
     this.cartCount = this.myCart.length;
-    // let cartCount = document.querySelector('.cart-count');
-    let button = document.querySelector('.product__addToCart');
-    eve.target.disabled = true;
   }
 
   // =====================================
-  addToWish(data: any) {
+  addToWish(data: any, eve: any) {
+    eve.target.disabled = true;
     this.wishArray.push(data);
     this.writeToStorage(this.wishArray, 'wish');
     this.myWish = this.readFromStorage('wish');

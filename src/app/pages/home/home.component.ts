@@ -18,7 +18,7 @@ export class HomeComponent {
   constructor(public global: GlobalService, public functions: FunctionService) {
     this.global.getWomenBags().subscribe(
       (data) => {
-        this.global.womanBag = data.products.slice(0, 4);
+        this.global.womanBag = data?.products.slice(0, 4);
       },
       (e) => {
         console.log(e);
@@ -29,7 +29,7 @@ export class HomeComponent {
     );
     this.global.getMensShoes().subscribe(
       (data) => {
-        this.global.manShoes = data.products;
+        this.global.manShoes = data?.products;
       },
       (e) => {
         console.log(e);
@@ -41,7 +41,7 @@ export class HomeComponent {
 
     this.global.getWomenDresses().subscribe(
       (data) => {
-        this.global.womanDress = data.products;
+        this.global.womanDress = data?.products;
       },
       (e) => {
         console.log(e);
@@ -52,7 +52,7 @@ export class HomeComponent {
     );
     this.global.getWomenWatches().subscribe(
       (data) => {
-        this.global.watches = data.products;
+        this.global.watches = data?.products;
       },
       (e) => {
         console.log(e);
@@ -63,7 +63,7 @@ export class HomeComponent {
     );
     this.global.getMensSunglasses().subscribe(
       (data) => {
-        this.global.sunglasses = data.products.slice(0, 4);
+        this.global.sunglasses = data?.products.slice(0, 4);
       },
       (e) => {
         console.log(e);
@@ -74,7 +74,7 @@ export class HomeComponent {
     );
     this.global.getMensShirts().subscribe(
       (data) => {
-        this.global.menShirts = data.products.slice(0, 4);
+        this.global.menShirts = data?.products.slice(0, 4);
       },
       (e) => {
         console.log(e);
@@ -85,7 +85,7 @@ export class HomeComponent {
     );
     this.global.getAllUsers().subscribe(
       (data) => {
-        this.global.users = data.users;
+        this.global.users = data?.users;
       },
       (e) => {
         console.log(e);
@@ -96,7 +96,7 @@ export class HomeComponent {
     );
     this.global.getFurniture().subscribe(
       (data) => {
-        this.global.furniture = data.products;
+        this.global.furniture = data?.products;
       },
       (e) => {
         console.log(e);

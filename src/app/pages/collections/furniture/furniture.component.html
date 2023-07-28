@@ -360,14 +360,29 @@
                   <figcaption
                     class="products__action bg-white position-absolute d-none flex-column p-2"
                   >
-                    <i
-                      class="fa-regular fa-heart my-2"
-                      (click)="this.functions.addToWish(item)"
-                    ></i>
-                    <i
-                      class="fa-solid fa-cart-shopping my-2"
+                    <button
+                      class="btn btn-outline-success my-2 product__addToWish w-100 border-0"
+                      type="button"
+                      (click)="this.functions.addToWish(item, $event)"
+                      title="login to use wish"
+                    >
+                      <i
+                        class="fa-regular fa-heart"
+                        style="pointer-events: none"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                    <button
+                      class="btn btn-outline-success my-2 product__addToCart w-100 border-0"
+                      type="button"
                       (click)="this.functions.addToCart(item, $event)"
-                    ></i>
+                    >
+                      <i
+                        class="fa-solid fa-cart-shopping"
+                        style="pointer-events: none"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
                   </figcaption>
                   <div class="card-body p-0">
                     <a
@@ -410,7 +425,12 @@
                     class="btn btn-outline-success product__addToCart d-none mt-2"
                     (click)="this.functions.addToCart(item, $event)"
                   >
-                    <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+                    <i
+                      class="fa-solid fa-cart-shopping fs-6"
+                      style="pointer-events: none"
+                      aria-hidden="true"
+                    ></i>
+                    Add to cart
                   </button>
                 </div>
               </div>

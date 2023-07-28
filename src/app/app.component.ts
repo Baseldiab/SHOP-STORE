@@ -4,6 +4,7 @@ import { GlobalService } from './services/global.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FunctionService } from './services/function.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,7 +31,7 @@ export class AppComponent {
     Aos.init();
   }
   // ===================================================
-  
+
   // ===================================================
   @HostListener('window:scroll', [])
   onWindowScroll() {

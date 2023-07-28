@@ -149,11 +149,12 @@
     margin-right: 50%;
   }
 }
-.fa-cart-shopping,
+/* .fa-cart-shopping,
 .fa-heart {
   cursor: pointer;
-}
-.product__addToCart {
+} */
+.product__addToCart,
+.product__addToWish {
   --bs-btn-hover-bg: var(--main-color) !important;
   --bs-btn-border-color: var(--main-color) !important;
   --bs-btn-hover-border-color: var(--main-color) !important;

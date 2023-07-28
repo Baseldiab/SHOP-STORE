@@ -171,19 +171,23 @@
               class="product__purchace py-2 d-flex flex-row align-items-start"
             >
               <button
-                class="custom-btn btn-3 position-relative me-3"
+                class="btn btn-outline-success my-2 product__addToCart fw-medium me-3 py-3 px-4 text-uppercase"
                 (click)="this.functions.addToCart(singleProduct, $event)"
+                type="button"
               >
-                <span class="py-3 px-4 text-uppercase fs-6 fw-light"
-                  >add to cart</span
-                >
+                add to cart
               </button>
             </div>
             <button
               class="singleProduct__addWish text-uppercase border-0 bg-transparent mt-3 d-block text-decoration-none text-secondary"
-              (click)="this.functions.addToWish(singleProduct)"
+              (click)="this.functions.addToWish(singleProduct, $event)"
             >
-              <i class="fa-solid fa-heart me-1"></i> add to wish
+              <i
+                class="fa-solid fa-heart me-1"
+                style="pointer-events: none"
+                aria-hidden="true"
+              ></i>
+              add to wish
             </button>
             <figure class="border-bottom border-black-50 py-2">
               <img
@@ -398,7 +402,12 @@
               >${{ item.price.toFixed(2) }}</span
             >
             <span class="product__addToCart d-none opacity-50 mt-2"
-              ><i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart</span
+              ><i
+                class="fa-solid fa-cart-shopping fs-6"
+                style="pointer-events: none"
+                aria-hidden="true"
+              ></i>
+              Add to cart</span
             >
           </div>
         </div>

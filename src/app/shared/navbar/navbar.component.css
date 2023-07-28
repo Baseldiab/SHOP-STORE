@@ -1,12 +1,15 @@
 /* ===================navbar=================== */
 .navbar-brand,
 .link-underline {
-  font-size: 12px !important;
+  font-size: 11px !important;
 }
 @media (max-width: 992px) {
   .border-end {
     --bs-border-width: 0px !important;
   }
+}
+#top-nav {
+  padding: 4px 0;
 }
 .products__carousel img {
   max-height: 200px !important;

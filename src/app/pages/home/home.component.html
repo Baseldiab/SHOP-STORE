@@ -115,21 +115,18 @@
           <figure
             class="categories__img col-md-5 col-12 position-relative ps-md-0"
           >
-            <a
-              class="text-decoration-none"
-              routerLink="./collection/womens-bags"
-            >
+            <a class="text-decoration-none" href="./collection/womens-bags">
               <div class="categories__bags overflow-hidden">
                 <img
                   class="w-100"
-                  src="{{ this.global.womanBag[3].images[3] }}"
+                  [src]="this.global.womanBag[3]?.images[3]"
                   alt="woman bag image"
                 />
               </div>
             </a>
             <figcaption class="position-absolute">
               <a
-                routerLink="./collection/womens-bags"
+                href="./collection/womens-bags"
                 class="categories__button text-decoration-none text-capitalize bg-white text-black px-4 py-2 fs-6"
                 >bag</a
               >
@@ -144,10 +141,7 @@
               <figure
                 class="categories__shoes overflow-hidden col-md-6 col-12 position-relative"
               >
-                <a
-                  class="text-decoration-none"
-                  routerLink="./collection/mens-shoes"
-                >
+                <a class="text-decoration-none" href="./collection/mens-shoes">
                   <div class="overflow-hidden">
                     <img
                       class="w-100"
@@ -158,7 +152,7 @@
                 </a>
                 <figcaption class="position-absolute">
                   <a
-                    routerLink="./collection/mens-shoes"
+                    href="./collection/mens-shoes"
                     class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >footwear</a
                   >
@@ -167,10 +161,7 @@
               <figure
                 class="categories__sunglasses overflow-hidden col-md-6 col-12 position-relative mt-md-0 mt-3"
               >
-                <a
-                  class="text-decoration-none"
-                  routerLink="./collection/sunglasses"
-                >
+                <a class="text-decoration-none" href="./collection/sunglasses">
                   <div class="overflow-hidden">
                     <img
                       class="w-100"
@@ -181,7 +172,7 @@
                 </a>
                 <figcaption class="position-absolute">
                   <a
-                    routerLink="./collection/sunglasses"
+                    href="./collection/sunglasses"
                     class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >sunglasses</a
                   >
@@ -197,7 +188,7 @@
               >
                 <a
                   class="text-decoration-none"
-                  routerLink="./collection/mens-watches"
+                  href="./collection/mens-watches"
                 >
                   <div class="overflow-hidden">
                     <img
@@ -209,7 +200,7 @@
                 </a>
                 <figcaption class="position-absolute">
                   <a
-                    routerLink="./collection/mens-watches"
+                    href="./collection/mens-watches"
                     class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >watches</a
                   >
@@ -218,10 +209,7 @@
               <figure
                 class="categories__menShirts overflow-hidden col-md-6 col-12 position-relative"
               >
-                <a
-                  class="text-decoration-none"
-                  routerLink="./collection/mens-shirts"
-                >
+                <a class="text-decoration-none" href="./collection/mens-shirts">
                   <div class="overflow-hidden">
                     <img
                       class="w-100"
@@ -232,7 +220,7 @@
                 </a>
                 <figcaption class="position-absolute">
                   <a
-                    routerLink="./collection/mens-shirts"
+                    href="./collection/mens-shirts"
                     class="categories__button text-decoration-none text-capitalize bg-white text-black"
                     >men</a
                   >
@@ -299,12 +287,12 @@
                   <img
                     [src]="item?.images[0]"
                     class="card-img-top img-thumbnail rounded-0 front__img d-block"
-                    [alt]="item?.title"
+                    alt="product image"
                   />
                   <img
                     [src]="item?.images[1]"
                     class="card-img-top img-thumbnail rounded-0 back__img d-none"
-                    [alt]="item?.title"
+                    alt="product image"
                   />
                 </div>
                 <div
@@ -321,14 +309,29 @@
             <figcaption
               class="products__action bg-white position-absolute d-none flex-column p-2"
             >
-              <i
-                class="fa-regular fa-heart my-2"
-                (click)="this.functions.addToWish(item)"
-              ></i>
-              <i
-                class="fa-solid fa-cart-shopping my-2"
+              <button
+                class="btn btn-outline-success my-2 product__addToWish w-100 border-0"
+                type="button"
+                (click)="this.functions.addToWish(item, $event)"
+                title="login to use wish"
+              >
+                <i
+                  class="fa-regular fa-heart"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <button
+                class="btn btn-outline-success my-2 product__addToCart w-100 border-0"
+                type="button"
                 (click)="this.functions.addToCart(item, $event)"
-              ></i>
+              >
+                <i
+                  class="fa-solid fa-cart-shopping"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+              </button>
             </figcaption>
             <div class="card-body p-0">
               <a
@@ -366,7 +369,12 @@
               class="btn btn-outline-success product__addToCart d-none mt-2"
               (click)="this.functions.addToCart(item, $event)"
             >
-              <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+              <i
+                class="fa-solid fa-cart-shopping fs-6"
+                style="pointer-events: none"
+                aria-hidden="true"
+              ></i>
+              Add to cart
             </button>
           </div>
         </div>
@@ -377,17 +385,17 @@
             *ngFor="let item of this.global?.sunglasses; let i = index"
           >
             <figure class="products_card shadow-sm">
-              <a href="/Product/{{ item.id }}" class="position-relative">
+              <a href="/Product/{{ item?.id }}" class="position-relative">
                 <div class="products__front">
                   <img
-                    src="{{ item.images[0] }}"
+                    [src]="item?.images[0]"
                     class="card-img-top img-thumbnail rounded-0 front__img d-block"
-                    [alt]="item?.title"
+                    alt="product image"
                   />
                   <img
-                    src="{{ item.images[2] }}"
+                    [src]="item?.images[2]"
                     class="card-img-top img-thumbnail rounded-0 back__img d-none"
-                    [alt]="item?.title"
+                    alt="product image"
                   />
                 </div>
                 <div
@@ -403,20 +411,35 @@
             <figcaption
               class="products__action bg-white position-absolute d-none flex-column p-2"
             >
-              <i
-                class="fa-regular fa-heart my-2"
-                (click)="this.functions.addToWish(item)"
-              ></i>
-              <i
-                class="fa-solid fa-cart-shopping my-2"
+              <button
+                class="btn btn-outline-success my-2 product__addToWish w-100 border-0"
+                type="button"
+                (click)="this.functions.addToWish(item, $event)"
+                title="login to use wish"
+              >
+                <i
+                  class="fa-regular fa-heart"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <button
+                class="btn btn-outline-success my-2 product__addToCart w-100 border-0"
+                type="button"
                 (click)="this.functions.addToCart(item, $event)"
-              ></i>
+              >
+                <i
+                  class="fa-solid fa-cart-shopping"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+              </button>
             </figcaption>
             <div class="card-body p-0">
               <a
-                href="/Product/{{ item.id }}"
+                href="/Product/{{ item?.id }}"
                 class="card-title link link-secondary mx-auto text-start fw-medium"
-                >{{ item.title }}</a
+                >{{ item?.title }}</a
               >
             </div>
             <div
@@ -435,8 +458,8 @@
                 <del class="text-black-50"
                   >${{
                     (
-                      item.price +
-                      item.price * (item.discountPercentage.toFixed() / 100)
+                      item?.price +
+                      item?.price * (item.discountPercentage.toFixed() / 100)
                     ).toFixed(2)
                   }}</del
                 >
@@ -447,7 +470,12 @@
                 class="btn btn-outline-success product__addToCart d-none mt-2"
                 (click)="this.functions.addToCart(item, $event)"
               >
-                <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+                <i
+                  class="fa-solid fa-cart-shopping fs-6"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+                Add to cart
               </button>
             </div>
           </div>
@@ -459,17 +487,17 @@
             *ngFor="let item of this.global?.womanBag; let i = index"
           >
             <figure class="products_card shadow-sm">
-              <a href="/Product/{{ item.id }}" class="position-relative">
+              <a href="/Product/{{ item?.id }}" class="position-relative">
                 <div class="products__front">
                   <img
-                    src="{{ item.images[0] }}"
+                    [src]="item?.images[0]"
                     class="card-img-top img-thumbnail rounded-0 front__img d-block"
-                    [alt]="item?.title"
+                    alt="product image"
                   />
                   <img
-                    src="{{ item.images[1] }}"
+                    [src]="item?.images[1]"
                     class="card-img-top img-thumbnail rounded-0 back__img d-none"
-                    [alt]="item?.title"
+                    alt="product image"
                   />
                 </div>
                 <div
@@ -485,20 +513,35 @@
             <figcaption
               class="products__action bg-white position-absolute d-none flex-column p-2"
             >
-              <i
-                class="fa-regular fa-heart my-2"
-                (click)="this.functions.addToWish(item)"
-              ></i>
-              <i
-                class="fa-solid fa-cart-shopping my-2"
+              <button
+                class="btn btn-outline-success my-2 product__addToWish w-100 border-0"
+                type="button"
+                (click)="this.functions.addToWish(item, $event)"
+                title="login to use wish"
+              >
+                <i
+                  class="fa-regular fa-heart"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+              </button>
+              <button
+                class="btn btn-outline-success my-2 product__addToCart w-100 border-0"
+                type="button"
                 (click)="this.functions.addToCart(item, $event)"
-              ></i>
+              >
+                <i
+                  class="fa-solid fa-cart-shopping"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+              </button>
             </figcaption>
             <div class="card-body p-0">
               <a
-                href="/Product/{{ item.id }}"
+                href="/Product/{{ item?.id }}"
                 class="card-title link link-secondary mx-auto text-start fw-medium"
-                >{{ item.title }}</a
+                >{{ item?.title }}</a
               >
             </div>
             <div
@@ -508,7 +551,7 @@
                 <!--   <div class="rating-bg" style="width: 90%;"></div> -->
                 <progress
                   class="rating-bg"
-                  value="{{ this.functions.calculateRating(item.rating) }}"
+                  value="{{ this.functions.calculateRating(item?.rating) }}"
                   max="5"
                 ></progress>
                 <svg><use xlink:href="#fivestars" /></svg>
@@ -522,14 +565,19 @@
                     ).toFixed(2)
                   }}</del
                 >
-                ${{ item.price.toFixed(2) }}
+                ${{ item?.price.toFixed(2) }}
               </div>
               <button
                 type="button"
                 class="btn btn-outline-success product__addToCart d-none mt-2"
                 (click)="this.functions.addToCart(item, $event)"
               >
-                <i class="fa-solid fa-cart-shopping fs-6"></i> Add to cart
+                <i
+                  class="fa-solid fa-cart-shopping fs-6"
+                  style="pointer-events: none"
+                  aria-hidden="true"
+                ></i>
+                Add to cart
               </button>
             </div>
           </div>
@@ -641,7 +689,7 @@
               <div class="carousel-item active">
                 <figure class="justify-content-center">
                   <img
-                    [src]="this.global.users[0].image"
+                    [src]="this.global.users[0]?.image"
                     class="img-fluid d-block mx-auto rounded-circle"
                     alt="person image"
                   />
@@ -664,7 +712,7 @@
               </div>
               <div
                 class="carousel-item"
-                *ngFor="let item of this.global.users.slice(3, 5)"
+                *ngFor="let item of this.global.users?.slice(3, 5)"
               >
                 <figure class="justify-content-center">
                   <img
