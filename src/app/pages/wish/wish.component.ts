@@ -10,6 +10,8 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class WishComponent {
   id: any;
+  empty = true;
+
   constructor(
     public global: GlobalService,
     public functions: FunctionService,
@@ -17,6 +19,16 @@ export class WishComponent {
     private _route: Router
   ) {
     this.global.wish = this.functions.readFromStorage('wish');
-    // console.log(this.functions.readFromStorage('wish'));
+    if (this.global.wish.length === 0) {
+      this.empty = false;
+    }
+    console.log(this.global.wish.length);
+  }
+  deleteMeal(i: any) {
+    this.global.wish.splice(i, 1);
+    let all = this.functions.readFromStorage('wish');
+    all.splice(i, 1);
+    this.functions.writeToStorage(all, 'wish');
+    window.location.reload();
   }
 }

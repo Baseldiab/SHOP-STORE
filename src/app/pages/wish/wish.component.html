@@ -4,7 +4,7 @@
   <!-- ================================================ -->
   <section class="head bg-black m-0 py-3">
     <div class="container mx-auto text-center">
-      <h1 class="text-uppercase text-white">wish</h1>
+      <h1 class="text-capitalize text-white">wishlist</h1>
       <nav aria-label="breadcrumb bg-black " data-bs-theme="dark">
         <ol class="breadcrumb justify-content-center">
           <li class="breadcrumb-item">
@@ -23,61 +23,78 @@
     </div>
   </section>
   <!-- ================================================ -->
-  <section class="cart-table">
-    <div class="container">
-      <table class="table table-striped">
-        <thead>
-          <tr class="w-100">
-            <th class="col th1"></th>
-            <th class="col th2"></th>
-            <th class="col th3 text-uppercase">product</th>
-            <th class="col th4 text-uppercase">price</th>
-            <th class="col th5 text-uppercase">quantity</th>
-            <th class="col th6 text-uppercase">total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let item of this.global.wish; let i = index">
-            <th class="" scope="row">{{ i + 1 }}</th>
-            <td colspan="1">
-              <a href="/Product/{{ item.id }}">
-                <img
-                  class="wish-img"
-                  [src]="item.images[0]"
-                  alt="product image"
-                />
-              </a>
-            </td>
-            <td colspan="1">
-              <a
-                href="/Product/{{ item.id }}"
-                class="text-decoration-none text-black"
-                >{{ item.title }}
-              </a>
-              <br />
-              <a
-                href="./collection/{{ item.category }}"
-                class="text-decoration-none text-secondary"
-                >{{ item.category }}</a
-              >
-            </td>
-            <td colspan="1">${{ item.price.toFixed(2) }}</td>
-            <td colspan="1">
-              <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="1"
-                value="1"
-                class="cart__box border rounded border-dark text-secondary fw-bold text-center w-25"
-              />
-            </td>
-            <td colspan="1">${{ item.price.toFixed(2) }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+  <section class="emptyWish" *ngIf="!empty; else showWish"></section>
+  <!-- ========================= -->
+  <ng-template #showWish>
+    <section class="wish-table">
+      <div class="container">
+        <table class="table table-striped my-sm-3">
+          <thead>
+            <tr class="w-100">
+              <th class="col th1"></th>
+              <th class="col th2"></th>
+              <th class="col th3 text-uppercase">product</th>
+              <th class="col th4 text-uppercase">price</th>
+
+              <th class="col th6 text-uppercase">actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="wish-products"
+              *ngFor="let item of this.global.wish; let i = index"
+            >
+              <th class="" scope="row">
+                <button
+                  class="border-0 bg-transparent"
+                  (click)="deleteMeal($event)"
+                >
+                  <i class="fa-solid fa-circle-xmark text-black fs-4"></i>
+                </button>
+              </th>
+              <td>
+                <a href="/Product/{{ item.id }}">
+                  <img
+                    class="wish-img"
+                    [src]="item.images[0]"
+                    alt="product image"
+                  />
+                </a>
+              </td>
+              <td>
+                <a
+                  href="/Product/{{ item.id }}"
+                  class="text-decoration-none text-black"
+                  >{{ item.title }}
+                </a>
+                <br />
+                <a
+                  href="./collection/{{ item.category }}"
+                  class="text-decoration-none text-secondary"
+                  >{{ item.category }}</a
+                >
+              </td>
+              <td>${{ item.price.toFixed(2) }}</td>
+
+              <td class="addToCart-button">
+                <button
+                  type="button"
+                  class="btn btn-outline-success product__addToCart mt-2"
+                  (click)="this.functions.addToCart(item, $event)"
+                >
+                  <i
+                    class="fa-solid fa-cart-shopping fs-6"
+                    style="pointer-events: none"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </ng-template>
   <!-- ================================================ -->
   <app-footer></app-footer>
 </main>
