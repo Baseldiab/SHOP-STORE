@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FunctionService } from 'src/app/services/function.service';
 import { GlobalService } from 'src/app/services/global.service';
@@ -9,8 +9,10 @@ import { GlobalService } from 'src/app/services/global.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-  // id: any;
+  id: number = 1;
   empty = true;
+  totalPrice: number = 0;
+  public qty: number = 1;
 
   constructor(
     public global: GlobalService,
@@ -22,7 +24,11 @@ export class CartComponent {
     if (this.global.cart.length === 0) {
       this.empty = false;
     }
-    console.log(this.global.cart.length);
+    console.log(this.global.cart[1].qty);
+    this.updateTotalPrice(this.global.cart);
+
+    console.log(this.qty);
+    // console.log(this.totalPrice);
   }
   // =====================================
   deleteMeal(i: any) {
@@ -33,17 +39,31 @@ export class CartComponent {
     window.location.reload();
   }
   // =====================================
-  sub_total = 1;
-  product_price = 1;
-  quantity = 1;
-  transform(product_price: number, quantity: number, sub_total: number) {
-    sub_total = product_price * quantity;
-    sub_total += sub_total;
-    return sub_total;
-  }
-  // =====================================
   updatePrice(inputValue: number = 1, priceValue: number) {
     let singlePrice = inputValue * priceValue;
-    return singlePrice.toFixed(2);
+    return singlePrice;
+  }
+
+  // =====================================
+  // qty: number = 1
+  validateInput(event: any, i: number) {
+    this.qty === event?.target.value;
+    if (this.qty < 1) {
+      event.target.value === this.global.cart[i].qty;
+    }
+    this.qtyUpdate(this.qty, i);
+  }
+  // =====================================
+  qtyUpdate(qty: number, i: number) {
+    this.global.cart[i].qty === qty;
+    this.functions.writeToStorage(this.global.cart, 'cart');
+    this.updateTotalPrice(this.global.cart);
+  }
+  // =====================================
+  updateTotalPrice(data: any) {
+    let subs = 0;
+    for (const item of data) subs += item.price * item.qty;
+
+    this.totalPrice = subs;
   }
 }

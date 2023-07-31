@@ -5,18 +5,24 @@ th,
 td {
   vertical-align: middle;
 }
-h1 {
+h1,
+.sub-totalPrice__head,
+.sub-totalPrice__h2 {
   font-family: "Dosis", Helvetica, Arial, sans-serif;
   letter-spacing: 5px;
 }
 @media (max-width: 576px) {
-  thead {
+  .cart-Products__table thead {
     display: none;
   }
-  table {
+  .cart-Products__table {
     margin-top: 15px;
   }
-  .cart-products {
+  .product__addToCart {
+    font-size: 12px;
+  }
+  .cart-products,
+  .sub-totalPrice__table tr {
     /* margin-top: 15px; */
     display: flex !important;
     flex-wrap: wrap;
@@ -30,4 +36,14 @@ h1 {
 }
 .quantity input {
   width: 60px;
+}
+.sub-totalPrice__head {
+  padding: 50px;
+}
+.sub-totalPrice__h2 {
+  position: absolute;
+  top: -23px;
+  z-index: 10;
+  padding: 0 5px;
+  background-color: #fff;
 }

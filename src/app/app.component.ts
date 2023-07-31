@@ -4,7 +4,6 @@ import { GlobalService } from './services/global.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FunctionService } from './services/function.service';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -36,8 +35,8 @@ export class AppComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.mainNavbar = document.getElementById('main-navbar');
-    const number = window.scrollY || 0;
-    if (number <= 20) {
+    const numberScrollY = window.scrollY || 0;
+    if (numberScrollY <= 20) {
       this.mainNavbar.style =
         'background-color:  transparent !important; box-shadow: none !important;';
     } else {

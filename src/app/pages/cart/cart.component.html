@@ -26,93 +26,117 @@
   <section class="emptyCart" *ngIf="!empty; else showCart"></section>
   <!-- ========================= -->
   <ng-template #showCart>
-    <section class="cart-table">
-      <div class="container">
-        <table class="table table-striped">
-          <thead>
-            <tr class="w-100">
-              <th class="col th1"></th>
-              <th class="col th2"></th>
-              <th class="col th3 text-uppercase">product</th>
-              <th class="col th5 text-uppercase">quantity</th>
-              <th class="col th4 text-uppercase">price</th>
-              <th class="col th6 text-uppercase">actions</th>
-            </tr>
-          </thead>
-          <tbody *ngFor="let item of this.global?.cart; let i = index">
-            <tr class="cart-products">
-              <th class="" scope="row">
-                <button
-                  class="border-0 bg-transparent"
-                  (click)="deleteMeal($event)"
-                >
-                  <i class="fa-solid fa-circle-xmark text-black fs-4"></i>
-                </button>
-              </th>
-              <td>
-                <a href="/Product/{{ item.id }}">
-                  <img
-                    class="cart-img"
-                    [src]="item.images[0]"
-                    alt="product image"
-                  />
-                </a>
-              </td>
-              <td>
-                <a
-                  href="/Product/{{ item.id }}"
-                  class="text-decoration-none text-black"
-                  >{{ item.title }}
-                </a>
-                <br />
-                <a
-                  href="./collection/{{ item.category }}"
-                  class="text-decoration-none text-secondary"
-                  >{{ item.category }}</a
-                >
-              </td>
-              <td class="quantity">
-                <input
-                  type="number"
-                  [(ngModel)]="item.quantity"
-                  value="1"
-                  name="quantity"
-                  min="1"
-                  class="cart__box border rounded border-dark text-secondary fw-bold text-center"
-                />
-              </td>
-              <td class="product-price" colspan="1">
-                ${{ updatePrice(item.quantity, item?.price) }}
-              </td>
+    <section class="cart-table container-fluid my-4">
+      <div class="row mt-5">
+        <div class="col-xl-9 col-12">
+          <table class="cart-Products__table table table-striped">
+            <thead>
+              <tr class="w-100">
+                <th class="col th1"></th>
+                <th class="col th2"></th>
+                <th class="col th3 text-uppercase">product</th>
+                <th class="col th4 text-uppercase">price</th>
+                <th class="col th5 text-uppercase">quantity</th>
+                <th class="col th4 text-uppercase">total</th>
+                <th class="col th6 text-uppercase">actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="cart-products"
+                *ngFor="let item of this.global?.cart; let i = index"
+              >
+                <th class="" scope="row">
+                  <button
+                    class="border-0 bg-transparent"
+                    (click)="deleteMeal($event)"
+                  >
+                    <i class="fa-solid fa-circle-xmark text-black fs-4"></i>
+                  </button>
+                </th>
+                <td>
+                  <a href="/Product/{{ item.id }}">
+                    <img
+                      class="cart-img"
+                      [src]="item.images[0]"
+                      alt="product image"
+                    />
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href="/Product/{{ item.id }}"
+                    class="text-decoration-none text-black"
+                    >{{ item.title }}
+                  </a>
+                  <br />
+                  <a
+                    href="./collection/{{ item.category }}"
+                    class="text-decoration-none text-secondary"
+                    >{{ item.category }}</a
+                  >
+                </td>
+                <td class="product-price" colspan="1">
+                  {{ item?.price.toFixed(2) | currency }}
+                </td>
+                <td class="quantity">
+                  <form>
+                    <input
+                      (change)="validateInput($event, i)"
+                      [placeholder]="1"
+                      type="number"
+                      [(ngModel)]="item.qty"
+                      name="qty"
+                      min="1"
+                      class="cart__box border rounded border-dark text-secondary fw-bold text-center"
+                    />
+                  </form>
+                </td>
+                <td class="product-totalPrice fw-bold" colspan="1">
+                  {{ updatePrice(item.qty, item?.price).toFixed(2) | currency }}
+                </td>
 
-              <td colspan="2" class="addToWish-button">
-                <button
-                  type="button"
-                  class="btn btn-outline-success product__addToCart mt-2"
-                  (click)="this.functions.addToWish(item, $event)"
-                >
-                  <i
-                    class="fa-solid fa-heart fs-6"
-                    style="pointer-events: none"
-                    aria-hidden="true"
-                  ></i>
-                </button>
-              </td>
-              <td>
-                {{
-                  transform(
-                    item?.price,
-                    item.quantity,
-                    item.quantity * item?.price
-                  )
-                }}
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr></tr>
-          </tfoot>
-        </table>
+                <td colspan="2" class="addToWish-button">
+                  <button
+                    type="button"
+                    class="btn btn-outline-success product__addToCart mt-2"
+                    (click)="this.functions.addToWish(item, $event)"
+                  >
+                    <i
+                      class="fa-solid fa-heart fs-6"
+                      style="pointer-events: none"
+                      aria-hidden="true"
+                    ></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- =========================== -->
+        <div class="sub-totalPrice col-xl-3 col-12 mt-5">
+          <div
+            class="sub-totalPrice__head px-3 pb-5 border border-3 position-relative border-success container"
+          >
+            <h2 class="text-uppercase sub-totalPrice__h2">cart total</h2>
+            <table class="sub-totalPrice__table w-75">
+              <tbody>
+                <tr>
+                  <td class="fw-medium me-2 fs-5">subtotal</td>
+                  <td class="text-uppercase fw-bold fs-5">
+                    {{ totalPrice | currency }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button
+              class="btn btn-outline-success my-2 product__addToCart w-75 d-block mx-auto mt-5"
+              type="button"
+            >
+              PROCEED TO CHECKOUT
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   </ng-template>
