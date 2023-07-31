@@ -14,6 +14,7 @@ export class GlobalService {
   searchBox: any[] = [];
   users: any[] = [];
   cart: any[] = [];
+  totalPrice: number = 0;
   wish: any[] = [];
   productImage: any;
   // =============

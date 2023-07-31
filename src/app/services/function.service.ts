@@ -1,15 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as $ from 'jquery';
+import { GlobalService } from './global.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FunctionService {
+  cart: any[] = [];
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public global: GlobalService) {
     this.myWish = this.readFromStorage('wish');
     this.myCart = this.readFromStorage('cart');
+    this.updateTotalPrice(this.myCart);
+    console.log(this.global.totalPrice);
     this.wishCount = this.myWish.length;
     this.cartCount = this.myCart.length;
   }
@@ -90,7 +94,7 @@ export class FunctionService {
     }
   }
   // =========================================
-  cart: any[] = [];
+
   all: any;
   readFromStorage(key = `products`) {
     this.all = localStorage.getItem(key) as String;
@@ -102,5 +106,13 @@ export class FunctionService {
   writeToStorage(data: any, key = `products`) {
     localStorage.setItem(key, JSON.stringify(data));
   }
-  // =========================================
+  //===================================
+  public updateTotalPrice(data: any) {
+    let subs = 0;
+    for (const item of data) {
+      subs += item.price * item.qty;
+    }
+
+    this.global.totalPrice = subs;
+  }
 }

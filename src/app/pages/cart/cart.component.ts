@@ -11,7 +11,7 @@ import { GlobalService } from 'src/app/services/global.service';
 export class CartComponent {
   id: number = 1;
   empty = true;
-  totalPrice: number = 0;
+
   public qty: number = 1;
 
   constructor(
@@ -25,9 +25,9 @@ export class CartComponent {
       this.empty = false;
     }
     console.log(this.global.cart[1].qty);
-    this.updateTotalPrice(this.global.cart);
+    this.functions.updateTotalPrice(this.global.cart);
 
-    console.log(this.qty);
+    console.log(this.global.totalPrice);
     // console.log(this.totalPrice);
   }
   // =====================================
@@ -54,16 +54,10 @@ export class CartComponent {
     this.qtyUpdate(this.qty, i);
   }
   // =====================================
-  qtyUpdate(qty: number, i: number) {
+  qtyUpdate(qty: number = 1, i: number) {
     this.global.cart[i].qty === qty;
     this.functions.writeToStorage(this.global.cart, 'cart');
-    this.updateTotalPrice(this.global.cart);
+    this.functions.updateTotalPrice(this.global.cart);
   }
   // =====================================
-  updateTotalPrice(data: any) {
-    let subs = 0;
-    for (const item of data) subs += item.price * item.qty;
-
-    this.totalPrice = subs;
-  }
 }

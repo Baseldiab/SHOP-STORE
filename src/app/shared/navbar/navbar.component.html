@@ -1,4 +1,4 @@
-<nav id="top-nav" class="navbar navbar-expand-lg bg-success ">
+<nav id="top-nav" class="navbar navbar-expand-lg bg-success">
   <div
     class="container-xxl d-flex justify-content-lg-between justify-content-center mx-auto"
   >
@@ -64,7 +64,7 @@
   class="navbar main-navbar navbar-expand-xl sticky-top m-0 py-2 py-lg-1"
   id="main-navbar"
 >
-  <div class="container-fluid flex-wrap mx-auto">
+  <div class="container-fluid mx-auto row">
     <!-- ===================== -->
     <button
       class="navbar-toggler p-md-1"
@@ -77,10 +77,15 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    <!-- ===================== -->
+    <a
+      class="navbar-brand m-0 site-logo d-flex justify-content-center col-xl-2"
+      href="#"
+      ><img src="./assets/images/logo.png" alt="logo image"
+    /></a>
     <!-- =========== -->
     <div
-      class="offcanvas offcanvas-start text-bg-dark col-xl-4"
+      class="offcanvas offcanvas-start text-bg-dark col-xl-7"
       tabindex="-1"
       id="offcanvasDarkNavbar"
       aria-labelledby="offcanvasDarkNavbarLabel"
@@ -93,15 +98,22 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas d-xl-inline d-none">
+      <div class="offcanvas navbar__xl d-xl-inline d-none mx-auto">
         <ul class="navbar-nav">
           <li class="nav-item navlink__home">
             <a
-              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
+              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center position-relative"
               aria-current="page"
-              routerLink=""
+              routerLinkActive="text-success"
+              href=""
               >Home <i class="fa-solid fa-angle-down d-inline ps-1"></i
-            ></a>
+              ><span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+              >
+                hot
+                <span class="visually-hidden">unread messages</span>
+              </span></a
+            >
             <div
               class="nav__home container d-none position-absolute mx-auto justify-content-center row shadow bg-light px-0 py-3 z-3 overflow-auto"
             >
@@ -110,7 +122,7 @@
                   <a
                     class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
                     routerLink=""
-                    routerLinkActive=""
+                    routerLinkActive="text-success"
                     ><span class="text-success">1.</span> home default</a
                   >
                 </figcaption>
@@ -262,37 +274,56 @@
               </figure>
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              routerLink=""
+              routerLinkActive="text-success"
+              href="./collection/all"
               >shop <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
           </li>
-          <li class="nav-item">
+
+          <li class="nav-item position-relative mx-1">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              routerLink=""
-              >blog <i class="fa-solid fa-angle-down ps-1"></i
-            ></a>
+              >product <i class="fa-solid fa-angle-down ps-1"></i></a
+            ><span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success"
+            >
+              hot
+              <span class="visually-hidden">unread messages</span>
+            </span>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              routerLink=""
               >pages <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mx-1">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
               href="#"
               >features <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
           </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center position-relative"
+              href="./collection/all"
+              >buy
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                sale
+                <span class="visually-hidden">unread messages</span>
+              </span></a
+            >
+          </li>
         </ul>
       </div>
-      <div class="offcanvas-body w-100 m-0 p-0 d-xl-none">
+      <!-- ============== -->
+      <div class="offcanvas-body navbar__md w-100 m-0 p-0 d-xl-none">
         <hr class="dropdown m-0" />
         <ul class="navbar-nav justify-content-end flex-grow-1">
           <!-- ======== -->
@@ -750,16 +781,11 @@
         </ul>
       </div>
     </div>
-    <!-- ===================== -->
-    <a
-      class="navbar-brand m-0 site-logo d-flex justify-content-center col-xl-4"
-      href="#"
-      ><img src="./assets/images/logo.png" alt="logo image"
-    /></a>
+
     <!-- ===================== -->
 
     <ul
-      class="navbar-nav col-xl-4 d-flex flex-wrap flex-row justify-content-center justify-content-sm-end"
+      class="navbar-nav navbar__main col-xl-3 d-flex flex-wrap flex-row justify-content-center justify-content-sm-end pe-0"
     >
       <!-- <li
         class="nav-item px-2 d-none d-xl-flex align-items-center border-end border-dark-subtle pe-lg-4"
@@ -783,8 +809,6 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <!-- ==================== -->
-
-        <!-- ============ -->
       </li>
       <li class="nav-item mx-md-2 my-md-2 my-2">
         <a
@@ -800,15 +824,17 @@
           </span></a
         >
       </li>
-      <li class="nav-item mx-md-2 my-md-2 my-2">
+      <li class="nav-item ms-md-2 my-md-2 my-2">
         <a
-          class="nav-link position-relative cartIcon p-0 pe-2 my-2 me-2"
+          class="nav-link position-relative cartIcon p-0 my-2"
           href="./cart"
           routerLinkActive="text-success"
           ><i class="fa-solid fa-cart-shopping"></i
           ><span class="cart-count fw-medium d-none d-md-inline">
             {{ this.functions.cartCount }} / </span
-          ><span class="cart-price fw-bold d-none d-md-inline">$0.00</span>
+          ><span class="cart-price fw-bold d-none d-md-inline">{{
+            this.global.totalPrice | currency
+          }}</span>
           <span
             class="position-absolute cart-count top-0 start-100 translate-middle badge rounded-pill bg-success px-1 d-md-none d-inline"
           >

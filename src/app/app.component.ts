@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import * as Aos from 'aos';
+
 import { GlobalService } from './services/global.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FunctionService } from './services/function.service';
@@ -12,7 +13,7 @@ import { FunctionService } from './services/function.service';
 export class AppComponent {
   title = 'shop-store';
   mainNavbar: any = [];
-
+  public qty: number = 1;
   constructor(
     public global: GlobalService,
     public functions: FunctionService,

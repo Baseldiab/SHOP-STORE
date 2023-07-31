@@ -1,7 +1,10 @@
 /* ===================navbar=================== */
 .navbar-brand,
-.link-underline {
+#top-nav .link-underline {
   font-size: 11px !important;
+}
+.nav__home {
+  font-size: 12px;
 }
 @media (max-width: 992px) {
   .border-end {
