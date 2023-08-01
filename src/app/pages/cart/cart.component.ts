@@ -12,8 +12,6 @@ export class CartComponent {
   id: number = 1;
   empty = true;
 
-  public qty: number = 1;
-
   constructor(
     public global: GlobalService,
     public functions: FunctionService,
@@ -47,11 +45,11 @@ export class CartComponent {
   // =====================================
   // qty: number = 1
   validateInput(event: any, i: number) {
-    this.qty === event?.target.value;
-    if (this.qty < 1) {
+    this.functions.qty === event?.target.value;
+    if (this.functions.qty < 1) {
       event.target.value === this.global.cart[i].qty;
     }
-    this.qtyUpdate(this.qty, i);
+    this.qtyUpdate((this.functions.qty = 1), i);
   }
   // =====================================
   qtyUpdate(qty: number = 1, i: number) {

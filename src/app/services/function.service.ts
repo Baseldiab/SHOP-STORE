@@ -8,14 +8,22 @@ import { GlobalService } from './global.service';
 })
 export class FunctionService {
   cart: any[] = [];
+  qty: number = 1;
+  cartArray: any = [];
+  wishArray: any = [];
+
+  myWish: any;
+  cartCount: number = 0;
+  wishCount: number = 0;
+
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(private http: HttpClient, public global: GlobalService) {
     this.myWish = this.readFromStorage('wish');
-    this.myCart = this.readFromStorage('cart');
-    this.updateTotalPrice(this.myCart);
+    this.global.cart = this.readFromStorage('cart');
+    this.updateTotalPrice(this.global.cart);
     console.log(this.global.totalPrice);
     this.wishCount = this.myWish.length;
-    this.cartCount = this.myCart.length;
+    this.cartCount = this.global.cart.length;
   }
 
   //====================SORT PRODUCTS======================
@@ -63,19 +71,15 @@ export class FunctionService {
     }
   }
   // =====================================================
-  cartArray: any = [];
-  wishArray: any = [];
-  myCart: any;
-  myWish: any;
-  cartCount: any = 0;
-  wishCount: any = 0;
 
   addToCart(data: any, eve: any) {
     eve.target.disabled = true;
+    this.initialQty();
     this.cartArray.push(data);
     this.writeToStorage(this.cartArray, 'cart');
-    this.myCart = this.readFromStorage('cart');
-    this.cartCount = this.myCart.length;
+    this.global.cart = this.readFromStorage('cart');
+    this.cartCount = this.global.cart.length;
+    this.updateTotalPrice(this.global.cart);
   }
 
   // =====================================
@@ -107,10 +111,23 @@ export class FunctionService {
     localStorage.setItem(key, JSON.stringify(data));
   }
   //===================================
+  initialQty() {
+    for (let i = 0; i < this.global.cart.length; i++) {
+      this.global.cart[i] === this.qty;
+    }
+  }
+  //===================================
+  // this.qty: number = 1
   public updateTotalPrice(data: any) {
     let subs = 0;
+
     for (const item of data) {
+      if (!item.qty) {
+        item.qty = 1;
+      }
+      // item.qty = 1;
       subs += item.price * item.qty;
+      console.log(item.qty);
     }
 
     this.global.totalPrice = subs;

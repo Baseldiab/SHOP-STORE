@@ -3,9 +3,7 @@
 #top-nav .link-underline {
   font-size: 11px !important;
 }
-.nav__home {
-  font-size: 12px;
-}
+
 @media (max-width: 992px) {
   .border-end {
     --bs-border-width: 0px !important;
@@ -41,7 +39,12 @@
     height: 16px;
   }
 }
-
+.bg-primary {
+  background-color: rgba(92 106 196) !important;
+}
+.menu-label {
+  font-size: 8px;
+}
 .navbar__phone {
   width: fit-content;
   text-align: center;
@@ -75,6 +78,9 @@
 }
 .nav__home {
   max-height: 80vh !important;
+  font-size: 12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .navbar :where(.fa-magnifying-glass, .fa-heart, .fa-cart-shopping) {
   font-size: 18px !important;
