@@ -17,9 +17,17 @@ export class NavbarComponent {
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {
-    // this.global.getProductBySearch().subscribe((data) => {
-    //   this.global.searchBox = data.products;
-    // });
+    this.global.getWomenDresses().subscribe(
+      (data) => {
+        this.global.womanDress = data.products;
+      },
+      (e) => {
+        console.log(e);
+      },
+      () => {
+        this.global.loadingFlag = false;
+      }
+    );
   }
   searchBox() {
     this.search == true;

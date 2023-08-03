@@ -19,7 +19,7 @@
           <a
             class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover border-end border-dark-subtle p-1 px-2 text-uppercase"
             aria-current="page"
-            href="#"
+            href="./login"
             >login / register</a
           >
         </li>
@@ -64,10 +64,10 @@
   class="navbar main-navbar navbar-expand-xl sticky-top m-0 py-2 py-lg-1"
   id="main-navbar"
 >
-  <div class="container-fluid mx-auto row position-relative">
+  <div class="navbar__container container-fluid mx-auto row position-relative">
     <!-- ===================== -->
     <button
-      class="navbar-toggler p-md-1"
+      class="navbar-toggler p-md-1 col-sm-1 col-2 border-0"
       type="button"
       data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasDarkNavbar"
@@ -79,8 +79,8 @@
     </button>
     <!-- ===================== -->
     <a
-      class="navbar-brand m-0 site-logo d-flex justify-content-center col-xl-2"
-      href="#"
+      class="navbar-brand m-0 site-logo d-flex justify-content-center col-xl-2 col-5"
+      href=""
       ><img src="./assets/images/logo.png" alt="logo image"
     /></a>
     <!-- =========== -->
@@ -283,189 +283,341 @@
               >shop <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
             <div
-              class="nav__shop hover__navbar-shop container d-none position-absolute mx-auto justify-content-center row shadow bg-light px-0 py-3 z-3 overflow-auto"
+              class="nav__shop hover__navbar-shop container d-none position-absolute row shadow bg-white px-0 z-3 overflow-auto align-items-center justify-content-between row"
             >
-              <figure class="nav__page1 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href=""
-                    hrefActive="text-success"
-                    ><span class="text-success">1.</span> home default</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/home page.jpg"
-                  alt="home default image"
-                />
-              </figure>
-              <figure class="nav__page2 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/furniture"
-                    ><span class="text-success">2.</span> furniture</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/furniture.jpg"
-                  alt="furniture image"
-                />
-              </figure>
-              <figure class="nav__page3 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/groceries"
-                    ><span class="text-success">3.</span> groceries</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/jewellery-menu.jpg"
-                  alt="jewellery image"
-                />
-              </figure>
-              <figure class="nav__page4 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/smartphones"
-                    ><span class="text-success">4.</span> electronics</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/electronics.jpg"
-                  alt="electronics image"
-                />
-              </figure>
-              <figure class="nav__page5 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/lighting"
-                    ><span class="text-success">5.</span> lighting</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/lighting.jpg"
-                  alt="lighting image"
-                />
-              </figure>
-              <figure class="nav__page6 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/womens-watches"
-                    ><span class="text-success">6.</span> watches</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/watches.jpg"
-                  alt="watches image"
-                />
-              </figure>
-              <figure class="nav__page7 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/womens-shoes"
-                    ><span class="text-success">7.</span> shoes</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/shoes.jpg"
-                  alt="shoes image"
-                />
-              </figure>
-              <figure class="nav__page8 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/womens-bags"
-                    ><span class="text-success">8.</span> women's bags</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/woman bags.jpg"
-                  alt="woman bags image"
-                />
-              </figure>
-              <figure class="nav__page9 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/womens-dresses"
-                    ><span class="text-success">9.</span> woman's dresses</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/woman dresses.jpg"
-                  alt="woman dresses"
-                />
-              </figure>
-              <figure class="nav__page10 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/mens-shirts"
-                    ><span class="text-success">10.</span> men's shirts</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/men's shirt.jpg"
-                  alt="woman dresses"
-                />
-              </figure>
-              <figure class="nav__page11 text-center col-3">
-                <figcaption class="text-uppercase fw-bold pb-1">
-                  <a
-                    class="text-dark link-offset-2 link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-                    href="./collection/sunglasses"
-                    ><span class="text-success">11.</span> sunglasses</a
-                  >
-                </figcaption>
-                <img
-                  class="d-none d-xl-inline w-100"
-                  src="./assets/images/sunglasses.jpg"
-                  alt="sunglasses image"
-                />
-              </figure>
+              <div class="nav__shop-pages col-8 m-0 row justify-content-center">
+                <div class="col-6">
+                  <h6>shop pages</h6>
+                  <ul class="shop-pages list-unstyled">
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./collection/all"
+                        >standard shop page</a
+                      >
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./collection/all"
+                        >small products</a
+                      >
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./collection/all"
+                        >medium products</a
+                      >
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./collection/all"
+                        >large products</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav__shop-pages col-6">
+                  <h6>product pages</h6>
+                  <ul class="shop-pages list-unstyled">
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./Product/73"
+                        >product page v1</a
+                      >
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./Product/70"
+                        >product page v2</a
+                      >
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./Product/6"
+                        >product page v3</a
+                      >
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                        href="./Product/2"
+                        >product page v4</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div
+                class="nav__shop-image m-0 p-0 col-4"
+                [ngStyle]="{
+                  'background-image':
+                    'url(' + this.global.womanDress[0].images[3] + ')'
+                }"
+              ></div>
             </div>
           </li>
 
-          <li class="nav-item position-relative mx-1">
+          <li class="nav-item navlink__product mx-1">
             <a
-              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              >product <i class="fa-solid fa-angle-down ps-1"></i></a
-            ><span
-              class="menu-label position-absolute top-0 start-100 translate-middle badge rounded-0 bg-success"
+              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center position-relative"
+              href="./collection/all"
+              >product <i class="fa-solid fa-angle-down ps-1"></i
+              ><span
+                class="menu-label position-absolute top-0 start-100 translate-middle badge rounded-0 bg-success"
+              >
+                hot
+                <span class="visually-hidden">unread messages</span>
+              </span></a
             >
-              hot
-              <span class="visually-hidden">unread messages</span>
-            </span>
+            <div
+              class="nav__product hover__navbar-product container d-none position-absolute row shadow bg-white p-3 z-3 overflow-auto align-items-start justify-content-between row"
+            >
+              <div class="col-4">
+                <h6>product details</h6>
+                <ul class="shop-pages list-unstyled">
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                      href="./Product/76"
+                      >product review</a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./Product/78"
+                      >product variable<span
+                        class="menu-label position-absolute top-0 start-100 translate-middle badge rounded-0 bg-success"
+                      >
+                        hot
+                        <span class="visually-hidden">unread messages</span>
+                      </span></a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                      href="./Product/77"
+                      >product configurable</a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./Product/80"
+                      >on sale
+                      <span
+                        class="menu-label position-absolute top-0 start-100 translate-middle badge rounded-0 bg-danger"
+                      >
+                        coming
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./Product/60"
+                      >product grouped<span
+                        class="menu-label position-absolute top-0 start-100 translate-middle badge rounded-0 bg-success"
+                      >
+                        coming
+                        <span class="visually-hidden">unread messages</span>
+                      </span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="nav__product-pages col-4">
+                <h6>product design</h6>
+                <ul class="shop-pages list-unstyled">
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                      href="./Product/89"
+                      >small image</a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                      href="./Product/46"
+                      >Thumbnails Left</a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative p-1"
+                      href="./Product/87"
+                      >Thumbnails bottom
+                      <span
+                        class="menu-label position-absolute top-0 end-0 translate-middle badge rounded-0 bg-success"
+                      >
+                        trend
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative p-1"
+                      href="./Product/26"
+                      >images gallery
+                      <span
+                        class="menu-label position-absolute top-0 end-0 translate-middle badge rounded-0 bg-success"
+                      >
+                        coming
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative p-1"
+                      href="./Product/29"
+                      >Image Carousel
+                      <span
+                        class="menu-label position-absolute top-0 end-0 translate-middle badge rounded-0 bg-success"
+                      >
+                        coming
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                      href="./Product/31"
+                      >sidebar</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="nav__product-pages col-4">
+                <h6>product features</h6>
+                <ul class="shop-pages list-unstyled">
+                  <li class="py-1">
+                    <a
+                      class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                      href="./Product/12"
+                      >zoom image</a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./Product/35"
+                      >360° product viewer
+                      <span
+                        class="menu-label position-absolute top-0 end-0 translate-middle badge rounded-0 bg-success"
+                      >
+                        coming
+                        <span class="visually-hidden">unread messages</span>
+                      </span></a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./Product/27"
+                      >Coupon
+                      <span
+                        class="menu-label position-absolute top-0 start-100 translate-middle badge rounded-0 bg-danger"
+                      >
+                        coming
+                        <span class="visually-hidden">unread messages</span>
+                      </span></a
+                    >
+                  </li>
+
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./Product/27"
+                      >Countdown
+                      <span
+                        class="menu-label position-absolute top-0 end-0 translate-middle badge rounded-0 bg-success"
+                      >
+                        hot
+                        <span class="visually-hidden">unread messages</span>
+                      </span></a
+                    >
+                  </li>
+                  <li class="py-1">
+                    <a
+                      class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                      href="./wish"
+                      >Wishlist
+                      <span
+                        class="menu-label position-absolute top-0 end-0 translate-middle badge rounded-0 bg-success"
+                      >
+                        App
+                        <span class="visually-hidden">unread messages</span>
+                      </span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </li>
-          <li class="nav-item mx-1">
+
+          <li class="nav-item navlink__pages mx-1">
             <a
               class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
               >pages <i class="fa-solid fa-angle-down ps-1"></i
             ></a>
-          </li>
-          <li class="nav-item mx-1">
-            <a
-              class="nav-link text-uppercase d-flex justify-content-xl-center align-items-center"
-              href="#"
-              >features <i class="fa-solid fa-angle-down ps-1"></i
-            ></a>
+            <div
+              class="nav__pages hover__navbar-pages container d-none position-absolute row shadow bg-white p-3 z-3 overflow-auto align-items-start justify-content-between row"
+            >
+              <ul class="shop-pages list-unstyled">
+                <li class="py-1">
+                  <a
+                    class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                    href="./about-us"
+                    >about</a
+                  >
+                </li>
+                <li class="py-1">
+                  <a
+                    class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                    href="./collection/all"
+                    >producs</a
+                  >
+                </li>
+
+                <li class="py-1">
+                  <a
+                    class="link-secondary py-1 text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover position-relative"
+                    href="./wish"
+                    >wish
+                  </a>
+                </li>
+
+                <li class="py-1">
+                  <a
+                    class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                    href="./cart"
+                    >cart</a
+                  >
+                </li>
+                <li class="py-1">
+                  <a
+                    class="link-secondary text-capitalize link-underline-opacity-0 link-offset-2 link-underline-opacity-100-hover"
+                    href="./collection/all"
+                    >shop</a
+                  >
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a
@@ -490,7 +642,7 @@
           <li class="nav-item dropdown row m-0 w-100">
             <a
               class="nav-link nav-link__offcanvas text-start col-10 d-flex align-items-center ps-4 d-inline text-uppercase"
-              href="#"
+              href=""
               role="button"
             >
               Home
@@ -505,11 +657,13 @@
               <i class="fa-solid fa-angle-down fs-5"></i>
               <span class="visually-hidden">Toggle Dropdown</span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark rounded-0">
+            <ul
+              class="dropdown-menu dropmenu__home dropdown-menu-dark rounded-0"
+            >
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href=""
                   >Base</a
                 >
               </li>
@@ -519,7 +673,7 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/furniture"
                   >furniture</a
                 >
               </li>
@@ -529,7 +683,7 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/groceries"
                   >groceries</a
                 >
               </li>
@@ -539,8 +693,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >electronics</a
+                  href="./collection/laptops"
+                  >laptops</a
                 >
               </li>
               <li>
@@ -549,7 +703,17 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/smartphones"
+                  >smartphones</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./collection/lighting"
                   >lighting</a
                 >
               </li>
@@ -559,8 +723,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >watches</a
+                  href="./collection/mens-watches"
+                  >men's watches</a
                 >
               </li>
               <li>
@@ -569,12 +733,9 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >shoes</a
+                  href="./collection/womens-watches"
+                  >women's watches</a
                 >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
               </li>
               <li>
                 <hr class="dropdown-divider" />
@@ -582,7 +743,27 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/mens-shoes"
+                  >men's shoes</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./collection/womens-shoes"
+                  >women's shoes</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./collection/womens-bags"
                   >women's bags</a
                 >
               </li>
@@ -592,7 +773,7 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/womens-dresses"
                   >women's dresses</a
                 >
               </li>
@@ -602,7 +783,7 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/mens-shirts"
                   >men's shirts</a
                 >
               </li>
@@ -612,7 +793,7 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/sunglasses"
                   >sunglasses</a
                 >
               </li>
@@ -626,7 +807,7 @@
           <li class="nav-item dropdown row m-0 w-100">
             <a
               class="nav-link nav-link__offcanvas d-flex align-items-center text-start col-10 ps-4 d-inline text-uppercase"
-              href="#"
+              href="./collection/all"
               role="button"
             >
               shop
@@ -645,8 +826,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >shop styles</a
+                  href="./collection/all"
+                  >standard shop page</a
                 >
               </li>
               <li>
@@ -655,8 +836,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >product pages</a
+                  href="./collection/all"
+                  >small products</a
                 >
               </li>
               <li>
@@ -665,8 +846,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >product features</a
+                  href="./collection/all"
+                  >medium products</a
                 >
               </li>
               <li>
@@ -675,8 +856,48 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >shop pages</a
+                  href="./collection/all"
+                  >large products</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/73"
+                  >product page v1</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/70"
+                  >product page v2</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/6"
+                  >product page v3</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/2"
+                  >product page v4</a
                 >
               </li>
             </ul>
@@ -689,10 +910,10 @@
           <li class="nav-item dropdown row m-0 w-100">
             <a
               class="nav-link nav-link__offcanvas d-flex align-items-center text-start col-10 ps-4 d-inline text-uppercase"
-              href="#"
+              href="./collection/all"
               role="button"
             >
-              blog
+              product
             </a>
             <button
               type="button"
@@ -708,8 +929,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >blog default</a
+                  href="./Product/76"
+                  >product review</a
                 >
               </li>
               <li>
@@ -718,8 +939,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >alternative style
+                  href="./Product/78"
+                  >product variable
                 </a>
               </li>
               <li>
@@ -728,8 +949,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >blog full width</a
+                  href="./Product/77"
+                  >product configurable</a
                 >
               </li>
               <li>
@@ -738,8 +959,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >small images</a
+                  href="./Product/80"
+                  >on sale</a
                 >
               </li>
               <li>
@@ -748,8 +969,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >masonry grid
+                  href="./Product/60"
+                  >product grouped
                 </a>
               </li>
               <li>
@@ -758,8 +979,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >blog mask
+                  href="./Product/89"
+                  >small image
                 </a>
               </li>
               <li>
@@ -768,8 +989,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >4 columns
+                  href="./Product/46"
+                  >Thumbnails Left
                 </a>
               </li>
               <li>
@@ -778,8 +999,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >blog single post
+                  href="./Product/87"
+                  >Thumbnails bottom
                 </a>
               </li>
               <li>
@@ -788,8 +1009,78 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >blog rtl
+                  href="./Product/26"
+                  >images gallery
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/29"
+                  >Image Carousel
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/31"
+                  >sidebar
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/12"
+                  >zoom image
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/35"
+                  >360° product viewer
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/27"
+                  >Coupon
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./Product/27"
+                  >Countdown
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./wish"
+                  >Wishlist
                 </a>
               </li>
             </ul>
@@ -802,7 +1093,6 @@
           <li class="nav-item dropdown row m-0 w-100">
             <a
               class="nav-link nav-link__offcanvas d-flex align-items-center text-start col-10 ps-4 d-inline text-uppercase"
-              href="#"
               role="button"
             >
               pages
@@ -818,11 +1108,11 @@
               <span class="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu dropdown-menu-dark rounded-0">
-              <li>
+              <li class="py-1">
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >page</a
+                  href="./about-us"
+                  >about</a
                 >
               </li>
               <li>
@@ -831,8 +1121,18 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >headers
+                  href="./collection/all"
+                  >products</a
+                >
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a
+                  class="dropdown-item nav-link__offcanvas text-capitalize"
+                  href="./wish"
+                  >wish
                 </a>
               </li>
               <li>
@@ -841,8 +1141,8 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >portfolio</a
+                  href="./cart"
+                  >cart</a
                 >
               </li>
               <li>
@@ -851,78 +1151,17 @@
               <li>
                 <a
                   class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
+                  href="./collection/all"
                   >shops</a
                 >
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <hr class="divider m-0" />
           </li>
-          <!-- ======== -->
-          <!-- ======== -->
-          <li class="nav-item dropdown row m-0 w-100">
-            <a
-              class="nav-link nav-link__offcanvas text-start d-flex align-items-center col-10 ps-4 d-inline text-uppercase"
-              href="#"
-              role="button"
-            >
-              features
-            </a>
-            <button
-              type="button"
-              class="btn btn-dark dropdown-toggle-split col-2 py-sm-3 rounded-0"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              data-bs-reference="parent"
-            >
-              <i class="fa-solid fa-angle-down fs-5"></i>
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-dark rounded-0">
-              <li>
-                <a
-                  class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >product pages</a
-                >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a
-                  class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >basel elements
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a
-                  class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >elements</a
-                >
-              </li>
-              <li>
-                <hr class="dropdown-divider" />
-              </li>
-              <li>
-                <a
-                  class="dropdown-item nav-link__offcanvas text-capitalize"
-                  href="#"
-                  >shops</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <hr class="divider m-0" />
-          </li>
+
           <!-- ======== -->
           <!-- ======== -->
           <li class="nav-item dropdown row m-0 w-100">
@@ -945,20 +1184,8 @@
     <!-- ===================== -->
 
     <ul
-      class="navbar-nav navbar__main col-xl-3 d-flex flex-wrap flex-row justify-content-center justify-content-sm-end pe-0"
+      class="navbar-nav navbar__main col-xl-3 col-3 d-flex flex-wrap flex-row justify-content-sm-end justify-content-center pe-0"
     >
-      <!-- <li
-        class="nav-item px-2 d-none d-xl-flex align-items-center border-end border-dark-subtle pe-lg-4"
-      >
-        <a
-          class="nav-link"
-          aria-current="page"
-          href="./login"
-          hrefActive="text-success border-bottom border-dark-subtle link-offset-1 border-2 "
-        >
-          Login / Register
-        </a>
-      </li> -->
       <li class="nav-item px-1 d-none d-xl-inline mx-1 my-md-2 my-4">
         <button
           class="nav-link searchIcon"
@@ -984,9 +1211,9 @@
           </span></a
         >
       </li>
-      <li class="nav-item ms-md-2 my-md-2 my-2">
+      <li class="nav-item ms-md-2 me-md-0 my-md-2 my-2">
         <a
-          class="nav-link position-relative cartIcon p-0 my-2"
+          class="nav-link position-relative cartIcon p-0 pe-sm-0 me-sm-0 me-2 pe-2 my-2"
           href="cart"
           hrefActive="text-success"
           ><i class="fa-solid fa-cart-shopping"></i
