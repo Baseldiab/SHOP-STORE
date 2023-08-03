@@ -7,23 +7,27 @@ import { GlobalService } from './global.service';
   providedIn: 'root',
 })
 export class FunctionService {
-  cart: any[] = [];
   qty: number = 1;
-  cartArray: any = [];
-  wishArray: any = [];
+  cartArray: any[] = [];
+  wishArray: any[] = [];
 
-  myWish: any;
+  myWish: any = [];
   cartCount: number = 0;
   wishCount: number = 0;
 
   // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   constructor(private http: HttpClient, public global: GlobalService) {
-    this.myWish = this.readFromStorage('wish');
-    this.global.cart = this.readFromStorage('cart');
-    this.updateTotalPrice(this.global.cart);
+    if (this.readFromStorage('cart')) {
+      this.global.cart = this.readFromStorage('cart');
+      this.updateTotalPrice(this.global.cart);
+      this.cartCount = this.global.cart.length;
+    }
+    if (this.readFromStorage('wish')) {
+      this.myWish = this.readFromStorage('wish');
+      this.wishCount = this.myWish.length;
+    }
     console.log(this.global.totalPrice);
-    this.wishCount = this.myWish.length;
-    this.cartCount = this.global.cart.length;
+    console.log(this.myWish);
   }
 
   //====================SORT PRODUCTS======================
@@ -74,12 +78,12 @@ export class FunctionService {
 
   addToCart(data: any, eve: any) {
     eve.target.disabled = true;
-    this.initialQty();
+    // this.initialQty();
     this.cartArray.push(data);
     this.writeToStorage(this.cartArray, 'cart');
     this.global.cart = this.readFromStorage('cart');
-    this.cartCount = this.global.cart.length;
     this.updateTotalPrice(this.global.cart);
+    this.cartCount = this.global.cart.length;
   }
 
   // =====================================
@@ -103,7 +107,7 @@ export class FunctionService {
   readFromStorage(key = `products`) {
     this.all = localStorage.getItem(key) as String;
 
-    return (this.cart = JSON.parse(this.all));
+    return (this.global.cart = JSON.parse(this.all));
   }
 
   //===================================
@@ -111,23 +115,20 @@ export class FunctionService {
     localStorage.setItem(key, JSON.stringify(data));
   }
   //===================================
-  initialQty() {
-    for (let i = 0; i < this.global.cart.length; i++) {
-      this.global.cart[i] === this.qty;
-    }
-  }
+
   //===================================
   // this.qty: number = 1
-  public updateTotalPrice(data: any) {
+  public updateTotalPrice(data: any = []) {
     let subs = 0;
-
-    for (const item of data) {
-      if (!item.qty) {
-        item.qty = 1;
+    if (data) {
+      for (const item of data) {
+        if (!item.qty) {
+          item.qty = 1;
+        }
+        // item.qty = 1;
+        subs += item.price * item.qty;
+        // console.log(item.qty);
       }
-      // item.qty = 1;
-      subs += item.price * item.qty;
-      console.log(item.qty);
     }
 
     this.global.totalPrice = subs;

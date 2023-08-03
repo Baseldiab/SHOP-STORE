@@ -23,7 +23,14 @@
     </div>
   </section>
   <!-- ================================================ -->
-  <section class="emptyCart" *ngIf="!empty; else showCart"></section>
+  <section class="emptyCart" *ngIf="empty; else showCart">
+    <div>
+      <h2 class="text-uppercase py-5 text-center">
+        your shopping cart is empty go to
+        <a class="text-success" href="./collection/all">products</a>
+      </h2>
+    </div>
+  </section>
   <!-- ========================= -->
   <ng-template #showCart>
     <section class="cart-table container-fluid my-4">

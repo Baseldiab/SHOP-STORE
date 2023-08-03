@@ -18,9 +18,11 @@ export class WishComponent {
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {
-    this.global.wish = this.functions.readFromStorage('wish');
-    if (this.global.wish.length === 0) {
-      this.empty = false;
+    if (this.functions.readFromStorage('wish')) {
+      this.global.wish = this.functions.readFromStorage('wish');
+      if (this.global.wish.length === 0) {
+        this.empty = false;
+      }
     }
     console.log(this.global.wish.length);
   }

@@ -23,7 +23,14 @@
     </div>
   </section>
   <!-- ================================================ -->
-  <section class="emptyWish" *ngIf="!empty; else showWish"></section>
+  <section class="emptyWish" *ngIf="!empty; else showWish">
+    <div>
+      <h2 class="text-uppercase py-5 text-center">
+        your wishlist is empty go to
+        <a class="text-success" href="./collection/all">products</a>
+      </h2>
+    </div>
+  </section>
   <!-- ========================= -->
   <ng-template #showWish>
     <section class="wish-table">

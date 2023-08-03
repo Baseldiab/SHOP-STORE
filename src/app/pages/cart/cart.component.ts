@@ -18,13 +18,15 @@ export class CartComponent {
     private _activatedRoute: ActivatedRoute,
     private _route: Router
   ) {
-    this.global.cart = this.functions.readFromStorage('cart');
-    if (this.global.cart.length === 0) {
-      this.empty = false;
+    if (this.functions.readFromStorage('cart')) {
+      this.empty === false;
+      this.global.cart = this.functions.readFromStorage('cart');
     }
-    console.log(this.global.cart[1].qty);
-    this.functions.updateTotalPrice(this.global.cart);
-
+    if (this.global.cart.length > 0) {
+      this.empty = false;
+      // console.log(this.global.cart[1].qty);
+      this.functions.updateTotalPrice(this.global.cart);
+    }
     console.log(this.global.totalPrice);
     // console.log(this.totalPrice);
   }
