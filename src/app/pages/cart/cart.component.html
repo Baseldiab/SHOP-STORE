@@ -45,7 +45,6 @@
                 <th class="col th4 text-uppercase">price</th>
                 <th class="col th5 text-uppercase">quantity</th>
                 <th class="col th4 text-uppercase">total</th>
-                <th class="col th6 text-uppercase">actions</th>
               </tr>
             </thead>
             <tbody>
@@ -103,20 +102,6 @@
                 <td class="product-totalPrice fw-bold" colspan="1">
                   {{ updatePrice(item.qty, item?.price).toFixed(2) | currency }}
                 </td>
-
-                <td colspan="2" class="addToWish-button">
-                  <button
-                    type="button"
-                    class="btn btn-outline-success product__addToCart mt-2"
-                    (click)="this.functions.addToWish(item, $event)"
-                  >
-                    <i
-                      class="fa-solid fa-heart fs-6"
-                      style="pointer-events: none"
-                      aria-hidden="true"
-                    ></i>
-                  </button>
-                </td>
               </tr>
             </tbody>
           </table>
@@ -137,12 +122,57 @@
                 </tr>
               </tbody>
             </table>
+
+            <!-- Button trigger modal -->
             <button
-              class="btn btn-outline-success my-2 product__addToCart w-75 d-block mx-auto mt-5"
               type="button"
+              class="btn btn-outline-success my-2 product__addToCart w-75 d-block mx-auto mt-5"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
             >
               PROCEED TO CHECKOUT
             </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1
+                      class="modal-title fs-5 text-danger fw-bold"
+                      id="exampleModalLabel"
+                    >
+                      successfully placed the order
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Thank for ordering. We received your order and will begin
+                    processing it soon.
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

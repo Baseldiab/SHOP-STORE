@@ -11,6 +11,10 @@ h1,
   font-family: "Dosis", Helvetica, Arial, sans-serif;
   letter-spacing: 5px;
 }
+.modal,
+.modal h1 {
+  letter-spacing: 1px;
+}
 @media (max-width: 576px) {
   .cart-Products__table thead {
     display: none;

@@ -34,7 +34,7 @@ import { WishComponent } from './pages/wish/wish.component';
 import { AllProductsComponent } from './pages/collections/all-products/all-products.component';
 import { WomensShoesComponent } from './pages/collections/womens-shoes/womens-shoes.component';
 import { WomensWatchesComponent } from './pages/collections/womens-watches/womens-watches.component';
-import { PipePipe } from './pipe.pipe';
+
 import { SmartphonesComponent } from './pages/collections/smartphones/smartphones.component';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
@@ -65,7 +65,6 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     AllProductsComponent,
     WomensShoesComponent,
     WomensWatchesComponent,
-    PipePipe,
     SmartphonesComponent,
     AboutUsComponent,
   ],

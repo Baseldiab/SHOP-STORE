@@ -70,9 +70,9 @@
   display: block !important;
 }
 
-.allProduct-navbar #main-navbar .nav-item {
+/* .allProduct-navbar #main-navbar > .nav-item {
   font-weight: 700 !important;
-}
+} */
 /* ===============================COMPONENT========================================= */
 .categories__text,
 .products__text,
