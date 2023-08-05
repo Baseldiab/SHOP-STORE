@@ -39,6 +39,11 @@ import { SmartphonesComponent } from './pages/collections/smartphones/smartphone
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ProductsComponent } from './dashboard/products/products.component';
+import { UpdateProductComponent } from './dashboard/update-product/update-product.component';
+import { AddProductComponent } from './dashboard/add-product/add-product.component';
+import { AdminLoginComponent } from './dashboard/admin-login/admin-login.component';
+import { NavbarDashboardComponent } from './shared/navbar-dashboard/navbar-dashboard.component';
 // import { ImagekitioAngularModule } from 'imagekitio-angular';
 
 @NgModule({
@@ -67,6 +72,11 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     WomensWatchesComponent,
     SmartphonesComponent,
     AboutUsComponent,
+    ProductsComponent,
+    UpdateProductComponent,
+    AddProductComponent,
+    AdminLoginComponent,
+    NavbarDashboardComponent,
   ],
   imports: [
     BrowserModule,

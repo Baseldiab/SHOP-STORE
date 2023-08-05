@@ -3,6 +3,9 @@
 #top-nav .link-underline {
   font-size: 11px !important;
 }
+.logout-link {
+  cursor: pointer;
+}
 
 @media (max-width: 992px) {
   .border-end {

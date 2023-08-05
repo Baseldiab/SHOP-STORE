@@ -37,4 +37,10 @@ export class NavbarComponent {
       console.log(this.searchValue);
     });
   }
+
+  handleClick() {
+    localStorage.removeItem('user');
+    this.global.isLogin = false;
+    window.location.reload();
+  }
 }

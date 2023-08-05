@@ -24,17 +24,62 @@ import { SmartphonesComponent } from './pages/collections/smartphones/smartphone
 import { AuthInterceptor } from './interceptor/auth.interceptor';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AuthGuard } from './guard/auth.guard.guard.spec';
+import { AdminLoginComponent } from './dashboard/admin-login/admin-login.component';
+import { AddProductComponent } from './dashboard/add-product/add-product.component';
+import { UpdateProductComponent } from './dashboard/update-product/update-product.component';
+import { ProductsComponent } from './dashboard/products/products.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   // ==================
   { path: 'about-us', component: AboutUsComponent },
   // { path: 'contact-us', component: AboutUsComponent },
-  { path: 'login', component: LoginComponent, pathMatch: 'full' },
+  {
+    path: 'login',
+    component: LoginComponent,
+    pathMatch: 'full',
+    data: { userType: 'user' },
+  },
+  {
+    path: 'adminLogin',
+    component: AdminLoginComponent,
+    pathMatch: 'full',
+    data: { userType: 'admin' },
+  },
   // ==================
   { path: 'wish', component: WishComponent, canActivate: [AuthGuard] },
   { path: 'cart', component: CartComponent },
+  // =================
+  {
+    path: 'dashboard',
+    children: [
+      {
+        path: 'products',
+        component: ProductsComponent,
+        data: { userType: 'admin' },
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'addNewProduct',
+        component: AddProductComponent,
+        data: { userType: 'admin' },
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'updateProduct',
+        children: [
+          {
+            path: ':productId',
+            component: UpdateProductComponent,
+            data: { userType: 'admin' },
+            canActivate: [AuthGuard],
+          },
+        ],
+      },
+    ],
+  },
   // ==================
+
   {
     path: 'Product',
     children: [{ path: ':singleProduct', component: SingleProductComponent }],

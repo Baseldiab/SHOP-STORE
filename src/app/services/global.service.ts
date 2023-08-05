@@ -7,8 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GlobalService {
+  singleProduct: any;
   isLogin = false;
   loadingFlag = true;
+  navbarFlag = true;
+  userType: any;
   // ============
   limited: any[] = [];
   searchBox: any[] = [];
@@ -50,6 +53,18 @@ export class GlobalService {
   // =====================================================
   getSingleProduct(id: any): Observable<any> {
     return this.http.get(`${this.baseUrl}products/${id}`);
+  }
+  // =====================================================
+  deleteSingleProduct(id: any): Observable<any> {
+    return this.http.delete(`${this.baseUrl}products/${id}`);
+  }
+  // =====================================================
+  updateProduct(id: any, data: any): Observable<any> {
+    return this.http.put(`${this.baseUrl}products/${id}`, data);
+  }
+  // =====================================================
+  addNewProduct(data: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}products/add`, data);
   }
   // =====================================================
   getLimitedProduct(numberProduct: any, id: any): Observable<any> {

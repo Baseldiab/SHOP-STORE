@@ -6,17 +6,14 @@ import { FunctionService } from 'src/app/services/function.service';
 import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-admin-login',
+  templateUrl: './admin-login.component.html',
+  styleUrls: ['./admin-login.component.css'],
 })
-export class LoginComponent {
-  // username: 'kminchelle',
-  // password: '0lelplR',
-  id: any;
+export class AdminLoginComponent {
   model: User = {
-    username: 'kminchelle',
-    password: '0lelplR',
+    username: 'atuny0',
+    password: '9uQFF1Lh',
   };
   msgError = null;
 
@@ -39,6 +36,7 @@ export class LoginComponent {
       console.log(this.global.userType);
     });
   }
+
   handleSubmit(form: NgForm) {
     if (this.global.userType == 'user') {
       this.global.login(this.model)?.subscribe(
@@ -53,7 +51,6 @@ export class LoginComponent {
         }
       );
       this.global.isLogin = true;
-      // ==========
     } else if (this.global.userType == 'admin') {
       this.global.login(this.model)?.subscribe(
         (data) => {

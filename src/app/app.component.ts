@@ -12,6 +12,7 @@ import { FunctionService } from './services/function.service';
 })
 export class AppComponent {
   title = 'shop-store';
+  userType: any;
   mainNavbar: any = [];
   public qty: number = 1;
   constructor(
@@ -20,8 +21,9 @@ export class AppComponent {
     private router: Router,
     private ActivatedRoute: ActivatedRoute
   ) {
-    let token = localStorage.getItem('token');
-    if (token) {
+    // console.log();
+    let user = localStorage.getItem('user');
+    if (user) {
       global.isLogin = true;
     }
   }

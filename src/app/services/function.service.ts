@@ -26,8 +26,8 @@ export class FunctionService {
       this.myWish = this.readFromStorage('wish');
       this.wishCount = this.myWish.length;
     }
-    console.log(this.global.totalPrice);
-    console.log(this.myWish);
+    // console.log(this.global.totalPrice);
+    // console.log(this.myWish);
   }
 
   //====================SORT PRODUCTS======================

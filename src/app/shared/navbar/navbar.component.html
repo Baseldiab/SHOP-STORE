@@ -20,7 +20,16 @@
             class="link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover border-end border-dark-subtle p-1 px-2 text-uppercase"
             aria-current="page"
             href="./login"
+            *ngIf="!global.isLogin"
             >login / register</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="logout-link link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover border-end border-dark-subtle p-1 px-2 text-uppercase"
+            *ngIf="global.isLogin"
+            (click)="handleClick()"
+            >logout</a
           >
         </li>
         <li class="nav-item">
@@ -358,7 +367,7 @@
                 class="nav__shop-image m-0 p-0 col-4"
                 [ngStyle]="{
                   'background-image':
-                    'url(' + this.global.womanDress[0].images[3] + ')'
+                    'url(' + this.global.womanDress[0]?.images[3] + ')'
                 }"
               ></div>
             </div>
@@ -1169,8 +1178,19 @@
               class="nav-link nav-link__offcanvas text-start py-sm-3 col-10 ps-4 d-inline text-uppercase"
               href="login"
               role="button"
+              *ngIf="!global.isLogin"
             >
               login / register
+            </a>
+          </li>
+          <li class="logout-link nav-item dropdown row m-0 w-100">
+            <a
+              class="nav-link nav-link__offcanvas text-start py-sm-3 col-10 ps-4 d-inline text-uppercase"
+              role="button"
+              *ngIf="global.isLogin"
+              (click)="handleClick()"
+            >
+              logout
             </a>
           </li>
           <li class="nav-item">
@@ -1269,19 +1289,19 @@
       *ngFor="let item of this.global.searchBox"
     >
       <div class="row g-0">
-        <div class="col-md-4">
+        <a class="col-md-4" href="/Product/{{ item.id }}">
           <img
             [src]="item.images[0]"
             class="img-fluid rounded-start"
             [alt]="item.title"
           />
-        </div>
-        <div class="col-md-8">
+        </a>
+        <a class="col-md-8" href="/Product/{{ item.id }}">
           <div class="card-body">
             <h6 class="card-title">{{ item.title }}</h6>
             <p class="card-text">${{ item.price.toFixed(2) }}</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
