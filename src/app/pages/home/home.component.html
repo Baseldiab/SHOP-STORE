@@ -387,7 +387,7 @@
             *ngFor="let item of this.global?.sunglasses; let i = index"
           >
             <figure class="products_card shadow-sm">
-              <a href="/Product/{{ item?.id }}" class="position-relative">
+              <a href="./Product/{{ item?.id }}" class="position-relative">
                 <div class="products__front">
                   <img
                     [src]="item?.images[0]"
@@ -439,7 +439,7 @@
             </figcaption>
             <div class="card-body p-0">
               <a
-                href="/Product/{{ item?.id }}"
+                href="./Product/{{ item?.id }}"
                 class="card-title link link-secondary mx-auto text-start fw-medium"
                 >{{ item?.title }}</a
               >
@@ -489,7 +489,7 @@
             *ngFor="let item of this.global?.womanBag; let i = index"
           >
             <figure class="products_card shadow-sm">
-              <a href="/Product/{{ item?.id }}" class="position-relative">
+              <a href="./Product/{{ item?.id }}" class="position-relative">
                 <div class="products__front">
                   <img
                     [src]="item?.images[0]"
@@ -541,7 +541,7 @@
             </figcaption>
             <div class="card-body p-0">
               <a
-                href="/Product/{{ item?.id }}"
+                href="./Product/{{ item?.id }}"
                 class="card-title link link-secondary mx-auto text-start fw-medium"
                 >{{ item?.title }}</a
               >
