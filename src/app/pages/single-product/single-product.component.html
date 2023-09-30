@@ -359,7 +359,7 @@
           *ngFor="let item of this.global.limited; let i = index"
         >
           <figure class="products__front shadow-sm">
-            <a href="/Product/{{ item.id }}">
+            <a href="./Product/{{ item?.id }}">
               <img
                 src="{{ item.images[0] }}"
                 class="card-img-top rounded-0 front__img d-block"
@@ -381,7 +381,7 @@
 
           <div class="card-body p-0">
             <a
-              href="/Product/{{ item.id }}"
+              href="./Product/{{ item?.id }}"
               class="card-title link link-secondary mx-auto text-start fw-medium"
               >{{ item.title }}</a
             >

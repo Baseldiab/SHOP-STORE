@@ -61,7 +61,7 @@
                   </button>
                 </th>
                 <td>
-                  <a href="/Product/{{ item.id }}">
+                  <a href="./Product/{{ item?.id }}">
                     <img
                       class="cart-img"
                       [src]="item.images[0]"
@@ -71,7 +71,7 @@
                 </td>
                 <td>
                   <a
-                    href="/Product/{{ item.id }}"
+                    href="./Product/{{ item?.id }}"
                     class="text-decoration-none text-black"
                     >{{ item.title }}
                   </a>

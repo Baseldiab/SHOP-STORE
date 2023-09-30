@@ -1310,14 +1310,14 @@
       *ngFor="let item of this.global.searchBox"
     >
       <div class="row g-0">
-        <a class="col-md-4" href="/Product/{{ item.id }}">
+        <a class="col-md-4" href="./Product/{{ item?.id }}">
           <img
             [src]="item.images[0]"
             class="img-fluid rounded-start"
             [alt]="item.title"
           />
         </a>
-        <a class="col-md-8" href="/Product/{{ item.id }}">
+        <a class="col-md-8" href="./Product/{{ item?.id }}">
           <div class="card-body">
             <h6 class="card-title">{{ item.title }}</h6>
             <p class="card-text">${{ item.price.toFixed(2) }}</p>

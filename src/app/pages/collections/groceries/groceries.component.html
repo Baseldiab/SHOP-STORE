@@ -334,7 +334,10 @@
                   "
                 >
                   <figure class="products_card">
-                    <a href="/Product/{{ item.id }}" class="position-relative">
+                    <a
+                      href="./Product/{{ item?.id }}"
+                      class="position-relative"
+                    >
                       <div class="products__front">
                         <img
                           [src]="item?.images[0]"
@@ -386,7 +389,7 @@
                   </figcaption>
                   <div class="card-body p-0">
                     <a
-                      href="/Product/{{ item.id }}"
+                      href="./Product/{{ item?.id }}"
                       class="card-title link link-secondary mx-auto text-start fw-medium"
                       >{{ item.title }}</a
                     >
